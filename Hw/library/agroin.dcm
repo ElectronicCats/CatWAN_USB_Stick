@@ -1,0 +1,26 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Antenna_Shield
+D Antenna symbol with extra pin for shielding
+K antenna
+$ENDCMP
+#
+$CMP BC850
+D 45V Vce, 0.1A Ic, NPN, SOT-23
+K NPN Small Signal Transistor
+F http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657
+$ENDCMP
+#
+$CMP FM4007W-W
+D 50V 1A General Purpose Rectifier Diode, DO-41
+K diode
+F http://www.vishay.com/docs/88503/1n4001.pdf
+$ENDCMP
+#
+$CMP MMBT2222A
+D 45V Vce, 0.8A Ic, NPN, SOT-23
+K NPN transistor
+F http://www.fairchildsemi.com/ds/BC/BC817.pdf
+$ENDCMP
+#
+#End Doc Library
