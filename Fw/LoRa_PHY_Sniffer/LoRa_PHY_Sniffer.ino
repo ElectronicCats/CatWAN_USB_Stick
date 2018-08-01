@@ -5,54 +5,25 @@ String inputString = "";
 boolean flagSerial = false;  
 
 
-void ISR_RX(){
-  flag_rx=1;
-  }
-
-
-void serialEvent() {
-  while (Serial.available()) {
-    char inChar = (char)Serial.read();
-    inputString += inChar;
-    if (inChar == '\n') {
-      flagSerial = true;
-    }
-  }
-}
-
-
 void setup() {
   Serial.begin(9600);
   while (!Serial);
   
-  LoRa.setPins(10, 9, 2);
+  LoRa.setPins(17, 16, 4);
   
-  //Serial.println("LoRa Receiver");
+  Serial.println("LoRa Receiver");
 
-  if (!LoRa.begin(915E6)) {
+  if (!LoRa.begin(904300000)) {
     Serial.println("Starting LoRa failed!");
     while (1);
   }
-  attachInterrupt(digitalPinToInterrupt(2), ISR_RX, RISING);
+  LoRa.onReceive(onReceive);
+  LoRa.receive();
   inputString.reserve(200);
 }
 
 
 void loop() {
-  //if(flag_rx){
-    int packetSize = LoRa.parsePacket();
-    if (packetSize) {
-      // received a packet
-      Serial.print("Received packet '");
-      while (LoRa.available()) {
-        Serial.print((char)LoRa.read());
-      }
-
-      Serial.print("' with RSSI ");
-      Serial.println(LoRa.packetRssi());
-    }
-   flag_rx=0;
-  //}
   
   if(flagSerial){
   Serial.println(inputString);
@@ -76,7 +47,23 @@ void loop() {
   }
   inputString = "";  
       }
-    flagSerial=0;
-    //
+   // flagSerial=0;
   }
+
+
+
+void onReceive(int packetSize) {
+  // received a packet
+  Serial.print("Received packet '");
+
+  // read packet
+  for (int i = 0; i < packetSize; i++) {
+    Serial.print((char)LoRa.read());
+  }
+
+  // print RSSI of packet
+  Serial.print("' with RSSI ");
+  Serial.println(LoRa.packetRssi());
+}
+ 
 
