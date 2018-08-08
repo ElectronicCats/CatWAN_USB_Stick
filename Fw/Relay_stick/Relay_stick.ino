@@ -27,9 +27,12 @@ void transmit(){
   }
   */
 void setup() {
-  SerialUSB.begin(115200);
+  Serial.begin(115200);
   while(!Serial);
-  LoRa.setPins(17, 16, 4);
+  
+  
+  LoRa.setPins(10, 9, 2);
+  //LoRa.setPins(17, 16, 4); //SAMD21
   if (!LoRa.begin(915E6)) {
     Serial.println("Fallo en Radio");
     while (1);
@@ -67,8 +70,8 @@ void onReceive(int packetSize) {
   for (int i = 0; i < packetSize; i++) {
     //Serial.print((char)LoRa.read());
     dato[i]=LoRa.read();
-    SerialUSB.print(!dato[i]);
-    SerialUSB.print(" \t\t ");
+    Serial.print(!dato[i]);
+    Serial.print(" \t\t ");
   }
   digitalWrite(14,LOW);
   
