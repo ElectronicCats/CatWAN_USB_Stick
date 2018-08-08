@@ -1,6 +1,101 @@
-EESchema Schematic File Version 4
-LIBS:LoRA_USBStick-cache
-EELAYER 26 0
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:allegro
+LIBS:Altera
+LIBS:analog_devices
+LIBS:battery_management
+LIBS:bbd
+LIBS:bosch
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:diode
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic_symbols
+LIBS:hc11
+LIBS:infineon
+LIBS:intersil
+LIBS:ir
+LIBS:Lattice
+LIBS:leds
+LIBS:LEM
+LIBS:logic_programmable
+LIBS:maxim
+LIBS:mechanical
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic24mcu
+LIBS:microchip_pic32mcu
+LIBS:modules
+LIBS:motor_drivers
+LIBS:motors
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:nxp
+LIBS:onsemi
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:RFSolutions
+LIBS:sensors
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:triac_thyristor
+LIBS:ttl_ieee
+LIBS:video
+LIBS:wiznet
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:zetex
+LIBS:Zilog
+LIBS:agroin
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -25,7 +120,7 @@ SCK
 Text Label 7680 725  0    60   ~ 0
 RST
 $Comp
-L LoRA_USBStick-rescue:SW_Push SW1
+L SW_Push SW1
 U 1 1 5AE4BB13
 P 7680 1025
 F 0 "SW1" H 7730 1125 50  0000 L CNN
@@ -37,7 +132,7 @@ F 4 "B3U-1000P" H 7680 1025 60  0001 C CNN "manf#"
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR01
+L GND #PWR01
 U 1 1 5AE4BBF8
 P 7680 1270
 F 0 "#PWR01" H 7680 1020 50  0001 C CNN
@@ -48,7 +143,7 @@ F 3 "" H 7680 1270 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR02
+L GND #PWR02
 U 1 1 5AE4BE8D
 P 4805 3905
 F 0 "#PWR02" H 4805 3655 50  0001 C CNN
@@ -69,7 +164,7 @@ DIO5
 Text Notes 4360 600  0    60   ~ 0
 Microcontroller
 $Comp
-L Device:C C4
+L C C4
 U 1 1 5AE4E748
 P 4820 2880
 F 0 "C4" H 4845 2980 50  0000 L CNN
@@ -81,7 +176,7 @@ F 4 "885012207072" H 4820 2880 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR03
+L +3.3V #PWR03
 U 1 1 5AE4E79C
 P 4820 2600
 F 0 "#PWR03" H 4820 2450 50  0001 C CNN
@@ -92,7 +187,7 @@ F 3 "" H 4820 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR04
+L GND #PWR04
 U 1 1 5AE4E948
 P 4820 3185
 F 0 "#PWR04" H 4820 2935 50  0001 C CNN
@@ -117,7 +212,7 @@ MISO
 Text Label 10600 1650 0    60   ~ 0
 MOSI
 $Comp
-L power:+3.3V #PWR05
+L +3.3V #PWR05
 U 1 1 5AE531DB
 P 10635 1020
 F 0 "#PWR05" H 10635 870 50  0001 C CNN
@@ -128,7 +223,7 @@ F 3 "" H 10635 1020 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
+L GND #PWR06
 U 1 1 5AE53467
 P 10750 2145
 F 0 "#PWR06" H 10750 1895 50  0001 C CNN
@@ -139,7 +234,7 @@ F 3 "" H 10750 2145 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
+L C C5
 U 1 1 5AE53A22
 P 8555 1550
 F 0 "C5" H 8580 1650 50  0000 L CNN
@@ -151,7 +246,7 @@ F 4 "885012207072" H 8555 1550 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR07
+L +3.3V #PWR07
 U 1 1 5AE53A28
 P 8555 1270
 F 0 "#PWR07" H 8555 1120 50  0001 C CNN
@@ -162,7 +257,7 @@ F 3 "" H 8555 1270 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR08
+L GND #PWR08
 U 1 1 5AE53A2E
 P 8555 1855
 F 0 "#PWR08" H 8555 1605 50  0001 C CNN
@@ -173,7 +268,7 @@ F 3 "" H 8555 1855 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L agroin:RFM95W-868S2 U2
+L RFM95W-868S2 U2
 U 1 1 5AE5452E
 P 9900 1550
 F 0 "U2" H 9299 2101 50  0000 L BNN
@@ -190,7 +285,7 @@ $EndComp
 Text Notes 8350 635  0    60   ~ 0
 LoRa
 $Comp
-L power:+3.3V #PWR09
+L +3.3V #PWR09
 U 1 1 5AE784FB
 P 4650 1185
 F 0 "#PWR09" H 4650 1035 50  0001 C CNN
@@ -211,7 +306,7 @@ Rx
 Text Label 6965 1965 0    60   ~ 0
 Tx
 $Comp
-L agroin:ATSAMD21E U1
+L ATSAMD21E U1
 U 1 1 5B04C5AF
 P 5565 2465
 F 0 "U1" H 5095 4175 45  0000 L BNN
@@ -225,7 +320,7 @@ $EndComp
 Text Label 4895 965  2    60   ~ 0
 RST
 $Comp
-L Device:C C3
+L C C3
 U 1 1 5B04EE2E
 P 4820 1810
 F 0 "C3" H 4845 1910 50  0000 L CNN
@@ -237,7 +332,7 @@ F 4 "GRM21BC80J106KE19L" H 4820 1810 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR010
+L GND #PWR010
 U 1 1 5B04EE3A
 P 4820 2115
 F 0 "#PWR010" H 4820 1865 50  0001 C CNN
@@ -248,7 +343,7 @@ F 3 "" H 4820 2115 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRA_USBStick-rescue:Conn_01x04 J4
+L Conn_01x04 J4
 U 1 1 5B0502EC
 P 6300 4805
 F 0 "J4" H 6300 5005 50  0000 C CNN
@@ -259,7 +354,7 @@ F 3 "" H 6300 4805 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR011
+L GND #PWR011
 U 1 1 5B050555
 P 7250 5040
 F 0 "#PWR011" H 7250 4790 50  0001 C CNN
@@ -270,7 +365,7 @@ F 3 "" H 7250 5040 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR012
+L +3.3V #PWR012
 U 1 1 5B050850
 P 5955 4625
 F 0 "#PWR012" H 5955 4475 50  0001 C CNN
@@ -294,12 +389,16 @@ Wire Notes Line
 	475  2365 4335 2365
 Wire Notes Line
 	4335 475  4335 7790
+Wire Notes Line
+	8270 475  8270 3515
+Wire Notes Line
+	8270 3510 8270 6535
 Wire Wire Line
 	4820 2600 4820 2730
 Wire Wire Line
 	4820 3185 4820 3030
 Wire Wire Line
-	10750 1850 10750 1950
+	10750 1850 10750 2145
 Wire Wire Line
 	10750 1850 10600 1850
 Wire Wire Line
@@ -315,7 +414,7 @@ Wire Wire Line
 Wire Notes Line
 	475  6540 6970 6540
 Wire Wire Line
-	4805 3605 4805 3805
+	4805 3605 4805 3905
 Wire Wire Line
 	4805 3605 4895 3605
 Wire Wire Line
@@ -326,7 +425,7 @@ Wire Wire Line
 Wire Wire Line
 	4650 1385 4895 1385
 Wire Wire Line
-	4650 1185 4650 1255
+	4650 1185 4650 1385
 Wire Wire Line
 	4895 1255 4650 1255
 Connection ~ 4650 1255
@@ -347,7 +446,7 @@ Wire Wire Line
 Wire Wire Line
 	5965 5005 6100 5005
 $Comp
-L LoRA_USBStick-rescue:Conn_01x03 J5
+L Conn_01x03 J5
 U 1 1 5B066480
 P 7540 4855
 F 0 "J5" H 7540 5055 50  0000 C CNN
@@ -380,7 +479,7 @@ Wire Wire Line
 Wire Wire Line
 	7250 4955 7340 4955
 $Comp
-L Device:Antenna_Shield AE1
+L Antenna_Shield AE1
 U 1 1 5B06DD9B
 P 10855 920
 F 0 "AE1" H 10780 1095 50  0000 R CNN
@@ -399,7 +498,7 @@ Wire Wire Line
 Wire Wire Line
 	10855 1350 10855 1120
 $Comp
-L power:GND #PWR013
+L GND #PWR013
 U 1 1 5B06EEE9
 P 10955 1120
 F 0 "#PWR013" H 10955 870 50  0001 C CNN
@@ -971,7 +1070,7 @@ Wire Notes Line
 Wire Notes Line
 	11220 4565 11220 4560
 $Comp
-L LoRA_USBStick-rescue:Mounting_Hole MK1
+L Mounting_Hole MK1
 U 1 1 5B0810C4
 P 4730 7195
 F 0 "MK1" H 4730 7395 50  0000 C CNN
@@ -982,7 +1081,7 @@ F 3 "" H 4730 7195 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRA_USBStick-rescue:Mounting_Hole MK3
+L Mounting_Hole MK3
 U 1 1 5B081269
 P 5315 7200
 F 0 "MK3" H 5315 7400 50  0000 C CNN
@@ -993,7 +1092,7 @@ F 3 "" H 5315 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRA_USBStick-rescue:Mounting_Hole MK2
+L Mounting_Hole MK2
 U 1 1 5B081339
 P 5960 7195
 F 0 "MK2" H 5960 7395 50  0000 C CNN
@@ -1004,7 +1103,7 @@ F 3 "" H 5960 7195 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LoRA_USBStick-rescue:Mounting_Hole MK4
+L Mounting_Hole MK4
 U 1 1 5B0813F3
 P 6595 7200
 F 0 "MK4" H 6595 7400 50  0000 C CNN
@@ -1017,7 +1116,7 @@ $EndComp
 Text Notes 4370 6665 0    60   ~ 0
 Mounting holes
 $Comp
-L power:GND #PWR014
+L GND #PWR014
 U 1 1 5B08A6AC
 P 5965 5080
 F 0 "#PWR014" H 5965 4830 50  0001 C CNN
@@ -1030,7 +1129,7 @@ $EndComp
 Text Label 6965 2665 0    60   ~ 0
 RFM_RST
 $Comp
-L power:GND #PWR015
+L GND #PWR015
 U 1 1 5B0C9EAC
 P 4805 5395
 F 0 "#PWR015" H 4805 5145 50  0001 C CNN
@@ -1041,7 +1140,7 @@ F 3 "" H 4805 5395 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4805 5395 4805 5350
+	4805 5395 4805 5290
 Wire Wire Line
 	4905 5290 4905 5350
 Wire Wire Line
@@ -1056,7 +1155,7 @@ D+
 Text Label 6965 3565 0    60   ~ 0
 D-
 $Comp
-L power:VBUS #PWR016
+L VBUS #PWR016
 U 1 1 5B0CB923
 P 5285 4630
 F 0 "#PWR016" H 5285 4480 50  0001 C CNN
@@ -1073,7 +1172,7 @@ Wire Wire Line
 Text Notes 1165 935  0    60   ~ 0
 USB voltage regulator\n
 $Comp
-L agroin:AP2114H-3.3TRG1 U7
+L AP2114H-3.3TRG1 U7
 U 1 1 5B0CCD1F
 P 1865 1380
 F 0 "U7" H 1655 1640 50  0000 C CNN
@@ -1085,7 +1184,7 @@ F 4 "AP2114H-3.3TRG1" H 1865 1380 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VBUS #PWR017
+L VBUS #PWR017
 U 1 1 5B0CD86E
 P 1315 1265
 F 0 "#PWR017" H 1315 1115 50  0001 C CNN
@@ -1096,13 +1195,13 @@ F 3 "" H 1315 1265 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1465 1330 1395 1330
+	1465 1330 1315 1330
 Wire Wire Line
 	1315 1330 1315 1265
 Wire Wire Line
-	2265 1330 2355 1330
+	2265 1330 2960 1330
 $Comp
-L power:GND #PWR018
+L GND #PWR018
 U 1 1 5B0CEDD6
 P 1865 1685
 F 0 "#PWR018" H 1865 1435 50  0001 C CNN
@@ -1115,7 +1214,7 @@ $EndComp
 Wire Wire Line
 	1865 1630 1865 1685
 $Comp
-L Device:C C7
+L C C7
 U 1 1 5B0CF618
 P 2355 1525
 F 0 "C7" H 2380 1625 50  0000 L CNN
@@ -1130,7 +1229,7 @@ Wire Wire Line
 	2355 1375 2355 1330
 Connection ~ 2355 1330
 $Comp
-L Device:C C6
+L C C6
 U 1 1 5B0CFE06
 P 1395 1515
 F 0 "C6" H 1420 1615 50  0000 L CNN
@@ -1145,7 +1244,7 @@ Wire Wire Line
 	1395 1365 1395 1330
 Connection ~ 1395 1330
 $Comp
-L power:GND #PWR019
+L GND #PWR019
 U 1 1 5B0D03BC
 P 1395 1705
 F 0 "#PWR019" H 1395 1455 50  0001 C CNN
@@ -1156,7 +1255,7 @@ F 3 "" H 1395 1705 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR020
+L GND #PWR020
 U 1 1 5B0D0460
 P 2355 1715
 F 0 "#PWR020" H 2355 1465 50  0001 C CNN
@@ -1171,7 +1270,7 @@ Wire Wire Line
 Wire Wire Line
 	1395 1705 1395 1665
 $Comp
-L power:+3.3V #PWR021
+L +3.3V #PWR021
 U 1 1 5B0D0D73
 P 2960 1215
 F 0 "#PWR021" H 2960 1065 50  0001 C CNN
@@ -1188,7 +1287,7 @@ Wire Notes Line
 Text Notes 2510 2520 0    60   ~ 0
 Led's indicators
 $Comp
-L Device:LED_Small D7
+L LED_Small D7
 U 1 1 5B0D290D
 P 2930 3185
 F 0 "D7" H 2880 3310 50  0000 L CNN
@@ -1200,7 +1299,7 @@ F 4 "APT2012SGC" H 2930 3185 60  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED_Small D6
+L LED_Small D6
 U 1 1 5B0D2AA0
 P 3635 3175
 F 0 "D6" H 3585 3300 50  0000 L CNN
@@ -1212,7 +1311,7 @@ F 4 "AP2012EC" H 3635 3175 60  0001 C CNN "manf#"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR022
+L GND #PWR022
 U 1 1 5B0D2B7E
 P 2930 3350
 F 0 "#PWR022" H 2930 3100 50  0001 C CNN
@@ -1223,7 +1322,7 @@ F 3 "" H 2930 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
+L GND #PWR023
 U 1 1 5B0D2ED9
 P 3635 3330
 F 0 "#PWR023" H 3635 3080 50  0001 C CNN
@@ -1238,7 +1337,7 @@ Wire Wire Line
 Wire Wire Line
 	3635 3275 3635 3330
 $Comp
-L Device:R_Small R9
+L R_Small R9
 U 1 1 5B0D38E2
 P 3635 2890
 F 0 "R9" H 3665 2910 50  0000 L CNN
@@ -1250,7 +1349,7 @@ F 4 "RMC1/10K1200FTP" H 3635 2890 60  0001 C CNN "manf#"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R11
+L R_Small R11
 U 1 1 5B0D3E93
 P 2930 2915
 F 0 "R11" H 2960 2935 50  0000 L CNN
@@ -1266,7 +1365,7 @@ Wire Wire Line
 Wire Wire Line
 	3635 3075 3635 2990
 $Comp
-L power:+3.3V #PWR024
+L +3.3V #PWR024
 U 1 1 5B0D45E0
 P 3635 2740
 F 0 "#PWR024" H 3635 2590 50  0001 C CNN
@@ -1284,12 +1383,16 @@ Text Label 2930 2675 0    60   ~ 0
 Rx_LED
 Wire Wire Line
 	2930 2675 2930 2815
+Wire Notes Line
+	2290 2365 2290 6540
+Wire Notes Line
+	2290 3800 2290 3795
 NoConn ~ 6965 3865
 NoConn ~ 6965 1765
 NoConn ~ 6965 1865
 NoConn ~ 6965 1165
 $Comp
-L LoRA_USBStick-rescue:USB_B J10
+L USB_B J10
 U 1 1 5B11F4BB
 P 4905 4890
 F 0 "J10" H 4705 5340 50  0000 L CNN
@@ -1299,22 +1402,4 @@ F 3 "" H 5055 4840 50  0001 C CNN
 	1    4905 4890
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10750 1950 10750 2050
-Wire Wire Line
-	10750 2050 10750 2145
-Wire Wire Line
-	4805 3805 4805 3905
-Wire Wire Line
-	4650 1255 4650 1385
-Wire Wire Line
-	4805 5350 4805 5290
-Wire Wire Line
-	2355 1330 2960 1330
-Wire Wire Line
-	1395 1330 1315 1330
-Wire Notes Line
-	8270 475  8270 6535
-Wire Notes Line
-	2290 2365 2290 6540
 $EndSCHEMATC

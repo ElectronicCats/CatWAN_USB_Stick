@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name LoRA_USBStick-rescue)(type Legacy)(uri ${KIPRJMOD}/LoRA_USBStick-rescue.lib)(options "")(descr ""))
+  (lib (name agroin)(type Legacy)(uri ${KIPRJMOD}/library/agroin.lib)(options "")(descr ""))
+)

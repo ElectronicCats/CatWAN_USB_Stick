@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/Volumes/Macintosh_HD/Documents/Electronic_Cats/Proyectos/Hw/LoRA_USB_Stick/Hw/LoRA_USBStick.sch</source>
+    <date>Friday, 06 July 2018 'pmt' 16:41:14</date>
+    <tool>Eeschema 4.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>USB Stick</title>
+        <company>Electronic Cats</company>
+        <rev>0.1</rev>
+        <date>2018-05-28</date>
+        <source>LoRA_USBStick.sch</source>
+        <comment number="1" value="Eduardo Contreras"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="SW1">
+      <value>RST</value>
+      <footprint>Buttons_Switches_SMD:SW_SPST_B3U-1000P</footprint>
+      <fields>
+        <field name="manf#">B3U-1000P</field>
+      </fields>
+      <libsource lib="switches" part="SW_Push"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5AE4BB13</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">885012207072</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5AE4E748</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">885012207072</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5AE53A22</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>RFM95W-868S2</value>
+      <footprint>agroin:RFM95W</footprint>
+      <datasheet>SMD-16 Hope Microelectronics</datasheet>
+      <fields>
+        <field name="Field4">RFM95W-868S2</field>
+        <field name="Field5">Warning</field>
+        <field name="Field6">7.22 USD</field>
+        <field name="Field7">RF</field>
+      </fields>
+      <libsource lib="agroin" part="RFM95W-868S2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5AE5452E</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>ATSAMD21E</value>
+      <footprint>Housings_QFP:TQFP-32_7x7mm_Pitch0.8mm</footprint>
+      <fields>
+        <field name="manf#">ATSAMD21E15B-AUT</field>
+      </fields>
+      <libsource lib="agroin" part="ATSAMD21E"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B04C5AF</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">GRM21BC80J106KE19L</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B04EE2E</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>SWD</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm</footprint>
+      <libsource lib="conn" part="Conn_01x04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0502EC</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>Serial</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm</footprint>
+      <libsource lib="conn" part="Conn_01x03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B066480</tstamp>
+    </comp>
+    <comp ref="AE1">
+      <value>Antenna_Shield</value>
+      <footprint>agroin:SMA_EDGE</footprint>
+      <libsource lib="device" part="Antenna_Shield"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B06DD9B</tstamp>
+    </comp>
+    <comp ref="MK1">
+      <value>Mounting_Hole</value>
+      <footprint>Mounting_Holes:MountingHole_3.5mm_Pad_Via</footprint>
+      <libsource lib="mechanical" part="Mounting_Hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0810C4</tstamp>
+    </comp>
+    <comp ref="MK3">
+      <value>Mounting_Hole</value>
+      <footprint>Mounting_Holes:MountingHole_3.5mm_Pad_Via</footprint>
+      <libsource lib="mechanical" part="Mounting_Hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B081269</tstamp>
+    </comp>
+    <comp ref="MK2">
+      <value>Mounting_Hole</value>
+      <footprint>Mounting_Holes:MountingHole_3.5mm_Pad_Via</footprint>
+      <libsource lib="mechanical" part="Mounting_Hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B081339</tstamp>
+    </comp>
+    <comp ref="MK4">
+      <value>Mounting_Hole</value>
+      <footprint>Mounting_Holes:MountingHole_3.5mm_Pad_Via</footprint>
+      <libsource lib="mechanical" part="Mounting_Hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0813F3</tstamp>
+    </comp>
+    <comp ref="U7">
+      <value>AP2114H-3.3TRG1</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2</footprint>
+      <fields>
+        <field name="manf#">AP2114H-3.3TRG1</field>
+      </fields>
+      <libsource lib="agroin" part="AP2114H-3.3TRG1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0CCD1F</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>10uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">GRM21BC80J106KE19L</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0CF618</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>10uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">GRM21BC80J106KE19L</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0CFE06</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>Rx</value>
+      <footprint>LEDs:LED_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">APT2012SGC</field>
+      </fields>
+      <libsource lib="device" part="LED_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0D290D</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>ON</value>
+      <footprint>LEDs:LED_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">AP2012EC</field>
+      </fields>
+      <libsource lib="device" part="LED_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0D2AA0</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>120R</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">RMC1/10K1200FTP</field>
+      </fields>
+      <libsource lib="device" part="R_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0D38E2</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>120R</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="manf#">RMC1/10K1200FTP</field>
+      </fields>
+      <libsource lib="device" part="R_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B0D3E93</tstamp>
+    </comp>
+    <comp ref="J10">
+      <value>USB_B</value>
+      <footprint>USB:629105150521</footprint>
+      <libsource lib="conn" part="USB_B"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5B11F4BB</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="agroin" part="AP2114H-3.3TRG1">
+      <footprints>
+        <fp>SOT</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP2114H-3.3TRG1</field>
+        <field name="Footprint">TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="OUT" type="power_out"/>
+        <pin num="3" name="IN" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="agroin" part="ATSAMD21E">
+      <footprints>
+        <fp>*QFN32_5MM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATSAMD21E</field>
+        <field name="Footprint">QFN32_5MM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PA00/EINT0/SERCOM1.0" type="BiDi"/>
+        <pin num="2" name="PA01/EINT1/SERCOM1.1" type="BiDi"/>
+        <pin num="3" name="PA02/EINT2/AIN0/Y0/VOUT" type="BiDi"/>
+        <pin num="4" name="PA03/EINT3/VREFA/AIN1" type="BiDi"/>
+        <pin num="5" name="PA04/EINT4/VREFB/AIN4/SERCOM0.0" type="BiDi"/>
+        <pin num="6" name="PA05/EINT5/AIN5/SERCOM0.1" type="BiDi"/>
+        <pin num="7" name="PA06/EINT6/AIN6/SERCOM0.2" type="BiDi"/>
+        <pin num="8" name="PA07/I7/AIN7/SERCOM0.3/I2SD0" type="BiDi"/>
+        <pin num="9" name="VDDA" type="power_in"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="PA08/I2C/AIN16/SERCOM0+2.0/I2SD1" type="BiDi"/>
+        <pin num="12" name="PA09/I2C/I9/AIN17/SERCOM0+2.1/I2SMC" type="BiDi"/>
+        <pin num="13" name="PA10/I10/AIN18/SERCOM0+2.2/I2SCK" type="BiDi"/>
+        <pin num="14" name="PA11/I11/AIN19/SERCOM0+2.3/I2SF0" type="BiDi"/>
+        <pin num="15" name="PA14/I14/SERCOM2+4.2" type="BiDi"/>
+        <pin num="16" name="PA15/I15/SERCOM3+4.3" type="BiDi"/>
+        <pin num="17" name="PA16/I2C/I0/SERCOM1+3.0" type="BiDi"/>
+        <pin num="18" name="PA17/I2C/I1/SERCOM1+3.1" type="BiDi"/>
+        <pin num="19" name="PA18/I2/SERCOM1+3.2" type="BiDi"/>
+        <pin num="20" name="PA19/I3/SERCOM1+3.3/I2SD0" type="BiDi"/>
+        <pin num="21" name="PA22/I2C/I6/SERCOM3+5.0" type="BiDi"/>
+        <pin num="22" name="PA23/I2C/I7/SERCOM3+5.1/SOF" type="BiDi"/>
+        <pin num="23" name="PA24/I12/SERCOM3+5.2/D-" type="BiDi"/>
+        <pin num="24" name="PA25/I13/SERCOM3+5.3/D+" type="BiDi"/>
+        <pin num="25" name="PA27/I15" type="BiDi"/>
+        <pin num="26" name="/RESET" type="BiDi"/>
+        <pin num="27" name="PA28/I8" type="BiDi"/>
+        <pin num="28" name="GNDA" type="power_in"/>
+        <pin num="29" name="VDDCORE" type="power_in"/>
+        <pin num="30" name="VDDIN" type="power_in"/>
+        <pin num="31" name="PA30/I10/SECOM1.2/SWCLK" type="BiDi"/>
+        <pin num="32" name="PA31/I11/SECOM1.3/SWDIO" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Antenna_Shield">
+      <description>Antenna symbol with extra pin for shielding</description>
+      <fields>
+        <field name="Reference">AE</field>
+        <field name="Value">Antenna_Shield</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="input"/>
+        <pin num="2" name="Shield" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_??x*mm*</fp>
+        <fp>Connector*:*1x??x*mm*</fp>
+        <fp>Pin?Header?Straight?1X*</fp>
+        <fp>Pin?Header?Angled?1X*</fp>
+        <fp>Socket?Strip?Straight?1X*</fp>
+        <fp>Socket?Strip?Angled?1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="LED_Small">
+      <description>LED, small symbol</description>
+      <footprints>
+        <fp>LED-*</fp>
+        <fp>LED_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="mechanical" part="Mounting_Hole">
+      <description>Mounting Hole without connection</description>
+      <footprints>
+        <fp>Mounting?Hole*</fp>
+        <fp>Hole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">MK</field>
+        <field name="Value">Mounting_Hole</field>
+      </fields>
+    </libpart>
+    <libpart lib="agroin" part="RFM95W-868S2">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">RFM95W-868S2</field>
+        <field name="Footprint">agroin:RFM95W</field>
+        <field name="Datasheet">SMD-16 Hope Microelectronics</field>
+        <field name="Field4">RFM95W-868S2</field>
+        <field name="Field5">Warning</field>
+        <field name="Field6">7.22 USD</field>
+        <field name="Field7">RF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="MISO" type="input"/>
+        <pin num="3" name="MOSI" type="output"/>
+        <pin num="4" name="SCK" type="input"/>
+        <pin num="5" name="NSS" type="input"/>
+        <pin num="6" name="RESET" type="BiDi"/>
+        <pin num="7" name="DIO5" type="BiDi"/>
+        <pin num="8" name="GND@1" type="power_in"/>
+        <pin num="9" name="ANT" type="passive"/>
+        <pin num="10" name="GND@2" type="power_in"/>
+        <pin num="11" name="DIO3" type="BiDi"/>
+        <pin num="12" name="DIO4" type="BiDi"/>
+        <pin num="13" name="3_3V" type="power_in"/>
+        <pin num="14" name="DIO0" type="BiDi"/>
+        <pin num="15" name="DIO1" type="BiDi"/>
+        <pin num="16" name="DIO2" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R_Small">
+      <description>Resistor, small symbol</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="switches" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="USB_B">
+      <description>USB Type B connector</description>
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_out"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="GND" type="power_out"/>
+        <pin num="5" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="conn">
+      <uri>/Library/Application Support/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="switches">
+      <uri>/Library/Application Support/kicad/library/switches.lib</uri>
+    </library>
+    <library logical="agroin">
+      <uri>/Volumes/Macintosh_HD/Documents/Electronic_Cats/Proyectos/Hw/LoRA_USB_Stick/Hw/library/agroin.lib</uri>
+    </library>
+    <library logical="mechanical">
+      <uri>/Library/Application Support/kicad/library/mechanical.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/Library/Application Support/kicad/library/device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND">
+      <node ref="D7" pin="1"/>
+      <node ref="C4" pin="2"/>
+      <node ref="D6" pin="1"/>
+      <node ref="C5" pin="2"/>
+      <node ref="J5" pin="3"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="U1" pin="28"/>
+      <node ref="U7" pin="1"/>
+      <node ref="J10" pin="5"/>
+      <node ref="J10" pin="4"/>
+      <node ref="C3" pin="2"/>
+      <node ref="J4" pin="4"/>
+      <node ref="AE1" pin="2"/>
+      <node ref="U2" pin="8"/>
+      <node ref="SW1" pin="2"/>
+      <node ref="U1" pin="10"/>
+      <node ref="U2" pin="10"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="2" name="Net-(AE1-Pad1)">
+      <node ref="U2" pin="9"/>
+      <node ref="AE1" pin="1"/>
+    </net>
+    <net code="3" name="VBUS">
+      <node ref="C6" pin="1"/>
+      <node ref="U7" pin="3"/>
+      <node ref="J10" pin="1"/>
+    </net>
+    <net code="4" name="Net-(C3-Pad1)">
+      <node ref="U1" pin="29"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="5" name="/SWCLK">
+      <node ref="U1" pin="31"/>
+      <node ref="J4" pin="3"/>
+    </net>
+    <net code="6" name="/SWDIO">
+      <node ref="U1" pin="32"/>
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="7" name="/Tx">
+      <node ref="U1" pin="13"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="8" name="/Rx">
+      <node ref="U1" pin="14"/>
+      <node ref="J5" pin="2"/>
+    </net>
+    <net code="9" name="/RST">
+      <node ref="U1" pin="26"/>
+      <node ref="SW1" pin="1"/>
+    </net>
+    <net code="10" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="11" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="12" name="+3V3">
+      <node ref="U2" pin="13"/>
+      <node ref="U1" pin="30"/>
+      <node ref="U1" pin="9"/>
+      <node ref="C4" pin="1"/>
+      <node ref="J4" pin="1"/>
+      <node ref="R9" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="U7" pin="2"/>
+    </net>
+    <net code="13" name="Net-(U1-Pad27)">
+      <node ref="U1" pin="27"/>
+    </net>
+    <net code="14" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="15" name="Net-(U1-Pad12)">
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="16" name="Net-(U1-Pad4)">
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="17" name="/D-">
+      <node ref="J10" pin="2"/>
+      <node ref="U1" pin="23"/>
+    </net>
+    <net code="18" name="/D+">
+      <node ref="J10" pin="3"/>
+      <node ref="U1" pin="24"/>
+    </net>
+    <net code="19" name="Net-(U2-Pad11)">
+      <node ref="U2" pin="11"/>
+    </net>
+    <net code="20" name="Net-(U2-Pad12)">
+      <node ref="U2" pin="12"/>
+    </net>
+    <net code="21" name="/DIO2">
+      <node ref="U1" pin="25"/>
+      <node ref="U2" pin="16"/>
+    </net>
+    <net code="22" name="/SS">
+      <node ref="U1" pin="18"/>
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="23" name="/MOSI">
+      <node ref="U2" pin="3"/>
+      <node ref="U1" pin="19"/>
+    </net>
+    <net code="24" name="/DI3">
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="25" name="/DI2">
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="26" name="/DI1">
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="27" name="/DIO0">
+      <node ref="U2" pin="14"/>
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="28" name="/DO3">
+      <node ref="U1" pin="6"/>
+    </net>
+    <net code="29" name="/DO2">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="30" name="/DO1">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="31" name="/SCK">
+      <node ref="U2" pin="4"/>
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="32" name="/MISO">
+      <node ref="U1" pin="21"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="33" name="/DIO1">
+      <node ref="U1" pin="22"/>
+      <node ref="U2" pin="15"/>
+    </net>
+    <net code="34" name="/Rx_LED">
+      <node ref="R11" pin="1"/>
+      <node ref="U1" pin="15"/>
+    </net>
+    <net code="35" name="/DIO5">
+      <node ref="U1" pin="16"/>
+      <node ref="U2" pin="7"/>
+    </net>
+    <net code="36" name="/RFM_RST">
+      <node ref="U2" pin="6"/>
+      <node ref="U1" pin="17"/>
+    </net>
+  </nets>
+</export>
