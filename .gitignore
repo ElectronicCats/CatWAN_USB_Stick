@@ -10,3 +10,5 @@ Hw/library/agroin\.bak
 Hw/library/agroin\.bck
 
 \.DS_Store
+
+*.kicad_pcb-bak
