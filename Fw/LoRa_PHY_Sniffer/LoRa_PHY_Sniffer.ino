@@ -30,7 +30,7 @@ void loop() {
   if(inputString.startsWith("1")){
       char inputChar[inputString.length()];
       inputString.toCharArray(inputChar,inputString.length());  
-      Serial.print("Frecuencia= ");
+      Serial.print("Frequency= ");
         for(int i=2;i<inputString.length();i++){
           Serial.print(inputChar[i]);
         } 
