@@ -6,11 +6,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "USB Stick"
-Date "2018-05-28"
-Rev "0.1"
+Date "2018-11-25"
+Rev "0.2"
 Comp "Electronic Cats"
 Comment1 "Eduardo Contreras"
-Comment2 ""
+Comment2 "Andres Sabas"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -64,8 +64,6 @@ Text Label 9200 1950 2    60   ~ 0
 DIO1
 Text Label 9200 2050 2    60   ~ 0
 DIO2
-Text Label 9200 1550 2    60   ~ 0
-DIO5
 Text Notes 4360 600  0    60   ~ 0
 Microcontroller
 $Comp
@@ -359,18 +357,6 @@ F 3 "" H 7540 4855 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7680 725  7680 825 
-Text Label 6965 1365 0    60   ~ 0
-DO3
-Text Label 6965 1465 0    60   ~ 0
-DO2
-Text Label 6965 1565 0    60   ~ 0
-DO1
-Text Label 6965 865  0    60   ~ 0
-DI3
-Text Label 6965 965  0    60   ~ 0
-DI2
-Text Label 6965 1065 0    60   ~ 0
-DI1
 Text Label 7340 4755 2    60   ~ 0
 Tx
 Text Label 7340 4855 2    60   ~ 0
@@ -1317,4 +1303,12 @@ Wire Notes Line
 	8270 475  8270 6535
 Wire Notes Line
 	2290 2365 2290 6540
+NoConn ~ 6965 1565
+NoConn ~ 6965 1465
+NoConn ~ 6965 1365
+NoConn ~ 6965 865 
+NoConn ~ 6965 965 
+NoConn ~ 6965 1065
+Text Label 9200 1550 2    60   ~ 0
+DIO5
 $EndSCHEMATC
