@@ -204,10 +204,6 @@ Text Label 6965 2565 0    60   ~ 0
 DIO5
 Text Label 6965 3765 0    60   ~ 0
 DIO2
-Text Label 6965 2065 0    60   ~ 0
-Rx
-Text Label 6965 1965 0    60   ~ 0
-Tx
 $Comp
 L agroin:ATSAMD21E U1
 U 1 1 5B04C5AF
@@ -254,17 +250,6 @@ F 1 "SWD" H 6300 4505 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 6300 4805 50  0001 C CNN
 F 3 "" H 6300 4805 50  0001 C CNN
 	1    6300 4805
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR011
-U 1 1 5B050555
-P 7250 5040
-F 0 "#PWR011" H 7250 4790 50  0001 C CNN
-F 1 "GND" H 7250 4890 50  0000 C CNN
-F 2 "" H 7250 5040 50  0001 C CNN
-F 3 "" H 7250 5040 50  0001 C CNN
-	1    7250 5040
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -344,27 +329,8 @@ Wire Wire Line
 	5965 5080 5965 5005
 Wire Wire Line
 	5965 5005 6100 5005
-$Comp
-L LoRA_USBStick-rescue:Conn_01x03 J5
-U 1 1 5B066480
-P 7540 4855
-F 0 "J5" H 7540 5055 50  0000 C CNN
-F 1 "Serial" H 7540 4655 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 7540 4855 50  0001 C CNN
-F 3 "" H 7540 4855 50  0001 C CNN
-	1    7540 4855
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7680 725  7680 825 
-Text Label 7340 4755 2    60   ~ 0
-Tx
-Text Label 7340 4855 2    60   ~ 0
-Rx
-Wire Wire Line
-	7250 5040 7250 4955
-Wire Wire Line
-	7250 4955 7340 4955
 $Comp
 L Device:Antenna_Shield AE1
 U 1 1 5B06DD9B
@@ -1311,4 +1277,6 @@ NoConn ~ 6965 965
 NoConn ~ 6965 1065
 Text Label 9200 1550 2    60   ~ 0
 DIO5
+NoConn ~ 6965 1965
+NoConn ~ 6965 2065
 $EndSCHEMATC
