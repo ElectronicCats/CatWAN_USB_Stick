@@ -37,26 +37,21 @@ Check our repository for more details and software downloads!
 - Range: up to 15 km coverage in suburban and up to 5 km coverage in urban areas
 
 
-### For update firmware with Arduino IDE: MattairTech D|L|C Core Installation
+### For update firmware with Arduino IDE:
 
-* To update from a previous version, click on MattairTech SAM D|L|C Core for Arduino in Boards Manager, then click Update.
+* To update from a previous version, click on Electronic Cats SAM  Core for Arduino in Boards Manager, then click Update.
 
-1. The MattairTech SAM D|L|C Core requires Arduino IDE 1.6.7 or above (including 1.8.x).
+1. The Electronic Cats Core requires Arduino IDE 1.6.7 or above (including 1.8.x).
 2. In the Arduino IDE, click File->Preferences.
 3. Click the button next to Additional Boards Manager URLs.
-4. Add `https://www.mattairtech.com/software/arduino/beta/package_MattairTech_index.json`.
+4. Add `https://electroniccats.github.io/Arduino_Boards_Index/package_electroniccats_index.json`.
 5. Save preferences, then open the Boards Manager.
 6. Install the Arduino SAMD Boards package. Use version 1.6.2 or higher.
-7. Install the MattairTech SAM D|L|C Core for Arduino package.
-8. Close Boards Manager, then click Tools->Board->MattairTech MT-D21E (rev B).
-9. Select the MCU with the now visible Tools->Microcontroller menu->SAMD21E18A).
-10. Select the clock source "INTERNAL_USB_CALIBRATED_OSCILLATOR"*
-11. Plug in the board. The blink sketch should be running.
-12. Click Tools->Port and choose the COM port. Note that the board indicated may not match the chosen board*
-13. You can now upload your own sketch.
-
-*Forgetting to set the clock source will stop the device from booting. It can saved by booting with safe mode, (press the reset button twice during startup).
-
+7. Install the Electronic Cats Core for Arduino package.
+8. Close Boards Manager, then click Tools->Board->Electronic Cats CatWAN USB Stick.
+9. Plug in the board. The blink sketch should be running.
+10. Click Tools->Port and choose the COM port. Note that the board indicated may not match the chosen board*
+11. You can now upload your own sketch.
 
 Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
 
