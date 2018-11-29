@@ -3,7 +3,7 @@
   (general
     (thickness 1.6)
     (drawings 37)
-    (tracks 255)
+    (tracks 261)
     (zones 0)
     (modules 17)
     (nets 37)
@@ -19,8 +19,8 @@
   )
 
   (layers
-    (0 F.Cu signal hide)
-    (31 B.Cu signal hide)
+    (0 F.Cu signal)
+    (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -1774,6 +1774,12 @@
   (segment (start 135.4 115.4) (end 133.9 115.4) (width 0.35) (layer F.Cu) (net 1))
   (via (at 133.9 113.2) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
   (segment (start 135.4 113.2) (end 133.9 113.2) (width 0.35) (layer F.Cu) (net 1))
+  (via (at 121.4 108.9) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (segment (start 121.3744 108.9256) (end 121.4 108.9) (width 0.35) (layer F.Cu) (net 1))
+  (segment (start 121.3744 110.6984) (end 121.3744 108.9256) (width 0.35) (layer F.Cu) (net 1))
+  (via (at 123.45 110.7) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 1))
+  (segment (start 123.4484 110.6984) (end 123.45 110.7) (width 0.35) (layer F.Cu) (net 1))
+  (segment (start 121.3744 110.6984) (end 123.4484 110.6984) (width 0.35) (layer F.Cu) (net 1))
   (segment (start 170.517 106.4224) (end 169.592 106.4224) (width 0.4) (layer F.Cu) (net 2) (tstamp 5B7CA9A5))
   (segment (start 171.142 107.0474) (end 170.517 106.4224) (width 0.4) (layer F.Cu) (net 2) (tstamp 5B7CA8FD))
   (segment (start 171.142 113.1364) (end 171.142 107.0474) (width 0.4) (layer F.Cu) (net 2) (tstamp 5B7CA9D2))
