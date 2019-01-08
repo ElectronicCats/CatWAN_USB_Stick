@@ -1,7 +1,7 @@
 #include <SPI.h>
 
-#define DIO0 4 
-#define NSS  17
+#define DIO0 RFM_DIO0
+#define NSS  SS
 
 void RFM_NSS(bool);
 int Message=0;

@@ -9,7 +9,7 @@ void setup() {
   Serial.begin(9600);
   while (!Serial);
   
-  LoRa.setPins(17, 16, 4);
+  LoRa.setPins(SS, RFM_RST, RFM_DIO0);
   
   Serial.println("LoRa Receiver");
 
@@ -66,4 +66,3 @@ void onReceive(int packetSize) {
   Serial.println(LoRa.packetRssi());
 }
  
-
