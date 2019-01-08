@@ -19,8 +19,8 @@
   )
 
   (layers
-    (0 F.Cu signal)
-    (31 B.Cu signal)
+    (0 F.Cu signal hide)
+    (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -1714,7 +1714,7 @@
   (gr_line (start 178.2572 118.999) (end 178.2572 120.396) (layer Edge.Cuts) (width 0.2) (tstamp 5B7CC076))
   (gr_line (start 116.7892 107.823) (end 116.7892 120.4214) (layer Edge.Cuts) (width 0.2) (tstamp 5B7CC0B5))
   (gr_line (start 119.8372 104.775) (end 175.2346 104.775) (layer Edge.Cuts) (width 0.2) (tstamp 5B7CC094))
-  (gr_text "USB-Stick V1.1\nCatWAN" (at 162.142 107.5224) (layer B.SilkS) (tstamp 5B7CAB19)
+  (gr_text "USB-Stick V2.0\nCatWAN" (at 162.142 107.5224) (layer B.SilkS) (tstamp 5B7CAB19)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
   (gr_text Notes: (at 127 106.1) (layer F.SilkS) (tstamp 5B7CAB0D)
