@@ -39,19 +39,7 @@ Check our repository for more details and software downloads!
 
 ### For update firmware with Arduino IDE:
 
-* To update from a previous version, click on Electronic Cats SAM  Core for Arduino in Boards Manager, then click Update.
-
-1. The Electronic Cats Core requires Arduino IDE 1.6.7 or above (including 1.8.x).
-2. In the Arduino IDE, click File->Preferences.
-3. Click the button next to Additional Boards Manager URLs.
-4. Add `https://electroniccats.github.io/Arduino_Boards_Index/package_electroniccats_index.json`.
-5. Save preferences, then open the Boards Manager.
-6. Install the Arduino SAMD Boards package. Use version 1.6.2 or higher.
-7. Install the Electronic Cats Core for Arduino package.
-8. Close Boards Manager, then click Tools->Board->Electronic Cats CatWAN USB Stick.
-9. Plug in the board. The blink sketch should be running.
-10. Click Tools->Port and choose the COM port. Note that the board indicated may not match the chosen board*
-11. You can now upload your own sketch.
+Visit Wiki with [Manual](https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki)
 
 Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
 
