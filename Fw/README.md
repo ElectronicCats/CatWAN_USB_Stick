@@ -5,7 +5,7 @@ This folder contains 3 sub-folders:
 - LoRa-PHY
 - bootloader_uf2
 
-The sub-folder bootloader_uf2 has inside all the files that can be use to re-flash your CatWAN USB-Stick in case of brick it.
+The sub-folder bootloader_uf2 has inside all the files that can be use to re-flash your CatWAN USB-Stick in case of hard brick it.
 
 The sub-folders LoRa and LoRaWAN have inside its own examples about a posible implementation of LoRa from LoRa physical layer to some LoRaWAN implementations. 
 
@@ -22,9 +22,6 @@ Here you will find three possible ways to implement a LoRaWAN Stack:
 	In this folder you'll find an example of the LoRaWAN stack implementation with the ArduinoLoRaWAN library which is simple than the LMIC implementation, for this examples you MUST install the [Arduino LoRaWAN library](https://github.com/BeelanMX/arduino-LoRaWAN)
 	
 ## LoRa_PHY 
-Here you'll find the simplest examples to use the LoRa radio just using the physical layer of LoRa 
-
-# LoRa_PHY Folder
 Here you'll find the simplest examples to use the LoRa radio just using the physical layer of LoRa 
 
 - "LoRaReceiverCallback" 
