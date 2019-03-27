@@ -3,9 +3,7 @@
   Based on Copyright (c) 2015 Thomas Telkamp and Matthijs Kooijman
   PLEASE REFER TO THIS LMIC LIBRARY https://github.com/things-nyc/arduino-lmic
   
-  LoRaShield
-  In this example you can send GPS information (Compatible with the L80)
-  or a temperature read by the ADC  
+  CatWAN USB-Stick
   Example
  *******************************************************************************/
 
@@ -16,11 +14,11 @@
 unsigned long previousMillis = 0; 
 
 // This EUI must be in little-endian format, so least-significant-byte first. 
-static const u1_t PROGMEM DEVEUI[8]= {0x83,0x34,0x27,0x82,0x91,0x12,0x29,0x91};
+static const u1_t PROGMEM DEVEUI[8]= {0x83,0x34,0x27,0x82,0x91,0x12,0x29,0x91};   //9129129182273483
 // This should also be in little endian format, see above.  
 static const u1_t PROGMEM APPEUI[8]= {0x76,0x28,0x81,0x73,0x61,0x35,0xFF,0xFF}; 
 // This key should be in big endian format so normal key should be place
-static const u1_t PROGMEM APPKEY[16] = {0xFF,0x21,0x35,0x16,0x23,0x21,0x3F,0x23,0xF2,0x3F,0x23,0xF2,0x3F,0x23,0xF2,0x31}; 
+static const u1_t PROGMEM APPKEY[16] = {0xFF,0x21,0x35,0x16,0x23,0x21,0x3F,0x23,0xF2,0x3F,0x23,0xF2,0x3F,0x23,0xF2,0x31}; //ff 21 35 16 23 21 3f 23 f2 3f 23 f2 3f 23 f2 31
  
 void os_getArtEui (u1_t* buf) { memcpy_P(buf, APPEUI, 8);} 
 void os_getDevEui (u1_t* buf) { memcpy_P(buf, DEVEUI, 8);} 
@@ -148,19 +146,8 @@ void setup() {
   for (int channel=0; channel<72; ++channel) { 
       LMIC_disableChannel(channel); 
     } 
- /*
-      //Subband 1 
-      LMIC_enableChannel(8);
-      LMIC_enableChannel(9);
-      LMIC_enableChannel(10);  //904.3Mhz
-      LMIC_enableChannel(11);
-      LMIC_enableChannel(12);
-      LMIC_enableChannel(13);
-      LMIC_enableChannel(14);
-      LMIC_enableChannel(15);
-      LMIC_enableChannel(65); 
-   */
-  //Beelan
+
+  //Beelan channels
     
       LMIC_enableChannel(48);
       LMIC_enableChannel(49);
