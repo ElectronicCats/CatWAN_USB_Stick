@@ -1,4 +1,4 @@
-##Firmware examples
+# Firmware examples
 This folder contains 3 sub-folders:
 
 - LoRaWAN
@@ -9,7 +9,7 @@ The sub-folder bootloader_uf2 has inside all the files that can be use to re-fla
 
 The sub-folders LoRa and LoRaWAN have inside its own examples about a posible implementation of LoRa from LoRa physical layer to some LoRaWAN implementations. 
 
-##LoRaWAN Folder
+## LoRaWAN Folder
 Here you will find three possible ways to implement a LoRaWAN Stack:
 
 - LoRa_WAN_Sniffer_REG
@@ -21,7 +21,7 @@ Here you will find three possible ways to implement a LoRaWAN Stack:
 - ArduinoLoRaWAN_library 
 	In this folder you'll find an example of the LoRaWAN stack implementation with the ArduinoLoRaWAN library which is simple than the LMIC implementation, for this examples you MUST install the [Arduino LoRaWAN library](https://github.com/BeelanMX/arduino-LoRaWAN)
 	
-##LoRa_PHY 
+## LoRa_PHY 
 Here you'll find the simplest examples to use the LoRa radio just using the physical layer of LoRa 
 
 - "LoRaReceiverCallback" 
