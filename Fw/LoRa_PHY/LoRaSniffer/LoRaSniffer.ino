@@ -16,7 +16,7 @@ bool rx_status=false;
 void setup(){  
   pinMode(LED_BUILTIN,OUTPUT);      // Configure the onboard LED for output
   digitalWrite(LED_BUILTIN,LOW);    // default to LED off
-
+  pinMode(RFM_DIO5,INPUT);
   Serial.begin(115200); 
   while (!Serial);
   Serial.println("Welcome to the LoRa Sniffer CLI " + String(fwVersion,1) + "v\n");
@@ -30,6 +30,7 @@ void setup(){
     set_chann -> Put LoRaWAN frequencies
     set_tx_acii -> Send Ascii data over LoRa
   */
+  SCmd.addCommand("help",help); 
   SCmd.addCommand("set_rx",set_rx);
   SCmd.addCommand("set_tx",set_tx1);
   SCmd.addCommand("set_tx_ascii",set_tx2);
@@ -39,10 +40,10 @@ void setup(){
 
   SCmd.addCommand("get_config",get_config);
   SCmd.addCommand("get_freq",get_freq);
-  SCmd.addCommand("get_sf",get_sf);
+  SCmd.addCommand("get_sf",get_sf);  
   SCmd.addCommand("get_bw",get_bw);
 
-  SCmd.addCommand("help",help);        
+      
   SCmd.addDefaultHandler(unrecognized);  // Handler for command that isn't matched  (says "What?") 
 
   LoRa.setPins(SS, RFM_RST, RFM_DIO0);
@@ -57,6 +58,27 @@ void setup(){
 void loop()
 {  
   SCmd.readSerial();     // We don't do much, just process serial commands
+}
+
+
+void help(){
+  Serial.println("Fw version: "+String(fwVersion,1)+"v");
+  Serial.println("\tConfiguration commands:");
+  Serial.println("\tset_rx");
+  Serial.println("\tset_tx");
+  Serial.println("\tset_tx_ascii");
+  Serial.println("\tset_freq");
+  Serial.println("\tset_sf");
+  Serial.println("\tset_bw");
+
+  Serial.println("Monitor commands:");
+  Serial.println("\tget_freq");
+  Serial.println("\tget_sf");
+  Serial.println("\tget_bw");
+  Serial.println("\tget_config");
+
+  Serial.println("..help");
+
 }
 
 /**********Set configuration**************/
@@ -197,7 +219,11 @@ void set_rx(){
     if(frequency>902&&frequency<923){
       long freq =frequency*1000000;
       LoRa.setFrequency(freq);
-      Serial.println("LoRa radio receiving at "+String(frequency)+" Mhz"); 
+      Serial.println("LoRa radio receiving at "+String(frequency)+" Mhz");
+      while (digitalRead(RFM_DIO5) == LOW){
+          Serial.print(".");
+        }
+      LoRa.receive(); 
       rx_status=true;
     }
     else{
@@ -207,6 +233,7 @@ void set_rx(){
   } 
   else {
     Serial.println("LoRa radio receiving at "+String(frequency)+" Mhz");
+    LoRa.receive();
     rx_status =true;
   }
 }
@@ -221,6 +248,7 @@ void get_sf(){
 }
 
 void get_bw(){
+  Serial.println("Bandwidth = ");
   switch (bwReference){
     case 0:
     Serial.println("7.8 Khz");
@@ -249,13 +277,14 @@ void get_bw(){
     case 8:
     Serial.println("250 Khz");
       break;
-
     default:
     Serial.println("Error setting the bandwidth value must be between 0-8");
       break;
   } 
 
 }
+
+
 
 void get_config(){
   Serial.println("Radio configurations: ");
@@ -292,28 +321,9 @@ void get_config(){
       break;
   }
   Serial.println("Rx active = "+String(rx_status));
-
 }
 
-void help(){
-  Serial.println("Fw version: "+String(fwVersion,1)+"v");
-  Serial.println("\tConfiguration commands:");
-  Serial.println("\tset_rx");
-  Serial.println("\tset_tx");
-  Serial.println("\tset_tx_ascii");
-  Serial.println("\tset_freq");
-  Serial.println("\tset_sf");
-  Serial.println("\tset_bw");
 
-  Serial.println("Monitor commands:");
-  Serial.println("\tget_freq");
-  Serial.println("\tget_sf");
-  Serial.println("\tget_bw");
-  Serial.println("\tget_config");
-
-  Serial.println("..help");
-
-}
 // This gets set as the default handler, and gets called when no other command matches. 
 void unrecognized(){
   Serial.println("Command not found, type help to get the valid commands"); 
@@ -325,10 +335,11 @@ void onReceive(int packetSize) {
 
   // read packet
   for (int i = 0; i < packetSize; i++) {
-    Serial.print((char)LoRa.read());
+    Serial.print(LoRa.read());
   }
 
   // print RSSI of packet
   Serial.print("' with RSSI ");
   Serial.println(LoRa.packetRssi());
+  LoRa.receive();
 }
