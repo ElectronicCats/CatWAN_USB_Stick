@@ -38,16 +38,17 @@ Check our repository for more details and software downloads!
 
 ### Pin connections
 
-Arduino |   Port    |   RFM Function
-0       |   PORTA4  |   DIO0 
-1       |   PORTA23 |   DIO1
-2       |   PORTA27 |   DIO2
-13      |   PORTA14 |   LED
-15      |   PORTA15 |   DIO5
-17      |   PORTA22 |   MISO
-18      |   PORTA18 |   MOSI
-19      |   PORTA19 |   SCK
-20      
+|Arduino |   Port    |   RFM Function|
+|--------|-----------|---------------|
+|0       |   PORTA4  |   DIO0   |
+|1       |   PORTA23 |   DIO1   |
+|2       |   PORTA27 |   DIO2   |
+|13      |   PORTA14 |   LED    |
+|15      |   PORTA15 |   DIO5   |
+|17      |   PORTA22 |   MISO   |
+|18      |   PORTA18 |   MOSI   |
+|19      |   PORTA19 |   SCK    |
+|20      |   PORTA17 |   SS     |
 
 ### For update firmware with Arduino IDE:
 
