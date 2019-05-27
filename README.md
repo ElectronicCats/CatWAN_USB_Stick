@@ -36,6 +36,18 @@ Check our repository for more details and software downloads!
 - TX Power: adjustable up to +18.5 dBm
 - Range: up to 15 km coverage in suburban and up to 5 km coverage in urban areas
 
+### Pin connections
+
+Arduino |   Port    |   RFM Function
+0       |   PORTA4  |   DIO0 
+1       |   PORTA23 |   DIO1
+2       |   PORTA27 |   DIO2
+13      |   PORTA14 |   LED
+15      |   PORTA15 |   DIO5
+17      |   PORTA22 |   MISO
+18      |   PORTA18 |   MOSI
+19      |   PORTA19 |   SCK
+20      
 
 ### For update firmware with Arduino IDE:
 
@@ -51,4 +63,4 @@ Hardware released under an CERN Open Hardware Licence v1.2. See the LICENSE_HARD
 
 Electronic Cats is a registered trademark, please do not use if you sell these PCBs.
 
-29 July 2018
+27 May 2019
