@@ -4,7 +4,9 @@
 
 **[OSHW] MX000006 | Certified open source hardware |** [oshwa.org/cert.](https://www.oshwa.org/cert)
 
-<a href="https://www.tindie.com/stores/electroniccats/?ref=offsite_badges&utm_source=sellers_electroniccats&utm_medium=badges&utm_campaign=badge_large"><img src="https://d2ss6ovg47m0r5.cloudfront.net/badges/tindie-larges.png" alt="I sell on Tindie" width="200" height="104"></a>
+<a href="https://electroniccats.com/producto/catwan_usb-stick/">
+  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" height="104" />
+</a>
 
 Are you interested in learning how LoRa works at the package level? Debugging your own LoRa hardware and trying to detect where something is wrong? Or maybe you're writing a custom application for your Internet of Things (IoT) network with LoraWAN? We have the perfect tool for you!
 
