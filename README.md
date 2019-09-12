@@ -5,7 +5,7 @@
 **[OSHW] MX000006 | Certified open source hardware |** [oshwa.org/cert.](https://www.oshwa.org/cert)
 
 <a href="https://electroniccats.com/producto/catwan_usb-stick/">
-  <img src="https://media.discordapp.net/attachments/562297893667471381/619566704372219915/unknown.png?width=441&height=228" width="200" height="104" />
+  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" height="104" />
 </a>
 
 Are you interested in learning how LoRa works at the package level? Debugging your own LoRa hardware and trying to detect where something is wrong? Or maybe you're writing a custom application for your Internet of Things (IoT) network with LoraWAN? We have the perfect tool for you!
