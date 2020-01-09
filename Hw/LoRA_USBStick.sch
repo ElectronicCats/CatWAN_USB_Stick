@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "USB Stick"
 Date "2020-01-09"
-Rev "1.1"
+Rev "2.4"
 Comp "Electronic Cats"
 Comment1 "Eduardo Contreras"
 Comment2 "Andres Sabas"
