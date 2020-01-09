@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Device:Antenna_Shield
+# Device_Antenna_Shield
 #
-DEF Device:Antenna_Shield AE 0 40 N N 1 F N
+DEF Device_Antenna_Shield AE 0 40 N N 1 F N
 F0 "AE" -75 175 50 H V R CNN
-F1 "Device:Antenna_Shield" -75 100 50 H V R CNN
+F1 "Device_Antenna_Shield" -75 100 50 H V R CNN
 F2 "" 0 100 50 H I C CNN
 F3 "" 0 100 50 H I C CNN
 DRAW
@@ -22,11 +22,11 @@ X Shield 2 100 -200 100 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Device:C
+# Device_C
 #
-DEF Device:C C 0 10 N Y 1 F N
+DEF Device_C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Device:C" 25 -100 50 H V L CNN
+F1 "Device_C" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -40,11 +40,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:LED_Small
+# Device_LED_Small
 #
-DEF Device:LED_Small D 0 10 N N 1 F N
+DEF Device_LED_Small D 0 10 N N 1 F N
 F0 "D" -50 125 50 H V L CNN
-F1 "Device:LED_Small" -175 -100 50 H V L CNN
+F1 "Device_LED_Small" -175 -100 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -63,11 +63,11 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device:R_Small
+# Device_R_Small
 #
-DEF Device:R_Small R 0 10 N N 1 F N
+DEF Device_R_Small R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "Device:R_Small" 30 -40 50 H V L CNN
+F1 "Device_R_Small" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -80,37 +80,11 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# LoRA_USBStick-rescue:Conn_01x03
+# LoRA_USBStick-rescue_Conn_01x04
 #
-DEF LoRA_USBStick-rescue:Conn_01x03 J 0 40 Y N 1 F N
+DEF LoRA_USBStick-rescue_Conn_01x04 J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "LoRA_USBStick-rescue:Conn_01x03" 0 -200 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_??x*mm*
- Connector*:*1x??x*mm*
- Pin?Header?Straight?1X*
- Pin?Header?Angled?1X*
- Socket?Strip?Straight?1X*
- Socket?Strip?Angled?1X*
-$ENDFPLIST
-DRAW
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 105 0 95 1 1 6 N
-S -50 150 50 -150 1 1 10 f
-X Pin_1 1 -200 100 150 R 50 50 1 1 P
-X Pin_2 2 -200 0 150 R 50 50 1 1 P
-X Pin_3 3 -200 -100 150 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# LoRA_USBStick-rescue:Conn_01x04
-#
-DEF LoRA_USBStick-rescue:Conn_01x04 J 0 40 Y N 1 F N
-F0 "J" 0 200 50 H V C CNN
-F1 "LoRA_USBStick-rescue:Conn_01x04" 0 -300 50 H V C CNN
+F1 "LoRA_USBStick-rescue_Conn_01x04" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -134,27 +108,11 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# LoRA_USBStick-rescue:Mounting_Hole
+# LoRA_USBStick-rescue_SW_Push
 #
-DEF LoRA_USBStick-rescue:Mounting_Hole MK 0 40 Y Y 1 F N
-F0 "MK" 0 200 50 H V C CNN
-F1 "LoRA_USBStick-rescue:Mounting_Hole" 0 125 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Mounting?Hole*
- Hole*
-$ENDFPLIST
-DRAW
-C 0 0 50 0 1 50 N
-ENDDRAW
-ENDDEF
-#
-# LoRA_USBStick-rescue:SW_Push
-#
-DEF LoRA_USBStick-rescue:SW_Push SW 0 40 N N 1 F N
+DEF LoRA_USBStick-rescue_SW_Push SW 0 40 N N 1 F N
 F0 "SW" 50 100 50 H V L CNN
-F1 "LoRA_USBStick-rescue:SW_Push" 0 -60 50 H V C CNN
+F1 "LoRA_USBStick-rescue_SW_Push" 0 -60 50 H V C CNN
 F2 "" 0 200 50 H I C CNN
 F3 "" 0 200 50 H I C CNN
 DRAW
@@ -167,11 +125,11 @@ X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
-# LoRA_USBStick-rescue:USB_B
+# LoRA_USBStick-rescue_USB_B
 #
-DEF LoRA_USBStick-rescue:USB_B J 0 40 Y Y 1 F N
+DEF LoRA_USBStick-rescue_USB_B J 0 40 Y Y 1 F N
 F0 "J" -200 450 50 H V L CNN
-F1 "LoRA_USBStick-rescue:USB_B" -200 350 50 H V L CNN
+F1 "LoRA_USBStick-rescue_USB_B" -200 350 50 H V L CNN
 F2 "" 150 -50 50 H I C CNN
 F3 "" 150 -50 50 H I C CNN
 $FPLIST
@@ -200,29 +158,32 @@ X Shield 5 -100 -400 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# agroin:AP2114H-3.3TRG1
+# Regulator_Linear_AP2112K-3.3
 #
-DEF agroin:AP2114H-3.3TRG1 U 0 40 Y Y 1 F N
-F0 "U" -200 200 50 H V C CNN
-F1 "agroin:AP2114H-3.3TRG1" 0 200 50 H V L CNN
-F2 "TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2" -460 270 50 H I C CIN
-F3 "" 0 0 50 H I C CNN
+DEF Regulator_Linear_AP2112K-3.3 U 0 10 Y Y 1 F N
+F0 "U" -200 225 50 H V L CNN
+F1 "Regulator_Linear_AP2112K-3.3" 0 225 50 H V L CNN
+F2 "Package_TO_SOT_SMD:SOT-23-5" 0 325 50 H I C CNN
+F3 "" 0 100 50 H I C CNN
+ALIAS AP2204K-1.8 AP2204K-2.5 AP2204K-2.8 AP2204K-3.0 AP2204K-3.3 AP2204K-5.0 AP2127K-1.0 AP2127K-1.2 AP2127K-1.5 AP2127K-1.8 AP2127K-2.5 AP2127K-2.8 AP2127K-3.0 AP2127K-3.3 AP2127K-4.2 AP2127K-4.75 AP2112K-1.2 AP2112K-1.8 AP2112K-2.5 AP2112K-2.6 AP2112K-3.3
 $FPLIST
- SOT
+ SOT?23?5*
 $ENDFPLIST
 DRAW
-S -250 150 250 -150 0 1 10 f
-X GND 1 0 -250 100 U 50 50 1 1 W
-X OUT 2 400 50 150 L 50 50 1 1 w
-X IN 3 -400 50 150 R 50 50 1 1 I
+S -200 175 200 -200 0 1 10 f
+X VIN 1 -300 100 100 R 50 50 1 1 W
+X GND 2 0 -300 100 U 50 50 1 1 W
+X EN 3 -300 0 100 R 50 50 1 1 I
+X NC 4 300 0 100 L 50 50 1 1 N N
+X VOUT 5 300 100 100 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# agroin:ATSAMD21E
+# agroin_ATSAMD21E
 #
-DEF agroin:ATSAMD21E U 0 40 Y Y 1 L N
+DEF agroin_ATSAMD21E U 0 40 Y Y 1 L N
 F0 "U" -470 1710 45 H V L BNN
-F1 "agroin:ATSAMD21E" 820 1730 45 H V L BNN
+F1 "agroin_ATSAMD21E" 820 1730 45 H V L BNN
 F2 "QFN32_5MM" 30 150 20 H I C CNN
 F3 "" 0 0 60 H I C CNN
 $FPLIST
@@ -266,11 +227,11 @@ X VDDA 9 -670 1210 200 R 40 40 1 1 W
 ENDDRAW
 ENDDEF
 #
-# agroin:RFM95W-868S2
+# agroin_RFM95W-868S2
 #
-DEF agroin:RFM95W-868S2 U 0 40 Y Y 1 L N
+DEF agroin_RFM95W-868S2 U 0 40 Y Y 1 L N
 F0 "U" -601 551 50 H V L BNN
-F1 "agroin:RFM95W-868S2" -602 -702 50 H V L BNN
+F1 "agroin_RFM95W-868S2" -602 -702 50 H V L BNN
 F2 "agroin:RFM95W" 0 0 50 H I L BNN
 F3 "SMD-16 Hope Microelectronics" -250 -150 50 H I L BNN
 F4 "RFM95W-868S2" 0 0 50 H I L BNN
@@ -301,11 +262,11 @@ X ANT 9 700 200 100 L 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
-# power:+3.3V
+# power_+3.3V
 #
-DEF power:+3.3V #PWR 0 0 Y Y 1 F P
+DEF power_+3.3V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:+3.3V" 0 140 50 H V C CNN
+F1 "power_+3.3V" 0 140 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 ALIAS +3.3V
@@ -317,11 +278,11 @@ X +3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:GND
+# power_GND
 #
-DEF power:GND #PWR 0 0 Y Y 1 F P
+DEF power_GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power:GND" 0 -150 50 H V C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -330,11 +291,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# power:VBUS
+# power_VBUS
 #
-DEF power:VBUS #PWR 0 0 Y Y 1 F P
+DEF power_VBUS #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power:VBUS" 0 150 50 H V C CNN
+F1 "power_VBUS" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
