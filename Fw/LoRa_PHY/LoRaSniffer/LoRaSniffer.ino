@@ -1,12 +1,28 @@
+/*
+  Created by Eduardo Contreras @ Electronic Cats 2020
+
+  PLEASE REFER TO THESE LIBRARIES:
+    https://github.com/kroimon/Arduino-SerialCommand
+    https://github.com/sandeepmistry/arduino-LoRa
+
+  This example code works as a CLI to control your CatWAN USB-Stick
+  As a LoRa Sniffer to catch any LoRa Packet
+  
+  This code is beerware; if you see me (or any other Electronic Cats
+  member) at the local, and you've found our code helpful,
+  please buy us a round!
+  Distributed as-is; no warranty is given.
+*/
+
 #define SERIALCOMMAND_HARDWAREONLY
  
 #include <SerialCommand.h>
 #include <SPI.h>
 #include <LoRa.h>
 
-SerialCommand SCmd;   // The demo SerialCommand object
+SerialCommand SCmd;
 
-float fwVersion= 0.1;
+float fwVersion= 0.2;
 
 float frequency=915;
 int spreadFactor=7;
@@ -23,13 +39,15 @@ void setup(){
   Serial.println("With this sketch you can scan the LoRa spectrum");
   Serial.println("Changing the Frequency, Spreading Factor, BandWidth or the IQ signals of the radio.");
   Serial.println("Type help to get the available commands.");
-  Serial.println("Electronic Cats ® 2019");
-  // Setup callbacks for SerialCommand commands 
+  Serial.println("Electronic Cats ® 2020");
   /*
   TODO: 
-    set_chann -> Put LoRaWAN frequencies
+    set_chann -> Put LoRaWAN frequencies 
     set_tx_acii -> Send Ascii data over LoRa
+    set_rx -> send data over LoRa
   */
+  
+  // Setup callbacks for SerialCommand commands 
   SCmd.addCommand("help",help); 
   SCmd.addCommand("set_rx",set_rx);
   SCmd.addCommand("set_tx",set_tx1);
@@ -43,8 +61,7 @@ void setup(){
   SCmd.addCommand("get_sf",get_sf);  
   SCmd.addCommand("get_bw",get_bw);
 
-      
-  SCmd.addDefaultHandler(unrecognized);  // Handler for command that isn't matched  (says "What?") 
+  SCmd.setDefaultHandler(unrecognized);  // Handler for command that isn't matched  (says "What?") 
 
   LoRa.setPins(SS, RFM_RST, RFM_DIO0);
 
@@ -240,10 +257,12 @@ void set_rx(){
 
 /**********Get information**************/
 void get_freq(){
+  Serial.print("Frequency = ");
   Serial.println(frequency);
 }
 
 void get_sf(){
+  Serial.print("Spreading factor = ");
   Serial.println(spreadFactor);
 }
 
@@ -325,7 +344,7 @@ void get_config(){
 
 
 // This gets set as the default handler, and gets called when no other command matches. 
-void unrecognized(){
+void unrecognized(const char *command) {
   Serial.println("Command not found, type help to get the valid commands"); 
 }
 
