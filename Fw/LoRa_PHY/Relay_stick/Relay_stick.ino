@@ -16,23 +16,13 @@ void transmit(int a,int b, int c){
     //SerialUSB.println("Dato enviado");
   }
 
-/*
-void transmit(){
-    LoRa.beginPacket();
-    LoRa.write(digitalRead(0));
-    LoRa.write(digitalRead(1));
-    LoRa.write(digitalRead(2));
-    LoRa.endPacket();
-    SerialUSB.println("Dato enviado");
-  }
-  */
+
 void setup() {
   Serial.begin(115200);
   while(!Serial);
   
   
-  LoRa.setPins(10, 9, 2);
-  //LoRa.setPins(17, 16, 4); //SAMD21
+  LoRa.setPins(SS, RFM_RST, RFM_DIO0);
   if (!LoRa.begin(915E6)) {
     Serial.println("Fallo en Radio");
     while (1);
