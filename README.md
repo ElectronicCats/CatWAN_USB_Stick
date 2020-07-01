@@ -4,7 +4,7 @@
 
 **[OSHW] MX000006 | Certified open source hardware |** [oshwa.org/cert.](https://www.oshwa.org/cert)
 
-<a href="https://electroniccats.com/producto/catwan_usb-stick/">
+<a href="https://electroniccats.com/store/catwan_usb-stick/">
   <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" height="104" />
 </a>
 
