@@ -1,13 +1,12 @@
 EESchema Schematic File Version 4
-LIBS:LoRA_USBStick-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "USB Stick"
-Date "2020-01-09"
-Rev "2.4"
+Date "2020-08-03"
+Rev "2.5"
 Comp "Electronic Cats"
 Comment1 "Eduardo Contreras"
 Comment2 "Andres Sabas"
@@ -1223,9 +1222,12 @@ F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 1865 1530 50  0001 C
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1395 1330 1565 1330
-Wire Wire Line
 	1865 1730 1865 1785
 Wire Wire Line
 	2165 1330 2355 1330
+Wire Wire Line
+	1395 1330 1565 1330
+Wire Wire Line
+	1565 1430 1565 1330
+Connection ~ 1565 1330
 $EndSCHEMATC
