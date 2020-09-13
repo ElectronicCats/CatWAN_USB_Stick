@@ -10,10 +10,7 @@
 #include <lmic.h>
 #include <hal/hal.h>
 #include <SPI.h>
-#include <TemperatureZero.h>
 
-
-TemperatureZero TempZero = TemperatureZero();
 unsigned long previousMillis = 0;
 
                                         //30   ff   5c  1e    44  02   a0   88    64   66   6c   bb   63   68   f2   e8
@@ -33,8 +30,6 @@ void os_getDevKey (u1_t* buf) { }
 // payload size depends on type
 // here we are using temperature
 
-static osjob_t sendjob;
-
 // Schedule TX every this many seconds (might become longer due to duty
 // cycle limitations).
 const unsigned TX_INTERVAL = 10;
@@ -42,28 +37,10 @@ const unsigned TX_INTERVAL = 10;
 // Pin mapping for RFM9X
 const lmic_pinmap lmic_pins = {
     .nss = SS,
-    .rxtx = LMIC_UNUSED_PIN,
+    .rxtx = RFM_SWITCH,
     .rst = RFM_RST,
     .dio = {RFM_DIO0, RFM_DIO1, RFM_DIO2},
 };
-
-void debug_char(u1_t b) {
-  debugSerial.write(b);
-}
-
-void debug_hex (u1_t b) {
-  debug_char("0123456789ABCDEF"[b >> 4]);
-  debug_char("0123456789ABCDEF"[b & 0xF]);
-}
-
-void debug_buf (const u1_t* buf, u2_t len) {
-  while (len--) {
-    debug_hex(*buf++);
-    debug_char(' ');
-  }
-  debug_char('\r');
-  debug_char('\n');
-}
 
 void onEvent (ev_t ev) {
   switch (ev) {
@@ -72,32 +49,31 @@ void onEvent (ev_t ev) {
       // indicating radio TX complete
       digitalWrite(LED_BUILTIN, LOW);
 
-      SerialUSB.println(F("[LMIC] Radio TX complete (included RX windows)"));
+      Serial.println(F("[LMIC] Radio TX complete (included RX windows)"));
       if (LMIC.txrxFlags & TXRX_ACK)
-        SerialUSB.println(F("[LMIC] Received ack"));
+        Serial.println(F("[LMIC] Received ack"));
       if (LMIC.dataLen) {
-        SerialUSB.print(F("[LMIC] Received "));
-        SerialUSB.print(LMIC.dataLen);
-        SerialUSB.println(F(" bytes of payload"));
+        Serial.print(F("[LMIC] Received "));
+        Serial.print(LMIC.dataLen);
+        Serial.println(F(" bytes of payload"));
         //Serial.write(LMIC.frame + LMIC.dataBeg, LMIC.dataLen);
         //Serial.println(LMIC.frame + LMIC.dataBeg, HEX);
         Serial.write(LMIC.frame + LMIC.dataBeg, LMIC.dataLen);
         Serial.println();
-        debug_buf(LMIC.frame + LMIC.dataBeg, LMIC.dataLen);
 
       }
       break;
 
     default:
-      SerialUSB.println(F("[LMIC] Unknown event"));
+      Serial.println(F("[LMIC] Unknown event"));
       break;
   }
 }
 
-void do_send(osjob_t* j, uint8_t *mydata1, uint16_t len) {
+void do_send(uint8_t *mydata1, uint16_t len) {
   // Check if there is not a current TX/RX job running
   if (LMIC.opmode & OP_TXRXPEND) {
-    SerialUSB.println(F("[LMIC] OP_TXRXPEND, not sending"));
+    Serial.println(F("[LMIC] OP_TXRXPEND, not sending"));
   } else {
     // Prepare upstream data transmission at the next possible time
     LMIC_setTxData2(1, mydata1, len, 0);
@@ -110,10 +86,9 @@ void setup() {
   pinMode(LED_BUILTIN,OUTPUT);
   // indicating radio TX complete
   digitalWrite(LED_BUILTIN, LOW);
-  SerialUSB.begin(115200);
-  SerialUSB.println(F("[INFO] LoRa Demo Node 1 Demonstration"));
-  
-  TempZero.init();
+  Serial.begin(115200);
+  Serial.println(F("[INFO] LoRa Demo Node 1 Demonstration"));
+
   os_init();
   LMIC_reset();
 
@@ -128,16 +103,16 @@ void setup() {
       LMIC_disableChannel(channel);
     }
 
-    //Beelan channels 
-      LMIC_enableChannel(48);
-      LMIC_enableChannel(49);
-      LMIC_enableChannel(50);
-      LMIC_enableChannel(51);
-      LMIC_enableChannel(52);
-      LMIC_enableChannel(53);
-      LMIC_enableChannel(54);
-      LMIC_enableChannel(55);
-      LMIC_enableChannel(70);
+   //Beelan channels 
+  LMIC_enableChannel(48);
+  LMIC_enableChannel(49);
+  LMIC_enableChannel(50);
+  LMIC_enableChannel(51);
+  LMIC_enableChannel(52);
+  LMIC_enableChannel(53);
+  LMIC_enableChannel(54);
+  LMIC_enableChannel(55);
+  LMIC_enableChannel(70);
   
   LMIC_setLinkCheckMode(0);
   LMIC_setAdrMode(false);
@@ -165,22 +140,22 @@ void getInfoAndSend() {
   uint8_t mydata[4];
   uint8_t cnt = 0;
   uint8_t ch = 0;
-  SerialUSB.println(F("[INFO] Collecting info"));
+  Serial.println(F("[INFO] Collecting info"));
 
-  float temp =   TempZero.readInternalTemperature();
-  SerialUSB.print(F("[INFO] Temperature:")); SerialUSB.println(temp);
+  float temp =  37;
+  Serial.print(F("[INFO] Temperature:")); Serial.println(temp);
   int val = round(temp * 10);
   mydata[cnt++] = ch;
   mydata[cnt++] = 0x67;
   mydata[cnt++] = highByte(val);
   mydata[cnt++] = lowByte(val);
   
-    SerialUSB.println(F("[LMIC] Start Radio TX"));
+    Serial.println(F("[LMIC] Start Radio TX"));
     // indicating start radio TX
     for(int i;i<sizeof(mydata);i++){
-      SerialUSB.print(mydata[i]);
+      Serial.print(mydata[i]);
     }
-    SerialUSB.println();
+    Serial.println();
     digitalWrite(LED_BUILTIN, HIGH);
-    do_send(&sendjob, mydata, sizeof(mydata));
+    do_send(mydata, sizeof(mydata));
   }
