@@ -24,10 +24,11 @@ SerialCommand SCmd;
 
 float fwVersion= 0.2;
 
-float frequency=915;
-int spreadFactor=7;
-int bwReference=7;
-bool rx_status=false;
+float frequency = 915;
+int spreadFactor = 7;
+int bwReference = 7;
+int channel = 0;
+bool rx_status = false;
 
 void setup(){  
   pinMode(LED_BUILTIN,OUTPUT);      // Configure the onboard LED for output
@@ -43,8 +44,11 @@ void setup(){
   /*
   TODO: 
     set_chann -> Put LoRaWAN frequencies 
-    set_tx_acii -> Send Ascii data over LoRa
+    set_tx_ascii -> Send Ascii data over LoRa
     set_rx -> send data over LoRa
+
+    //set_tx -> send data over LoRa
+    
   */
   
   // Setup callbacks for SerialCommand commands 
@@ -55,6 +59,7 @@ void setup(){
   SCmd.addCommand("set_freq",set_freq);
   SCmd.addCommand("set_sf",set_sf);
   SCmd.addCommand("set_bw",set_bw);
+  SCmd.addCommand("set_chann",set_chann);
 
   SCmd.addCommand("get_config",get_config);
   SCmd.addCommand("get_freq",get_freq);
@@ -69,6 +74,12 @@ void setup(){
     Serial.println("Starting LoRa failed!");
     while (1);
   }
+
+  //LoRa.setFrequency(915E6);
+  //LoRa.setSpreadingFactor(spreadFactor);
+  //LoRa.setSignalBandwidth(125E3);
+  rx_status = false;
+
   LoRa.onReceive(onReceive);
 }
 
@@ -84,6 +95,7 @@ void help(){
   Serial.println("\tset_rx");
   Serial.println("\tset_tx");
   Serial.println("\tset_tx_ascii");
+  Serial.println("\tset_chann");
   Serial.println("\tset_freq");
   Serial.println("\tset_sf");
   Serial.println("\tset_bw");
@@ -102,17 +114,17 @@ void help(){
 void set_freq(){
   char *arg;  
   arg = SCmd.next();
-  frequency=atof(arg);
+  frequency = atof(arg);
   if (arg != NULL){
-    if(frequency>902&&frequency<923){
-      long freq =frequency*1000000;
+    if(frequency > 902 && frequency < 923){
+      long freq = frequency*1000000;
       LoRa.setFrequency(freq);
-      Serial.println("Frequency set to "+String(frequency)+" Mhz");
-      rx_status=false;
+      Serial.println("Frequency set to " + String(frequency) + " MHz");
+      rx_status = false;
     }
     else{
       Serial.println("Error setting the frequency");
-      Serial.println("Value must be between 902 Mhz and 923");
+      Serial.println("Value must be between 902 MHz and 923 MHz");
     }
   } 
   else {
@@ -124,16 +136,16 @@ void set_sf(){
   char *arg;  
   arg = SCmd.next();  
   if (arg != NULL){
-    spreadFactor=atoi(arg);
-    if(spreadFactor<6||spreadFactor>12){
+    spreadFactor = atoi(arg);
+    if(spreadFactor < 6 || spreadFactor > 12){
       Serial.println("Error setting the Spreading factor");
       Serial.println("Value must be between 6 and 12");
       return;
     }
     else{
       LoRa.setSpreadingFactor(spreadFactor);
-      Serial.println("Spreading factor set to "+String(spreadFactor));
-      rx_status=false;
+      Serial.println("Spreading factor set to " + String(spreadFactor));
+      rx_status = false;
     }
 
   } 
@@ -145,59 +157,59 @@ void set_sf(){
 void set_bw(){
   char *arg;  
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
-  int bwRefResp=bwReference; //save the previous data 
-  bwReference=atoi(arg);
+  int bwRefResp = bwReference; //save the previous data 
+  bwReference = atoi(arg);
   if (arg != NULL){
       switch (bwReference){
         case 0:
-        LoRa.setSignalBandwidth(7.8E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 7.8 Khz");
+          LoRa.setSignalBandwidth(7.8E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 7.8 kHz");
           break;
         case 1:
-        LoRa.setSignalBandwidth(10.4E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 10.4 Khz");
+          LoRa.setSignalBandwidth(10.4E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 10.4 kHz");
           break;
         case 2:
-        LoRa.setSignalBandwidth(15.6E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 15.6 Khz");
+          LoRa.setSignalBandwidth(15.6E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 15.6 kHz");
           break;
         case 3:
-        LoRa.setSignalBandwidth(20.8E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 20.8 Khz");
+          LoRa.setSignalBandwidth(20.8E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 20.8 kHz");
           break;
         case 4:
-        LoRa.setSignalBandwidth(31.25E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 31.25 Khz");
+          LoRa.setSignalBandwidth(31.25E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 31.25 kHz");
           break;
         case 5:
-        LoRa.setSignalBandwidth(41.7E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 41.7 Khz");
+          LoRa.setSignalBandwidth(41.7E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 41.7 kHz");
           break;
         case 6:
-        LoRa.setSignalBandwidth(62.5E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 62.5 Khz");
+          LoRa.setSignalBandwidth(62.5E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 62.5 kHz");
           break;
         case 7:
-        LoRa.setSignalBandwidth(125E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 125 Khz");
+          LoRa.setSignalBandwidth(125E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 125 kHz");
           break;
         case 8:
-        LoRa.setSignalBandwidth(250E3);
-        rx_status=false;
-        Serial.println("Bandwidth set to 250 Khz");
+          LoRa.setSignalBandwidth(250E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 250 kHz");
           break;
 
         default:
-        Serial.println("Error setting the bandwidth value must be between 0-8");
-        bwReference=bwRefResp; //if there's no valid data restore previous value
+          Serial.println("Error setting the bandwidth value must be between 0-8");
+          bwReference = bwRefResp; //if there's no valid data restore previous value
           break;
       }
   } 
@@ -206,23 +218,89 @@ void set_bw(){
   }
 }
 
+byte nibble(char c)
+{
+  if (c >= '0' && c <= '9')
+    return c - '0';
+
+  if (c >= 'a' && c <= 'f')
+    return c - 'a' + 10;
+
+  if (c >= 'A' && c <= 'F')
+    return c - 'A' + 10;
+
+  return 0;  // Not a valid hexadecimal character
+}
+
+
 void set_tx1(){
   char *arg;  
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if (arg != NULL){
-  rx_status=false;
+   
+      byte data = 0;
+      data = nibble(*(arg + 2))<<4;
+      data = data|nibble(*(arg + 3));
+
+      Serial.println(data,BIN);
+      
+      LoRa.beginPacket();                   // start packet                 // add payload
+      LoRa.write(data);
+      LoRa.endPacket(true);                 // finish packet and send it
+
+      Serial.println("Byte sent"); 
+
+      rx_status = false;
   } 
   else {
     Serial.println("No argument"); 
   }
 }
 
+//°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 void set_tx2(){
   char *arg;  
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if (arg != NULL){
-  rx_status=false;
+      
+      LoRa.beginPacket();                   // start packet
+      LoRa.print(arg);                      // add payload
+      LoRa.endPacket(true);                 // finish packet and send it
+
+      Serial.println("ASCII message sent"); 
+
+      rx_status = false;
   } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
+//°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+void set_chann(){
+  char *arg;  
+  arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
+  channel = atoi(arg);
+  if (arg != NULL){
+    if(channel > -1 && channel < 64){
+    long freq = 902300000 + channel*125000;
+    frequency = (float)freq/1000000;
+    LoRa.setFrequency(freq);
+    Serial.println("Uplink channel set to " + String(channel));
+    rx_status = false;
+    }
+    else if(channel > 63 && channel < 72){
+    long freq = 903000000 + (channel - 64)*500000;
+    frequency = (float)freq/1000000;
+    LoRa.setFrequency(freq);
+    Serial.println("Uplink channel set to " + String(channel));
+    rx_status = false;
+    }
+    else{
+      Serial.println("Error setting the channel");
+      Serial.println("Value must be between 0 and 63");
+    }
+  }  
   else {
     Serial.println("No argument"); 
   }
@@ -232,26 +310,26 @@ void set_rx(){
   char *arg;  
   arg = SCmd.next(); 
   if (arg != NULL){
-    frequency=atof(arg);
-    if(frequency>902&&frequency<923){
-      long freq =frequency*1000000;
+    frequency = atof(arg);
+    if(frequency > 902 && frequency < 923){
+      long freq = frequency*1000000;
       LoRa.setFrequency(freq);
-      Serial.println("LoRa radio receiving at "+String(frequency)+" Mhz");
+      Serial.println("LoRa radio receiving at " + String(frequency) + " MHz");
       while (digitalRead(RFM_DIO5) == LOW){
           Serial.print(".");
         }
       LoRa.receive(); 
-      rx_status=true;
+      rx_status = true;
     }
     else{
       Serial.println("Error setting the frequency");
-      Serial.println("Value must be between 902 Mhz and 923");
+      Serial.println("Value must be between 902 MHz and 923 MHz");
     }
   } 
   else {
-    Serial.println("LoRa radio receiving at "+String(frequency)+" Mhz");
+    Serial.println("LoRa radio receiving at " + String(frequency) + " MHz");
     LoRa.receive();
-    rx_status =true;
+    rx_status = true;
   }
 }
 
@@ -270,34 +348,34 @@ void get_bw(){
   Serial.println("Bandwidth = ");
   switch (bwReference){
     case 0:
-    Serial.println("7.8 Khz");
+      Serial.println("7.8 kHz");
       break;
     case 1:
-    Serial.println("10.4 Khz");
+      Serial.println("10.4 kHz");
       break;
     case 2:
-    Serial.println("15.6 Khz");
+      Serial.println("15.6 kHz");
       break;
     case 3:
-    Serial.println("20.8 Khz");
+      Serial.println("20.8 kHz");
       break;
     case 4:
-    Serial.println("31.25 Khz");
+      Serial.println("31.25 kHz");
       break;
     case 5:
-    Serial.println("41.7 Khz");
+      Serial.println("41.7 kHz");
       break;
     case 6:
-    Serial.println("62.5 Khz");
+      Serial.println("62.5 kHz");
       break;
     case 7:
-    Serial.println("125 Khz");
+      Serial.println("125 kHz");
       break;
     case 8:
-    Serial.println("250 Khz");
+      Serial.println("250 kHz");
       break;
     default:
-    Serial.println("Error setting the bandwidth value must be between 0-8");
+      Serial.println("Error setting the bandwidth value must be between 0-8");
       break;
   } 
 
@@ -307,39 +385,39 @@ void get_bw(){
 
 void get_config(){
   Serial.println("Radio configurations: ");
-  Serial.println("Frequency = "+String(frequency)+" Mhz");
-  Serial.println("Spreading Factor = "+String(spreadFactor));
+  Serial.println("Frequency = " + String(frequency) + " MHz");
+  Serial.println("Spreading Factor = " + String(spreadFactor));
   Serial.print("Bandwidth = ");
   switch (bwReference){
     case 0:
-    Serial.println("7.8 Khz");
+      Serial.println("7.8 kHz");
       break;
     case 1:
-    Serial.println("10.4 Khz");
+      Serial.println("10.4 kHz");
       break;
     case 2:
-    Serial.println("15.6 Khz");
+      Serial.println("15.6 kHz");
       break;
     case 3:
-    Serial.println("20.8 Khz");
+      Serial.println("20.8 kHz");
       break;
     case 4:
-    Serial.println("31.25 Khz");
+      Serial.println("31.25 kHz");
       break;
     case 5:
-    Serial.println("41.7 Khz");
+      Serial.println("41.7 kHz");
       break;
     case 6:
-    Serial.println("62.5 Khz");
+      Serial.println("62.5 kHz");
       break;
     case 7:
-    Serial.println("125 Khz");
+      Serial.println("125 kHz");
       break;
     case 8:
-    Serial.println("250 Khz");
+      Serial.println("250 kHz");
       break;
   }
-  Serial.println("Rx active = "+String(rx_status));
+  Serial.println("Rx active = " + String(rx_status));
 }
 
 
@@ -349,13 +427,20 @@ void unrecognized(const char *command) {
 }
 
 void onReceive(int packetSize) {
+  char buf[64];
+  
   // received a packet
   Serial.print("Received packet '");
 
   // read packet
   for (int i = 0; i < packetSize; i++) {
-    Serial.print(LoRa.read());
+    buf[i] = LoRa.read();
+    Serial.print("<0x");
+    Serial.print(buf[i], HEX);
+    Serial.print(">");
   }
+  Serial.print(" ");
+  Serial.print(buf);
 
   // print RSSI of packet
   Serial.print("' with RSSI ");
