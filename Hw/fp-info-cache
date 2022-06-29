@@ -1,1254 +1,1765 @@
-294885198129437
-Crystal
-Crystal_AT310_D3.0mm_L10.0mm_Horizontal
-Crystal THT AT310 10.0mm-10.5mm length 3.0mm diameter http://www.cinetech.com.tw/upload/2011/04/20110401165201.pdf
-['AT310']
+0
+Audio_Module
+Reverb_BTDR-1H
+Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
+audio belton reverb
+0
+7
+7
+Audio_Module
+Reverb_BTDR-1V
+Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
+audio belton reverb
+0
+7
+7
+Battery
+BatteryHolder_Bulgin_BX0036_1xC
+Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
+Bulgin BX0036
 0
 2
 2
-Crystal
-Crystal_AT310_D3.0mm_L10.0mm_Horizontal_1EP_style1
-Crystal THT AT310 10.0mm-10.5mm length 3.0mm diameter http://www.cinetech.com.tw/upload/2011/04/20110401165201.pdf
-['AT310']
+Battery
+BatteryHolder_ComfortableElectronic_CH273-2450_1x2450
+Comfortable Electronic CR2450 battery holder, http://www.comf.com.tw/ProductDetail.asp?no=148
+Comfortable Electronic CR2450
+0
+2
+2
+Battery
+BatteryHolder_Eagle_12BH611-GR
+https://eu.mouser.com/datasheet/2/209/EPD-200766-1274481.pdf
+9V Battery Holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_103_1x20mm
+http://www.keyelco.com/product-pdf.cfm?p=719
+Keystone type 103 battery holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_104_1x23mm
+http://www.keyelco.com/product-pdf.cfm?p=744
+Keystone type 104 battery holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_105_1x2430
+http://www.keyelco.com/product-pdf.cfm?p=745
+Keystone type 105 battery holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_106_1x20mm
+http://www.keyelco.com/product-pdf.cfm?p=720
+Keystone type 106 battery holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_107_1x23mm
+http://www.keyelco.com/product-pdf.cfm?p=746
+Keystone type 107 battery holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_500
+Keystone #500, CR1220 battery holder, http://www.keyelco.com/product-pdf.cfm?p=710
+CR1220 battery holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_1042_1x18650
+Battery holder for 18650 cylindrical cells http://www.keyelco.com/product.cfm/product_id/918
+18650 Keystone 1042 Li-ion
+0
+2
+2
+Battery
+BatteryHolder_Keystone_1058_1x2032
+http://www.keyelco.com/product-pdf.cfm?p=14028
+Keystone type 1058 coin cell retainer
+0
+2
+2
+Battery
+BatteryHolder_Keystone_1060_1x2032
+http://www.keyelco.com/product-pdf.cfm?p=726
+CR2032 BR2032 BatteryHolder Battery
+0
+2
+2
+Battery
+BatteryHolder_Keystone_2460_1xAA
+https://www.keyelco.com/product-pdf.cfm?p=1025
+AA battery cell holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_2462_2xAA
+2xAA cell battery holder, Keystone P/N 2462, https://www.keyelco.com/product-pdf.cfm?p=1027
+AA battery cell holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_2466_1xAAA
+1xAAA Battery Holder, Keystone, Plastic Case, http://www.keyelco.com/product-pdf.cfm?p=1031
+AAA battery holder Keystone
+0
+2
+2
+Battery
+BatteryHolder_Keystone_2468_2xAAA
+2xAAA cell battery holder, Keystone P/N 2468, http://www.keyelco.com/product-pdf.cfm?p=1033
+AAA battery cell holder
+0
+2
+2
+Battery
+BatteryHolder_Keystone_2479_3xAAA
+Keystone Battery Holder, 2479, Battery Type 3xAAA (Script generated with StandardBox.py) (Keystone Battery Holder, 2479, Battery Type 3xAAA)
+Keystone Battery Holder 2479 Battery Type 3xAAA
+0
+2
+2
+Battery
+BatteryHolder_Keystone_2993
+http://www.keyelco.com/product-pdf.cfm?p=776
+Keystone type 2993 negative battery contact
+0
+1
+1
+Battery
+BatteryHolder_Keystone_2998_1x6.8mm
+www.keyelco.com/product-pdf.cfm?p=763
+Keystone type 2998 battery holder
 0
 3
+2
+Battery
+BatteryHolder_Keystone_3000_1x12mm
+http://www.keyelco.com/product-pdf.cfm?p=777
+Keystone type 3000 coin cell retainer
+0
 3
-Crystal
-Crystal_AT310_D3.0mm_L10.0mm_Horizontal_1EP_style2
-Crystal THT AT310 10.0mm-10.5mm length 3.0mm diameter http://www.cinetech.com.tw/upload/2011/04/20110401165201.pdf
-['AT310']
+2
+Battery
+BatteryHolder_Keystone_3001_1x12mm
+http://www.keyelco.com/product-pdf.cfm?p=778
+Keystone type 3001 coin cell retainer
+0
+3
+2
+Battery
+BatteryHolder_Keystone_3002_1x2032
+https://www.tme.eu/it/Document/a823211ec201a9e209042d155fe22d2b/KEYS2996.pdf
+BR2016 CR2016 DL2016 BR2020 CL2020 BR2025 CR2025 DL2025 DR2032 CR2032 DL2032
+0
+3
+2
+Battery
+BatteryHolder_Keystone_3008_1x2450
+http://www.keyelco.com/product-pdf.cfm?p=786
+Keystone type 3008 coin cell retainer
+0
+3
+2
+Battery
+BatteryHolder_Keystone_3009_1x2450
+http://www.keyelco.com/product-pdf.cfm?p=787
+Keystone type 3009 coin cell retainer
+0
+3
+2
+Battery
+BatteryHolder_Keystone_3034_1x20mm
+Keystone 3034 SMD battery holder for 2020, 2025 and 2032 coincell batteries. http://www.keyelco.com/product-pdf.cfm?p=798
+Keystone type 3034 coin cell retainer
+0
+3
+2
+Battery
+BatteryHolder_LINX_BAT-HLD-012-SMT
+SMT battery holder for CR1216/1220/1225, https://linxtechnologies.com/wp/wp-content/uploads/bat-hld-012-smt.pdf
+battery holder coin cell cr1216 cr1220 cr1225
+0
+3
+2
+Battery
+BatteryHolder_MPD_BA9VPC_1xPP3
+1xPP3 (9V) battery holder, Memory Protection Devices P/N BA9VPC, http://www.memoryprotectiondevices.com/datasheets/BA9VPC-datasheet.pdf
+PP3 Battery Holder BA9VPC 9V
+0
+2
+2
+Battery
+BatteryHolder_MPD_BC2AAPC_2xAA
+2xAA cell battery holder, Memory Protection Devices P/N BC2AAPC, http://www.memoryprotectiondevices.com/datasheets/BC2AAPC-datasheet.pdf
+AA battery cell holder
+0
+2
+2
+Battery
+BatteryHolder_MPD_BC12AAPC_2xAA
+2xAA cell battery holder, Memory Protection Devices P/N BC12AAPC, http://www.memoryprotectiondevices.com/datasheets/BC12AAPC-datasheet.pdf
+AA battery cell holder
+0
+2
+2
+Battery
+BatteryHolder_MPD_BC2003_1x2032
+http://www.memoryprotectiondevices.com/datasheets/BC-2003-datasheet.pdf
+BC2003 CR2032 2032 Battery Holder
+0
+3
+2
+Battery
+BatteryHolder_MPD_BH-18650-PC2
+18650 Battery Holder (http://www.memoryprotectiondevices.com/datasheets/BK-18650-PC2-datasheet.pdf)
+18650 Battery Holder
+0
+2
+2
+Battery
+BatteryHolder_Seiko_MS621F
+Seiko MS621F, https://www.sii.co.jp/en/me/files/2014/02/file_EXTENDED_PRDCT_SPEC_75_FILE_11.jpg
+Seiko MS621F
+0
+2
+2
+Battery
+BatteryHolder_TruPower_BH-331P_3xAA
+Keystone Battery Holder BH-331P Battery Type 3xAA (Script generated with StandardBox.py) (Keystone Battery Holder BH-331P Battery Type 3xAA)
+Battery Holder BH-331P Battery Type 3xAA
+0
+2
+2
+Battery
+Battery_CR1225
+CR1225 battery
+battery CR1225 coin cell
+0
+0
+0
+Battery
+Battery_Panasonic_CR1025-VSK_Vertical_CircularHoles
+Panasonic CR-1025/VSK battery
+battery CR-1025 coin cell vertical
+0
+2
+2
+Battery
+Battery_Panasonic_CR1220-VCN_Vertical_CircularHoles
+Panasonic CR-1220/VCN battery, https://industrial.panasonic.com/cdbs/www-data/pdf2/AAA4000/AAA4000D140.PDF
+battery CR-1220 coin cell vertical
+0
+2
+2
+Battery
+Battery_Panasonic_CR1632-V1AN_Vertical_CircularHoles
+Panasonic CR-1632-V1AN battery, https://industrial.panasonic.com/cdbs/www-data/pdf2/AAA4000/AAA4000D464.PDF
+battery CR-1632 coin cell vertical
+0
+2
+2
+Battery
+Battery_Panasonic_CR2025-V1AK_Vertical_CircularHoles
+Panasonic CR-2025/V1AK battery,
+battery CR-2025 coin cell vertical
+0
+2
+2
+Battery
+Battery_Panasonic_CR2032-VS1N_Vertical_CircularHoles
+Panasonic CR-2032/VS1N battery, https://industrial.panasonic.com/cdbs/www-data/pdf2/AAA4000/AAA4000D348.PDF
+battery CR-2032 coin cell vertical
+0
+2
+2
+Battery
+Battery_Panasonic_CR2354-VCN_Vertical_CircularHoles
+Panasonic CR-2354/VCN battery, https://industrial.panasonic.com/cdbs/www-data/pdf2/AAA4000/AAA4000D486.PDF
+battery CR-2354/VCN coin cell vertical
+0
+2
+2
+Battery
+Battery_Panasonic_CR2450-VAN_Vertical_CircularHoles
+Panasonic CR-2450/VAN battery, https://industrial.panasonic.com/cdbs/www-data/pdf2/AAA4000/AAA4000D492.PDF
+battery CR-2450 coin cell
+0
+2
+2
+Battery
+Battery_Panasonic_CR2477-VCN_Vertical_CircularHoles
+Panasonic CR-2477/VCN battery, https://industrial.panasonic.com/cdbs/www-data/pdf2/AAA4000/AAA4000D502.PDF
+battery CR-2477 coin cell vertical
+0
+2
+2
+Battery
+Battery_Panasonic_CR3032-VCN_Vertical_CircularHoles
+Panasonic CR-3032/VCN battery, https://industrial.panasonic.com/cdbs/www-data/pdf2/AAA4000/AAA4000D508.PDF
+battery CR-3032 coin cell vertical
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_1.00u_PCB
+Cherry MX keyswitch, 1.00u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.00u PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_1.00u_Plate
+Cherry MX keyswitch, 1.00u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.00u plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_1.25u_PCB
+Cherry MX keyswitch, 1.25u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.25u PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_1.25u_Plate
+Cherry MX keyswitch, 1.25u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.25u plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_1.50u_PCB
+Cherry MX keyswitch, 1.50u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.50u PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_1.50u_Plate
+Cherry MX keyswitch, 1.50u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.50u plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_1.75u_PCB
+Cherry MX keyswitch, 1.75u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.75u PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_1.75u_Plate
+Cherry MX keyswitch, 1.75u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 1.75u plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_2.00u_PCB
+Cherry MX keyswitch, 2.00u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 2.00u PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_2.00u_Plate
+Cherry MX keyswitch, 2.00u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 2.00u plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_2.00u_Vertical_PCB
+Cherry MX keyswitch, 2.00u, vertical, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 2.00u vertical PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_2.00u_Vertical_Plate
+Cherry MX keyswitch, 2.00u, vertical, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 2.00u vertical plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_2.25u_PCB
+Cherry MX keyswitch, 2.25u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 2.25u PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_2.25u_Plate
+Cherry MX keyswitch, 2.25u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 2.25u plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_2.75u_PCB
+Cherry MX keyswitch, 2.75u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 2.75u PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_2.75u_Plate
+Cherry MX keyswitch, 2.75u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 2.75u plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_6.25u_PCB
+Cherry MX keyswitch, 6.25u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 6.25u PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_6.25u_Plate
+Cherry MX keyswitch, 6.25u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch 6.25u plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_ISOEnter_PCB
+Cherry MX keyswitch, ISO Enter, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch ISO enter PCB
+0
+2
+2
+Button_Switch_Keyboard
+SW_Cherry_MX_ISOEnter_Plate
+Cherry MX keyswitch, ISO Enter, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+Cherry MX keyswitch ISO enter plate
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_1.00u
+Matias/ALPS keyswitch, 1.00u, http://matias.ca/switches/
+Matias ALPS keyswitch 1.00u
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_1.25u
+Matias/ALPS keyswitch, 1.25u, http://matias.ca/switches/
+Matias ALPS keyswitch 1.25u
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_1.50u
+Matias/ALPS keyswitch, 1.50u, http://matias.ca/switches/
+Matias ALPS keyswitch 1.50u
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_1.75u
+Matias/ALPS keyswitch, 1.75u, http://matias.ca/switches/
+Matias ALPS keyswitch 1.75u
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_2.00u
+Matias/ALPS keyswitch, 2.00u, http://matias.ca/switches/
+Matias ALPS keyswitch 2.00u
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_2.25u
+Matias/ALPS keyswitch, 2.25u, http://matias.ca/switches/
+Matias ALPS keyswitch 2.25u
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_2.75u
+Matias/ALPS keyswitch, 2.75u, http://matias.ca/switches/
+Matias ALPS keyswitch 2.75u
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_6.25u
+Matias/ALPS keyswitch, 6.25u, http://matias.ca/switches/
+Matias ALPS keyswitch 6.25u
+0
+2
+2
+Button_Switch_Keyboard
+SW_Matias_ISOEnter
+Matias/ALPS keyswitch, ISO Enter, http://matias.ca/switches/
+Matias ALPS keyswitch ISO enter
+0
+2
+2
+Button_Switch_SMD
+Nidec_Copal_SH-7010A
+4-bit rotary coded switch, J-hook, https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf
+rotary switch bcd
+0
+6
+5
+Button_Switch_SMD
+Nidec_Copal_SH-7010B
+4-bit rotary coded switch, gull wing, https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf
+rotary switch bcd
+0
+6
+5
+Button_Switch_SMD
+Nidec_Copal_SH-7040B
+4-bit rotary coded switch, gull wing, Gray code, https://www.nidec-copal-electronics.com/e/catalog/switch/sh-7000.pdf
+rotary switch bcd
+0
+5
+5
+Button_Switch_SMD
+Panasonic_EVQPUJ_EVQPUA
+http://industrial.panasonic.com/cdbs/www-data/pdf/ATV0000/ATV0000CE5.pdf
+SMD SMT SPST EVQPUJ EVQPUA
+0
+4
+2
+Button_Switch_SMD
+Panasonic_EVQPUK_EVQPUB
+http://industrial.panasonic.com/cdbs/www-data/pdf/ATV0000/ATV0000CE5.pdf
+SMD SMT SPST EVQPUK EVQPUB
+0
+4
+2
+Button_Switch_SMD
+Panasonic_EVQPUL_EVQPUC
+http://industrial.panasonic.com/cdbs/www-data/pdf/ATV0000/ATV0000CE5.pdf
+SMD SMT SPST EVQPUL EVQPUC
+0
+4
+2
+Button_Switch_SMD
+Panasonic_EVQPUM_EVQPUD
+http://industrial.panasonic.com/cdbs/www-data/pdf/ATV0000/ATV0000CE5.pdf
+SMD SMT SPST EVQPUM EVQPUD
+0
+4
+2
+Button_Switch_SMD
+SW_DIP_SPSTx01_Slide_6.7x4.1mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 1x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x4.1mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+2
+2
+Button_Switch_SMD
+SW_DIP_SPSTx01_Slide_6.7x4.1mm_W8.61mm_P2.54mm_LowProfile
+SMD 1x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x4.1mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+2
+2
+Button_Switch_SMD
+SW_DIP_SPSTx01_Slide_9.78x4.72mm_W8.61mm_P2.54mm
+SMD 1x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x4.72mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+2
+2
+Button_Switch_SMD
+SW_DIP_SPSTx01_Slide_Copal_CHS-01A_W5.08mm_P1.27mm_JPin
+SMD 1x-dip-switch SPST Copal_CHS-01A, Slide, row spacing 5.08 mm (200 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD, JPin
+SMD DIP Switch SPST Slide 5.08mm 200mil SMD JPin
+0
+2
+2
+Button_Switch_SMD
+SW_DIP_SPSTx01_Slide_Copal_CHS-01B_W7.62mm_P1.27mm
+SMD 1x-dip-switch SPST Copal_CHS-01B, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD
+SMD DIP Switch SPST Slide 7.62mm 300mil SMD
+0
+2
+2
+Button_Switch_SMD
+SW_DIP_SPSTx01_Slide_Copal_CVS-01xB_W5.9mm_P1mm
+SMD 1x-dip-switch SPST Copal_CVS-01xB, Slide, row spacing 5.9 mm (232 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/cvs.pdf)
+SMD DIP Switch SPST Slide 5.9mm 232mil
+0
+6
+3
+Button_Switch_SMD
+SW_DIP_SPSTx01_Slide_Omron_A6S-110x_W8.9mm_P2.54mm
+SMD 1x-dip-switch SPST Omron_A6S-110x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+2
+2
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_6.7x6.64mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 2x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x6.64mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_6.7x6.64mm_W8.61mm_P2.54mm_LowProfile
+SMD 2x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x6.64mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_9.78x7.26mm_W8.61mm_P2.54mm
+SMD 2x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x7.26mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_Copal_CHS-02A_W5.08mm_P1.27mm_JPin
+SMD 2x-dip-switch SPST Copal_CHS-02A, Slide, row spacing 5.08 mm (200 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD, JPin
+SMD DIP Switch SPST Slide 5.08mm 200mil SMD JPin
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_Copal_CHS-02B_W7.62mm_P1.27mm
+SMD 2x-dip-switch SPST Copal_CHS-02B, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD
+SMD DIP Switch SPST Slide 7.62mm 300mil SMD
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_Copal_CVS-02xB_W5.9mm_P1mm
+SMD 2x-dip-switch SPST Copal_CVS-02xB, Slide, row spacing 5.9 mm (232 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/cvs.pdf)
+SMD DIP Switch SPST Slide 5.9mm 232mil
+0
+8
+5
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_KingTek_DSHP02TJ_W5.25mm_P1.27mm_JPin
+SMD 2x-dip-switch SPST KingTek_DSHP02TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_KingTek_DSHP02TS_W7.62mm_P1.27mm
+SMD 2x-dip-switch SPST KingTek_DSHP02TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_Omron_A6H-2101_W6.15mm_P1.27mm
+SMD 2x-dip-switch SPST Omron_A6H-2101, Slide, row spacing 6.15 mm (242 mils), body size  (see https://www.omron.com/ecb/products/pdf/en-a6h.pdf)
+SMD DIP Switch SPST Slide 6.15mm 242mil
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx02_Slide_Omron_A6S-210x_W8.9mm_P2.54mm
+SMD 2x-dip-switch SPST Omron_A6S-210x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+4
+4
+Button_Switch_SMD
+SW_DIP_SPSTx03_Slide_6.7x9.18mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 3x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x9.18mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+6
+6
+Button_Switch_SMD
+SW_DIP_SPSTx03_Slide_6.7x9.18mm_W8.61mm_P2.54mm_LowProfile
+SMD 3x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x9.18mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+6
+6
+Button_Switch_SMD
+SW_DIP_SPSTx03_Slide_9.78x9.8mm_W8.61mm_P2.54mm
+SMD 3x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x9.8mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+6
+6
+Button_Switch_SMD
+SW_DIP_SPSTx03_Slide_Copal_CVS-03xB_W5.9mm_P1mm
+SMD 3x-dip-switch SPST Copal_CVS-03xB, Slide, row spacing 5.9 mm (232 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/cvs.pdf)
+SMD DIP Switch SPST Slide 5.9mm 232mil
+0
+10
+7
+Button_Switch_SMD
+SW_DIP_SPSTx03_Slide_KingTek_DSHP03TJ_W5.25mm_P1.27mm_JPin
+SMD 3x-dip-switch SPST KingTek_DSHP03TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+6
+6
+Button_Switch_SMD
+SW_DIP_SPSTx03_Slide_KingTek_DSHP03TS_W7.62mm_P1.27mm
+SMD 3x-dip-switch SPST KingTek_DSHP03TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+6
+6
+Button_Switch_SMD
+SW_DIP_SPSTx03_Slide_Omron_A6S-310x_W8.9mm_P2.54mm
+SMD 3x-dip-switch SPST Omron_A6S-310x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+6
+6
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_6.7x11.72mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 4x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x11.72mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_6.7x11.72mm_W8.61mm_P2.54mm_LowProfile
+SMD 4x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x11.72mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_9.78x12.34mm_W8.61mm_P2.54mm
+SMD 4x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x12.34mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_Copal_CHS-04A_W5.08mm_P1.27mm_JPin
+SMD 4x-dip-switch SPST Copal_CHS-04A, Slide, row spacing 5.08 mm (200 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD, JPin
+SMD DIP Switch SPST Slide 5.08mm 200mil SMD JPin
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_Copal_CHS-04B_W7.62mm_P1.27mm
+SMD 4x-dip-switch SPST Copal_CHS-04B, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD
+SMD DIP Switch SPST Slide 7.62mm 300mil SMD
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_Copal_CVS-04xB_W5.9mm_P1mm
+SMD 4x-dip-switch SPST Copal_CVS-04xB, Slide, row spacing 5.9 mm (232 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/cvs.pdf)
+SMD DIP Switch SPST Slide 5.9mm 232mil
+0
+12
+9
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_KingTek_DSHP04TJ_W5.25mm_P1.27mm_JPin
+SMD 4x-dip-switch SPST KingTek_DSHP04TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_KingTek_DSHP04TS_W7.62mm_P1.27mm
+SMD 4x-dip-switch SPST KingTek_DSHP04TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_Omron_A6H-4101_W6.15mm_P1.27mm
+SMD 4x-dip-switch SPST Omron_A6H-4101, Slide, row spacing 6.15 mm (242 mils), body size  (see https://www.omron.com/ecb/products/pdf/en-a6h.pdf)
+SMD DIP Switch SPST Slide 6.15mm 242mil
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx04_Slide_Omron_A6S-410x_W8.9mm_P2.54mm
+SMD 4x-dip-switch SPST Omron_A6S-410x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+8
+8
+Button_Switch_SMD
+SW_DIP_SPSTx05_Slide_6.7x14.26mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 5x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x14.26mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+10
+10
+Button_Switch_SMD
+SW_DIP_SPSTx05_Slide_6.7x14.26mm_W8.61mm_P2.54mm_LowProfile
+SMD 5x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x14.26mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+10
+10
+Button_Switch_SMD
+SW_DIP_SPSTx05_Slide_9.78x14.88mm_W8.61mm_P2.54mm
+SMD 5x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x14.88mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+10
+10
+Button_Switch_SMD
+SW_DIP_SPSTx05_Slide_KingTek_DSHP05TJ_W5.25mm_P1.27mm_JPin
+SMD 5x-dip-switch SPST KingTek_DSHP05TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+10
+10
+Button_Switch_SMD
+SW_DIP_SPSTx05_Slide_KingTek_DSHP05TS_W7.62mm_P1.27mm
+SMD 5x-dip-switch SPST KingTek_DSHP05TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+10
+10
+Button_Switch_SMD
+SW_DIP_SPSTx05_Slide_Omron_A6S-510x_W8.9mm_P2.54mm
+SMD 5x-dip-switch SPST Omron_A6S-510x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+10
+10
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_6.7x16.8mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 6x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x16.8mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_6.7x16.8mm_W8.61mm_P2.54mm_LowProfile
+SMD 6x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x16.8mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_9.78x17.42mm_W8.61mm_P2.54mm
+SMD 6x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x17.42mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_Copal_CHS-06A_W5.08mm_P1.27mm_JPin
+SMD 6x-dip-switch SPST Copal_CHS-06A, Slide, row spacing 5.08 mm (200 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD, JPin
+SMD DIP Switch SPST Slide 5.08mm 200mil SMD JPin
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_Copal_CHS-06B_W7.62mm_P1.27mm
+SMD 6x-dip-switch SPST Copal_CHS-06B, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD
+SMD DIP Switch SPST Slide 7.62mm 300mil SMD
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_KingTek_DSHP06TJ_W5.25mm_P1.27mm_JPin
+SMD 6x-dip-switch SPST KingTek_DSHP06TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_KingTek_DSHP06TS_W7.62mm_P1.27mm
+SMD 6x-dip-switch SPST KingTek_DSHP06TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_Omron_A6H-6101_W6.15mm_P1.27mm
+SMD 6x-dip-switch SPST Omron_A6H-6101, Slide, row spacing 6.15 mm (242 mils), body size  (see https://www.omron.com/ecb/products/pdf/en-a6h.pdf)
+SMD DIP Switch SPST Slide 6.15mm 242mil
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx06_Slide_Omron_A6S-610x_W8.9mm_P2.54mm
+SMD 6x-dip-switch SPST Omron_A6S-610x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+12
+12
+Button_Switch_SMD
+SW_DIP_SPSTx07_Slide_6.7x19.34mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 7x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x19.34mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+14
+14
+Button_Switch_SMD
+SW_DIP_SPSTx07_Slide_6.7x19.34mm_W8.61mm_P2.54mm_LowProfile
+SMD 7x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x19.34mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+14
+14
+Button_Switch_SMD
+SW_DIP_SPSTx07_Slide_9.78x19.96mm_W8.61mm_P2.54mm
+SMD 7x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x19.96mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+14
+14
+Button_Switch_SMD
+SW_DIP_SPSTx07_Slide_KingTek_DSHP07TJ_W5.25mm_P1.27mm_JPin
+SMD 7x-dip-switch SPST KingTek_DSHP07TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+14
+14
+Button_Switch_SMD
+SW_DIP_SPSTx07_Slide_KingTek_DSHP07TS_W7.62mm_P1.27mm
+SMD 7x-dip-switch SPST KingTek_DSHP07TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+14
+14
+Button_Switch_SMD
+SW_DIP_SPSTx07_Slide_Omron_A6S-710x_W8.9mm_P2.54mm
+SMD 7x-dip-switch SPST Omron_A6S-710x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+14
+14
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_6.7x21.88mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 8x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x21.88mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_6.7x21.88mm_W8.61mm_P2.54mm_LowProfile
+SMD 8x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x21.88mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_9.78x22.5mm_W8.61mm_P2.54mm
+SMD 8x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x22.5mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_Copal_CHS-08A_W5.08mm_P1.27mm_JPin
+SMD 8x-dip-switch SPST Copal_CHS-08A, Slide, row spacing 5.08 mm (200 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD, JPin
+SMD DIP Switch SPST Slide 5.08mm 200mil SMD JPin
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_Copal_CHS-08B_W7.62mm_P1.27mm
+SMD 8x-dip-switch SPST Copal_CHS-08B, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD
+SMD DIP Switch SPST Slide 7.62mm 300mil SMD
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_Copal_CVS-08xB_W5.9mm_P1mm
+SMD 8x-dip-switch SPST Copal_CVS-08xB, Slide, row spacing 5.9 mm (232 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/cvs.pdf)
+SMD DIP Switch SPST Slide 5.9mm 232mil
+0
+20
+17
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_KingTek_DSHP08TJ_W5.25mm_P1.27mm_JPin
+SMD 8x-dip-switch SPST KingTek_DSHP08TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_KingTek_DSHP08TS_W7.62mm_P1.27mm
+SMD 8x-dip-switch SPST KingTek_DSHP08TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_Omron_A6H-8101_W6.15mm_P1.27mm
+SMD 8x-dip-switch SPST Omron_A6H-8101, Slide, row spacing 6.15 mm (242 mils), body size  (see https://www.omron.com/ecb/products/pdf/en-a6h.pdf)
+SMD DIP Switch SPST Slide 6.15mm 242mil
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx08_Slide_Omron_A6S-810x_W8.9mm_P2.54mm
+SMD 8x-dip-switch SPST Omron_A6S-810x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+16
+16
+Button_Switch_SMD
+SW_DIP_SPSTx09_Slide_6.7x24.42mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 9x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x24.42mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+18
+18
+Button_Switch_SMD
+SW_DIP_SPSTx09_Slide_6.7x24.42mm_W8.61mm_P2.54mm_LowProfile
+SMD 9x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x24.42mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+18
+18
+Button_Switch_SMD
+SW_DIP_SPSTx09_Slide_9.78x25.04mm_W8.61mm_P2.54mm
+SMD 9x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x25.04mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+18
+18
+Button_Switch_SMD
+SW_DIP_SPSTx09_Slide_KingTek_DSHP09TJ_W5.25mm_P1.27mm_JPin
+SMD 9x-dip-switch SPST KingTek_DSHP09TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+18
+18
+Button_Switch_SMD
+SW_DIP_SPSTx09_Slide_KingTek_DSHP09TS_W7.62mm_P1.27mm
+SMD 9x-dip-switch SPST KingTek_DSHP09TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+18
+18
+Button_Switch_SMD
+SW_DIP_SPSTx09_Slide_Omron_A6S-910x_W8.9mm_P2.54mm
+SMD 9x-dip-switch SPST Omron_A6S-910x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+18
+18
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_6.7x26.96mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 10x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x26.96mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_6.7x26.96mm_W8.61mm_P2.54mm_LowProfile
+SMD 10x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x26.96mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_9.78x27.58mm_W8.61mm_P2.54mm
+SMD 10x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x27.58mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_Copal_CHS-10A_W5.08mm_P1.27mm_JPin
+SMD 10x-dip-switch SPST Copal_CHS-10A, Slide, row spacing 5.08 mm (200 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD, JPin
+SMD DIP Switch SPST Slide 5.08mm 200mil SMD JPin
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_Copal_CHS-10B_W7.62mm_P1.27mm
+SMD 10x-dip-switch SPST Copal_CHS-10B, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf), SMD
+SMD DIP Switch SPST Slide 7.62mm 300mil SMD
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_KingTek_DSHP10TJ_W5.25mm_P1.27mm_JPin
+SMD 10x-dip-switch SPST KingTek_DSHP10TJ, Slide, row spacing 5.25 mm (206 mils), body size  (see http://www.kingtek.net.cn/pic/201601201446313350.pdf), JPin
+SMD DIP Switch SPST Slide 5.25mm 206mil JPin
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_KingTek_DSHP10TS_W7.62mm_P1.27mm
+SMD 10x-dip-switch SPST KingTek_DSHP10TS, Slide, row spacing 7.62 mm (300 mils), body size  (see http://www.kingtek.net.cn/pic/201601201417455112.pdf)
+SMD DIP Switch SPST Slide 7.62mm 300mil
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_Omron_A6H-10101_W6.15mm_P1.27mm
+SMD 10x-dip-switch SPST Omron_A6H-10101, Slide, row spacing 6.15 mm (242 mils), body size  (see https://www.omron.com/ecb/products/pdf/en-a6h.pdf)
+SMD DIP Switch SPST Slide 6.15mm 242mil
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx10_Slide_Omron_A6S-1010x_W8.9mm_P2.54mm
+SMD 10x-dip-switch SPST Omron_A6S-1010x, Slide, row spacing 8.9 mm (350 mils), body size  (see http://omronfs.omron.com/en_US/ecb/products/pdf/en-a6s.pdf)
+SMD DIP Switch SPST Slide 8.9mm 350mil
+0
+20
+20
+Button_Switch_SMD
+SW_DIP_SPSTx11_Slide_6.7x29.5mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 11x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x29.5mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+22
+22
+Button_Switch_SMD
+SW_DIP_SPSTx11_Slide_6.7x29.5mm_W8.61mm_P2.54mm_LowProfile
+SMD 11x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x29.5mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+22
+22
+Button_Switch_SMD
+SW_DIP_SPSTx11_Slide_9.78x30.12mm_W8.61mm_P2.54mm
+SMD 11x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x30.12mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+22
+22
+Button_Switch_SMD
+SW_DIP_SPSTx12_Slide_6.7x32.04mm_W6.73mm_P2.54mm_LowProfile_JPin
+SMD 12x-dip-switch SPST , Slide, row spacing 6.73 mm (264 mils), body size 6.7x32.04mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile, JPin
+SMD DIP Switch SPST Slide 6.73mm 264mil SMD LowProfile JPin
+0
+24
+24
+Button_Switch_SMD
+SW_DIP_SPSTx12_Slide_6.7x32.04mm_W8.61mm_P2.54mm_LowProfile
+SMD 12x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 6.7x32.04mm (see e.g. https://www.ctscorp.com/wp-content/uploads/219.pdf), SMD, LowProfile
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD LowProfile
+0
+24
+24
+Button_Switch_SMD
+SW_DIP_SPSTx12_Slide_9.78x32.66mm_W8.61mm_P2.54mm
+SMD 12x-dip-switch SPST , Slide, row spacing 8.61 mm (338 mils), body size 9.78x32.66mm (see e.g. https://www.ctscorp.com/wp-content/uploads/204.pdf), SMD
+SMD DIP Switch SPST Slide 8.61mm 338mil SMD
+0
+24
+24
+Button_Switch_SMD
+SW_DPDT_CK_JS202011JCQN
+Sub-miniature slide switch, vertical, SMT J bend https://dznh3ojzb2azq.cloudfront.net/products/Slide/JS/documents/datasheet.pdf
+switch DPDT SMT
+0
+6
+6
+Button_Switch_SMD
+SW_MEC_5GSH9
+MEC 5G single pole normally-open tactile switch
+switch normally-open pushbutton push-button
+0
+4
+4
+Button_Switch_SMD
+SW_Push_1P1T-MP_NO_Horizontal_Alps_SKRTLAE010
+Side push button (https://www.alps.com/prod/info/E/PDF/Tact/SurfaceMount/SKRT/SKRT.pdf)
+push horizontal SPST 1P1T
 0
 5
 3
-Crystal
-Crystal_AT310_D3.0mm_L10.0mm_Vertical
-Crystal THT AT310 10.0mm-10.5mm length 3.0mm diameter http://www.cinetech.com.tw/upload/2011/04/20110401165201.pdf
-['AT310']
-0
-2
-2
-Crystal
-Crystal_C26-LF_D2.1mm_L6.5mm_Horizontal
-Crystal THT C26-LF 6.5mm length 2.06mm diameter
-['C26-LF']
-0
-2
-2
-Crystal
-Crystal_C26-LF_D2.1mm_L6.5mm_Horizontal_1EP_style1
-Crystal THT C26-LF 6.5mm length 2.06mm diameter
-['C26-LF']
-0
-3
-3
-Crystal
-Crystal_C26-LF_D2.1mm_L6.5mm_Horizontal_1EP_style2
-Crystal THT C26-LF 6.5mm length 2.06mm diameter
-['C26-LF']
+Button_Switch_SMD
+SW_Push_1P1T-SH_NO_CK_KMR2xxG
+CK components KMR2 tactile switch with ground pin http://www.ckswitches.com/media/1479/kmr2.pdf
+tactile switch kmr2
 0
 5
 3
-Crystal
-Crystal_C26-LF_D2.1mm_L6.5mm_Vertical
-Crystal THT C26-LF 6.5mm length 2.06mm diameter
-['C26-LF']
+Button_Switch_SMD
+SW_Push_1P1T_NO_6x6mm_H9.5mm
+tactile push button, 6x6mm e.g. PTS645xx series, height=9.5mm
+tact sw push 6mm smd
+0
+4
+2
+Button_Switch_SMD
+SW_Push_1P1T_NO_CK_KMR2
+CK components KMR2 tactile switch http://www.ckswitches.com/media/1479/kmr2.pdf
+tactile switch kmr2
+0
+4
+2
+Button_Switch_SMD
+SW_Push_1P1T_NO_CK_KSC6xxJ
+CK components KSC6 tactile switch https://www.ckswitches.com/media/1972/ksc6.pdf
+tactile switch ksc6
+0
+4
+2
+Button_Switch_SMD
+SW_Push_1P1T_NO_CK_KSC7xxJ
+CK components KSC7 tactile switch https://www.ckswitches.com/media/1973/ksc7.pdf
+tactile switch ksc7
+0
+4
+2
+Button_Switch_SMD
+SW_Push_1P1T_NO_CK_PTS125Sx43PSMTR
+C&K Switches 1P1T SMD PTS125 Series 12mm Tact Switch with Pegs, https://www.ckswitches.com/media/1462/pts125.pdf
+Button Tactile Switch SPST 1P1T
+0
+4
+2
+Button_Switch_SMD
+SW_Push_1P1T_NO_Vertical_Wuerth_434133025816
+https://katalog.we-online.com/em/datasheet/434133025816.pdf
+tactile switch Wurth Wuerth
+0
+4
+2
+Button_Switch_SMD
+SW_Push_SPST_NO_Alps_SKRK
+http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKRK/SKRKAHE020.html
+SMD SMT button
 0
 2
 2
-Crystal
-Crystal_C38-LF_D3.0mm_L8.0mm_Horizontal
-Crystal THT C38-LF 8.0mm length 3.0mm diameter
-['C38-LF']
+Button_Switch_SMD
+SW_SP3T_PCM13
+Ultraminiature Surface Mount Slide Switch, right-angle, https://www.ckswitches.com/media/1424/pcm.pdf
+
 0
-2
-2
-Crystal
-Crystal_C38-LF_D3.0mm_L8.0mm_Horizontal_1EP_style1
-Crystal THT C38-LF 8.0mm length 3.0mm diameter
-['C38-LF']
-0
-3
-3
-Crystal
-Crystal_C38-LF_D3.0mm_L8.0mm_Horizontal_1EP_style2
-Crystal THT C38-LF 8.0mm length 3.0mm diameter
-['C38-LF']
-0
-5
-3
-Crystal
-Crystal_C38-LF_D3.0mm_L8.0mm_Vertical
-Crystal THT C38-LF 8.0mm length 3.0mm diameter
-['C38-LF']
-0
-2
-2
-Crystal
-Crystal_DS10_D1.0mm_L4.3mm_Horizontal
-Crystal THT DS10 4.3mm length 1.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS10']
-0
-2
-2
-Crystal
-Crystal_DS10_D1.0mm_L4.3mm_Horizontal_1EP_style1
-Crystal THT DS10 4.3mm length 1.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS10']
-0
-3
-3
-Crystal
-Crystal_DS10_D1.0mm_L4.3mm_Horizontal_1EP_style2
-Crystal THT DS10 4.3mm length 1.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS10']
-0
-5
-3
-Crystal
-Crystal_DS10_D1.0mm_L4.3mm_Vertical
-Crystal THT DS10 4.3mm length 1.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS10']
-0
-2
-2
-Crystal
-Crystal_DS15_D1.5mm_L5.0mm_Horizontal
-Crystal THT DS15 5.0mm length 1.5mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS15']
-0
-2
-2
-Crystal
-Crystal_DS15_D1.5mm_L5.0mm_Horizontal_1EP_style1
-Crystal THT DS15 5.0mm length 1.5mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS15']
+8
+4
+Button_Switch_SMD
+SW_SPDT_CK-JS102011SAQN
+Sub-miniature slide switch, right-angle, http://www.ckswitches.com/media/1422/js.pdf
+switch spdt
 0
 3
 3
-Crystal
-Crystal_DS15_D1.5mm_L5.0mm_Horizontal_1EP_style2
-Crystal THT DS15 5.0mm length 1.5mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS15']
+Button_Switch_SMD
+SW_SPDT_PCM12
+Ultraminiature Surface Mount Slide Switch, right-angle, https://www.ckswitches.com/media/1424/pcm.pdf
+
 0
-5
+7
 3
-Crystal
-Crystal_DS15_D1.5mm_L5.0mm_Vertical
-Crystal THT DS15 5.0mm length 1.5mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS15']
+Button_Switch_SMD
+SW_SPST_B3S-1000
+Surface Mount Tactile Switch for High-Density Packaging
+Tactile Switch
 0
+4
 2
-2
-Crystal
-Crystal_DS26_D2.0mm_L6.0mm_Horizontal
-Crystal THT DS26 6.0mm length 2.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS26']
-0
-2
-2
-Crystal
-Crystal_DS26_D2.0mm_L6.0mm_Horizontal_1EP_style1
-Crystal THT DS26 6.0mm length 2.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS26']
-0
-3
-3
-Crystal
-Crystal_DS26_D2.0mm_L6.0mm_Horizontal_1EP_style2
-Crystal THT DS26 6.0mm length 2.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS26']
+Button_Switch_SMD
+SW_SPST_B3S-1100
+Surface Mount Tactile Switch for High-Density Packaging with Ground Terminal
+Tactile Switch
 0
 5
 3
-Crystal
-Crystal_DS26_D2.0mm_L6.0mm_Vertical
-Crystal THT DS26 6.0mm length 2.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS26']
+Button_Switch_SMD
+SW_SPST_B3SL-1002P
+Middle Stroke Tactile Switch, B3SL
+Middle Stroke Tactile Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_B3SL-1022P
+Middle Stroke Tactile Switch, B3SL
+Middle Stroke Tactile Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_B3U-1000P
+Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, without Ground Terminal, without Boss
+Tactile Switch
 0
 2
 2
-Crystal
-Crystal_HC18-U_Horizontal
-Crystal THT HC-18/U http://5hertz.com/pdfs/04404_D.pdf
-THT crystal
+Button_Switch_SMD
+SW_SPST_B3U-1000P-B
+Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, without Ground Terminal, with Boss
+Tactile Switch
 0
 2
 2
-Crystal
-Crystal_HC18-U_Horizontal_1EP_style1
-Crystal THT HC-18/U http://5hertz.com/pdfs/04404_D.pdf
-THT crystal
+Button_Switch_SMD
+SW_SPST_B3U-1100P
+Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, with Ground Terminal, without Boss
+Tactile Switch
 0
 3
 3
-Crystal
-Crystal_HC18-U_Horizontal_1EP_style2
-Crystal THT HC-18/U http://5hertz.com/pdfs/04404_D.pdf
-THT crystal
+Button_Switch_SMD
+SW_SPST_B3U-1100P-B
+Ultra-small-sized Tactile Switch with High Contact Reliability, Top-actuated Model, with Ground Terminal, with Boss
+Tactile Switch
+0
+3
+3
+Button_Switch_SMD
+SW_SPST_B3U-3000P
+Ultra-small-sized Tactile Switch with High Contact Reliability, Side-actuated Model, without Ground Terminal, without Boss
+Tactile Switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_B3U-3000P-B
+Ultra-small-sized Tactile Switch with High Contact Reliability, Side-actuated Model, without Ground Terminal, with Boss
+Tactile Switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_B3U-3100P
+Ultra-small-sized Tactile Switch with High Contact Reliability, Side-actuated Model, with Ground Terminal, without Boss
+Tactile Switch
+0
+3
+3
+Button_Switch_SMD
+SW_SPST_B3U-3100P-B
+Ultra-small-sized Tactile Switch with High Contact Reliability, Side-actuated Model, with Ground Terminal, with Boss
+Tactile Switch
+0
+3
+3
+Button_Switch_SMD
+SW_SPST_CK_KXT3
+https://www.ckswitches.com/media/1465/kxt3.pdf
+Switch SPST KXT3
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_CK_RS282G05A3
+https://www.mouser.com/ds/2/60/RS-282G05A-SM_RT-1159762.pdf
+SPST button tactile switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_EVPBF
+Light Touch Switch
+
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_EVQP0
+Light Touch Switch, https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf
+
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_EVQP2
+Light Touch Switch
+
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_EVQP7A
+Light Touch Switch,https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE20.pdf
+
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_EVQP7C
+Light Touch Switch
+
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_EVQPE1
+Light Touch Switch, https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE7.pdf
+
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_EVQQ2
+Light Touch Switch, https://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE28.pdf
+
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_FSMSM
+http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1437566-3&DocType=Customer+Drawing&DocLang=English
+SPST button tactile switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_Omron_B3FS-100xP
+Surface Mount Tactile Switch for High-Density Mounting, 3.1mm height, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf
+Tactile Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_Omron_B3FS-101xP
+Surface Mount Tactile Switch for High-Density Mounting, 4.3mm height, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf
+Tactile Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_Omron_B3FS-105xP
+Surface Mount Tactile Switch for High-Density Mounting, 7.3mm height, https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf
+Tactile Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_PTS645
+C&K Components SPST SMD PTS645 Series 6mm Tact Switch
+SPST Button Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_PTS810
+C&K Components, PTS 810 Series, Microminiature SMT Top Actuated, http://www.ckswitches.com/media/1476/pts810.pdf
+SPST Button Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_Panasonic_EVQPL_3PL_5PL_PT_A08
+Light Touch Switch, http://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE3.pdf
+SMD SMT SPST EVQPL EVQPT
+0
+6
+3
+Button_Switch_SMD
+SW_SPST_Panasonic_EVQPL_3PL_5PL_PT_A15
+Light Touch Switch, http://industrial.panasonic.com/cdbs/www-data/pdf/ATK0000/ATK0000CE3.pdf
+SMD SMT SPST EVQPL EVQPT
+0
+6
+3
+Button_Switch_SMD
+SW_SPST_REED_CT05-XXXX-G1
+Coto Technologies SPST Reed Switch CT05-XXXX-G1
+Coto Reed SPST Switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_REED_CT05-XXXX-J1
+Coto Technologies SPST Reed Switch CT05-XXXX-J1
+Coto Reed SPST Switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_REED_CT10-XXXX-G1
+Coto Technologies SPST Reed Switch CT10-XXXX-G1
+Coto Reed SPST Switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_REED_CT10-XXXX-G2
+Coto Technologies SPST Reed Switch CT10-XXXX-G2
+Coto Reed SPST Switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_REED_CT10-XXXX-G4
+Coto Technologies SPST Reed Switch CT10-XXXX-G4
+Coto Reed SPST Switch
+0
+2
+2
+Button_Switch_SMD
+SW_SPST_SKQG_WithStem
+ALPS 5.2mm Square Low-profile Type (Surface Mount) SKQG Series, With stem, http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKQG/SKQGAFE010.html
+SPST Button Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_SKQG_WithoutStem
+ALPS 5.2mm Square Low-profile Type (Surface Mount) SKQG Series, Without stem, http://www.alps.com/prod/info/E/HTML/Tact/SurfaceMount/SKQG/SKQGAEE010.html
+SPST Button Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_TL3305A
+https://www.e-switch.com/system/asset/product_line/data_sheet/213/TL3305.pdf
+TL3305 Series Tact Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_TL3305B
+https://www.e-switch.com/system/asset/product_line/data_sheet/213/TL3305.pdf
+TL3305 Series Tact Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_TL3305C
+https://www.e-switch.com/system/asset/product_line/data_sheet/213/TL3305.pdf
+TL3305 Series Tact Switch
+0
+4
+2
+Button_Switch_SMD
+SW_SPST_TL3342
+Low-profile SMD Tactile Switch, https://www.e-switch.com/system/asset/product_line/data_sheet/165/TL3342.pdf
+SPST Tactile Switch
+0
+4
+2
+Calibration_Scale
+Gauge_10mm_Type1_CopperTop
+Gauge, Massstab, 10mm, CopperTop, Type 1,
+Gauge Massstab 10mm CopperTop Type 1
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type1_SilkScreenTop
+Gauge, Massstab, 10mm, SilkScreenTop, Type 1,
+Gauge Massstab 10mm SilkScreenTop Type 1
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type2_CopperTop
+Gauge, Massstab, 10mm, CopperTop, Type 2,
+Gauge Massstab 10mm CopperTop Type 2
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type2_SilkScreenTop
+Gauge, Massstab, 10mm, SilkScreenTop, Type 2,
+Gauge Massstab 10mm SilkScreenTop Type 2
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type3_CopperTop
+Gauge, Massstab, 10mm, CopperTop, Type 3,
+Gauge Massstab 10mm CopperTop Type 3
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type3_SilkScreenTop
+Gauge, Massstab, 10mm, SilkScreenTop, Type 3,
+Gauge Massstab 10mm SilkScreenTop Type 3
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type4_CopperTop
+Gauge, Massstab, 10mm, CopperTop, Type 4,
+Gauge Massstab 10mm CopperTop Type 4
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type4_SilkScreenTop
+Gauge, Massstab, 10mm, SilkScreenTop, Type 4,
+Gauge Massstab 10mm SilkScreenTop Type 4
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type5_CopperTop
+Gauge, Massstab, 10mm, CopperTop, Type 5,
+Gauge Massstab 10mm CopperTop Type 5
+0
+0
+0
+Calibration_Scale
+Gauge_10mm_Type5_SilkScreenTop
+Gauge, Massstab, 10mm, SilkScreenTop, Type 5,
+Gauge Massstab 10mm SilkScreenTop Type 5
+0
+0
+0
+Calibration_Scale
+Gauge_50mm_Type1_CopperTop
+Gauge, Massstab, 50mm, CopperTop, Type 1,
+Gauge Massstab 50mm CopperTop Type 1
+0
+0
+0
+Calibration_Scale
+Gauge_50mm_Type1_SilkScreenTop
+Gauge, Massstab, 50mm, SilkScreenTop, Type 1,
+Gauge Massstab 50mm SilkScreenTop Type 1
+0
+0
+0
+Calibration_Scale
+Gauge_50mm_Type2_CopperTop
+Gauge, Massstab, 50mm, CopperTop, Type 2,
+Gauge Massstab 50mm CopperTop Type 2
+0
+0
+0
+Calibration_Scale
+Gauge_50mm_Type2_SilkScreenTop
+Gauge, Massstab, 50mm, SilkScreenTop, Type 2,
+Gauge Massstab 50mm SilkScreenTop Type 2
+0
+0
+0
+Calibration_Scale
+Gauge_100mm_Grid_Type1_CopperTop
+Gauge, Massstab, 100mm, Gitter, Grid, CopperTop, Type 1,
+Gauge Massstab 100mm Gitter Grid CopperTop Type 1
+0
+0
+0
+Calibration_Scale
+Gauge_100mm_Type1_CopperTop
+Gauge, Massstab, 100mm, CopperTop, Type 1,
+Gauge Massstab 100mm CopperTop Type 1
+0
+0
+0
+Calibration_Scale
+Gauge_100mm_Type1_SilkScreenTop
+Gauge, Massstab, 100mm, SilkScreenTop, Type 1,
+Gauge Massstab 100mm SilkScreenTop Type 1
+0
+0
+0
+Calibration_Scale
+Gauge_100mm_Type2_CopperTop
+Gauge, Massstab, 100mm, CopperTop, Type 2,
+Gauge Massstab 100mm  CopperTop Type 2
+0
+0
+0
+Calibration_Scale
+Gauge_100mm_Type2_SilkScreenTop
+Gauge, Massstab, 100mm, SilkScreenTop, Type 2,
+Gauge Massstab 100mm SilkScreenTop Type 2
+0
+0
+0
+agroin
+691101710002
+WR-TBL SERIE 101 - 5.0MM HORIZONTAL ENTRY MODULAR WITH PRESSURE CLAMP - 2.5MM2 WIRES , 2 PINS
+WR-TBL SERIE 101 - 5.0MM HORIZONTAL ENTRY MODULAR WITH PRESSURE CLAMP - 2.5MM2 WIRES , 2 PINS
+0
+2
+2
+agroin
+691101710002_w
+WR-TBL SERIE 101 - 5.0MM HORIZONTAL ENTRY MODULAR WITH PRESSURE CLAMP - 2.5MM2 WIRES , 2 PINS
+WR-TBL SERIE 101 - 5.0MM HORIZONTAL ENTRY MODULAR WITH PRESSURE CLAMP - 2.5MM2 WIRES , 2 PINS
+0
+2
+2
+agroin
+691313710002
+<b>WR-TBL Serie 3137 - 5.0mm Close Horizontal PCB Header , 2 Pins
+
+0
+2
+2
+agroin
+691313710003
+<b>WR-TBL Serie 3137 - 5.0mm Close Horizontal PCB Header , 3 Pins
+
+0
+3
+3
+agroin
+AMPHENOL_901-144
+
+
 0
 5
-3
-Crystal
-Crystal_HC18-U_Vertical
-Crystal THT HC-18/U, http://5hertz.com/pdfs/04404_D.pdf
-THT crystalHC-18/U
+5
+agroin
+F4007
+
+
 0
 2
 2
-Crystal
-Crystal_HC33-U_Horizontal
-Crystal THT HC-33/U http://pdi.bentech-taiwan.com/PDI/GEN20SPEV20HC3320U.pdf
-THT crystal
+agroin
+LM2596DC-DC
+
+
 0
-2
-2
-Crystal
-Crystal_HC33-U_Horizontal_1EP_style1
-Crystal THT HC-33/U http://pdi.bentech-taiwan.com/PDI/GEN20SPEV20HC3320U.pdf
-THT crystal
+4
+4
+agroin
+RFM95W
+
+
 0
-3
-3
-Crystal
-Crystal_HC33-U_Horizontal_1EP_style2
-Crystal THT HC-33/U http://pdi.bentech-taiwan.com/PDI/GEN20SPEV20HC3320U.pdf
-THT crystal
+16
+16
+agroin
+SMA_EDGE
+
+
 0
 5
-3
-Crystal
-Crystal_HC33-U_Vertical
-Crystal THT HC-33/U, http://pdi.bentech-taiwan.com/PDI/GEN20SPEV20HC3320U.pdf
-THT crystalHC-33/U
-0
-2
-2
-Crystal
-Crystal_HC35-U
-Crystal, Quarz, HC35/U, http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/TO71xx.pdf
-Crystal Quarz HC35/U
-0
-3
-3
-Crystal
-Crystal_HC49-4H_Vertical
-Crystal THT HC-49-4H http://5hertz.com/pdfs/04404_D.pdf
-THT crystalHC-49-4H
-0
-2
-2
-Crystal
-Crystal_HC49-U-3Pin_Vertical
-Crystal THT HC-49/U, 3pin-version, http://www.raltron.com/products/pdfspecs/crystal_hc_49_45_51.pdf
-THT crystalHC-49/U
-0
-3
-3
-Crystal
-Crystal_HC49-U_Horizontal
-Crystal THT HC-49/U http://5hertz.com/pdfs/04404_D.pdf
-THT crystal
-0
-2
-2
-Crystal
-Crystal_HC49-U_Horizontal_1EP_style1
-Crystal THT HC-49/U http://5hertz.com/pdfs/04404_D.pdf
-THT crystal
-0
-3
-3
-Crystal
-Crystal_HC49-U_Horizontal_1EP_style2
-Crystal THT HC-49/U http://5hertz.com/pdfs/04404_D.pdf
-THT crystal
-0
-5
-3
-Crystal
-Crystal_HC49-U_Vertical
-Crystal THT HC-49/U http://5hertz.com/pdfs/04404_D.pdf
-THT crystalHC-49/U
-0
-2
-2
-Crystal
-Crystal_HC50_Horizontal
-Crystal THT HC-50 http://www.crovencrystals.com/croven_pdf/HC-50_Crystal_Holder_Rev_00.pdf
-THT crystal
-0
-2
-2
-Crystal
-Crystal_HC50_Horizontal_1EP_style1
-Crystal THT HC-50 http://www.crovencrystals.com/croven_pdf/HC-50_Crystal_Holder_Rev_00.pdf
-THT crystal
-0
-3
-3
-Crystal
-Crystal_HC50_Horizontal_1EP_style2
-Crystal THT HC-50 http://www.crovencrystals.com/croven_pdf/HC-50_Crystal_Holder_Rev_00.pdf
-THT crystal
-0
-5
-3
-Crystal
-Crystal_HC50_Vertical
-Crystal THT HC-50, http://www.crovencrystals.com/croven_pdf/HC-50_Crystal_Holder_Rev_00.pdf
-THT crystalHC-50
-0
-2
-2
-Crystal
-Crystal_HC51-U_Vertical
-Crystal THT HC-51/U, http://www.crovencrystals.com/croven_pdf/HC-51_Crystal_Holder_Rev_00.pdf
-THT crystalHC-51/U
-0
-2
-2
-Crystal
-Crystal_HC51_Horizontal
-Crystal THT HC-51 http://www.crovencrystals.com/croven_pdf/HC-51_Crystal_Holder_Rev_00.pdf
-THT crystal
-0
-2
-2
-Crystal
-Crystal_HC51_Horizontal_1EP_style1
-Crystal THT HC-51 http://www.crovencrystals.com/croven_pdf/HC-51_Crystal_Holder_Rev_00.pdf
-THT crystal
-0
-3
-3
-Crystal
-Crystal_HC51_Horizontal_1EP_style2
-Crystal THT HC-51 http://www.crovencrystals.com/croven_pdf/HC-51_Crystal_Holder_Rev_00.pdf
-THT crystal
-0
-5
-3
-Crystal
-Crystal_HC52-6mm_Horizontal
-Crystal THT HC-51/6mm http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-2
-2
-Crystal
-Crystal_HC52-6mm_Horizontal_1EP_style1
-Crystal THT HC-51/6mm http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-3
-3
-Crystal
-Crystal_HC52-6mm_Horizontal_1EP_style2
-Crystal THT HC-51/6mm http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-5
-3
-Crystal
-Crystal_HC52-6mm_Vertical
-Crystal THT HC-52/6mm, http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystalHC-49/U
-0
-2
-2
-Crystal
-Crystal_HC52-8mm_Horizontal
-Crystal THT HC-51/8mm http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-2
-2
-Crystal
-Crystal_HC52-8mm_Horizontal_1EP_style1
-Crystal THT HC-51/8mm http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-3
-3
-Crystal
-Crystal_HC52-8mm_Horizontal_1EP_style2
-Crystal THT HC-51/8mm http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-5
-3
-Crystal
-Crystal_HC52-8mm_Vertical
-Crystal THT HC-52/8mm, http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystalHC-49/U
-0
-2
-2
-Crystal
-Crystal_HC52-U-3Pin_Vertical
-Crystal THT HC-52/U, http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystalHC-52/U
-0
-3
-3
-Crystal
-Crystal_HC52-U_Horizontal
-Crystal THT HC-51/U http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-2
-2
-Crystal
-Crystal_HC52-U_Horizontal_1EP_style1
-Crystal THT HC-51/U http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-3
-3
-Crystal
-Crystal_HC52-U_Horizontal_1EP_style2
-Crystal THT HC-51/U http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal
-0
-5
-3
-Crystal
-Crystal_HC52-U_Vertical
-Crystal THT HC-52/U, http://www.kvg-gmbh.de/assets/uploads/files/product_pdfs/XS71xx.pdf
-THT crystal HC-52/U
-0
-2
-2
-Crystal
-Crystal_Round_D1.0mm_Vertical
-Crystal THT DS10 1.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS10']
-0
-2
-2
-Crystal
-Crystal_Round_D1.5mm_Vertical
-Crystal THT DS15 5.0mm length 1.5mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS15']
-0
-2
-2
-Crystal
-Crystal_Round_D2.0mm_Vertical
-Crystal THT DS26 6.0mm length 2.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/DS-Series.pdf
-['DS26']
-0
-2
-2
-Crystal
-Crystal_Round_D3.0mm_Vertical
-Crystal THT C38-LF 8.0mm length 3.0mm diameter
-['C38-LF']
-0
-2
-2
-Crystal
-Crystal_SMD_0603-2Pin_6.0x3.5mm
-SMD Crystal SERIES SMD0603/2 http://www.petermann-technik.de/fileadmin/petermann/pdf/SMD0603-2.pdf, 6.0x3.5mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_0603-2Pin_6.0x3.5mm_HandSoldering
-SMD Crystal SERIES SMD0603/2 http://www.petermann-technik.de/fileadmin/petermann/pdf/SMD0603-2.pdf, hand-soldering, 6.0x3.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_0603-4Pin_6.0x3.5mm
-SMD Crystal SERIES SMD0603/4 http://www.petermann-technik.de/fileadmin/petermann/pdf/SMD0603-4.pdf, 6.0x3.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_0603-4Pin_6.0x3.5mm_HandSoldering
-SMD Crystal SERIES SMD0603/4 http://www.petermann-technik.de/fileadmin/petermann/pdf/SMD0603-4.pdf, hand-soldering, 6.0x3.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_2012-2Pin_2.0x1.2mm
-SMD Crystal 2012/2 http://txccrystal.com/images/pdf/9ht11.pdf, 2.0x1.2mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_2012-2Pin_2.0x1.2mm_HandSoldering
-SMD Crystal 2012/2 http://txccrystal.com/images/pdf/9ht11.pdf, hand-soldering, 2.0x1.2mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_2016-4Pin_2.0x1.6mm
-SMD Crystal SERIES SMD2016/4 http://www.q-crystal.com/upload/5/2015552223166229.pdf, 2.0x1.6mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_2520-4Pin_2.5x2.0mm
-SMD Crystal SERIES SMD2520/4 http://www.newxtal.com/UploadFiles/Images/2012-11-12-09-29-09-776.pdf, 2.5x2.0mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_3215-2Pin_3.2x1.5mm
-SMD Crystal FC-135 https://support.epson.biz/td/api/doc_check.php?dl=brief_FC-135R_en.pdf
-SMD SMT Crystal
-0
-2
-2
-Crystal
-Crystal_SMD_3225-4Pin_3.2x2.5mm
-SMD Crystal SERIES SMD3225/4 http://www.txccrystal.com/images/pdf/7m-accuracy.pdf, 3.2x2.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_3225-4Pin_3.2x2.5mm_HandSoldering
-SMD Crystal SERIES SMD3225/4 http://www.txccrystal.com/images/pdf/7m-accuracy.pdf, hand-soldering, 3.2x2.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_5032-2Pin_5.0x3.2mm
-SMD Crystal SERIES SMD2520/2 http://www.icbase.com/File/PDF/HKC/HKC00061008.pdf, 5.0x3.2mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_5032-2Pin_5.0x3.2mm_HandSoldering
-SMD Crystal SERIES SMD2520/2 http://www.icbase.com/File/PDF/HKC/HKC00061008.pdf, hand-soldering, 5.0x3.2mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_5032-4Pin_5.0x3.2mm
-SMD Crystal SERIES SMD2520/4 http://www.icbase.com/File/PDF/HKC/HKC00061008.pdf, 5.0x3.2mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_7050-2Pin_7.0x5.0mm
-SMD Crystal SERIES SMD7050/4 https://www.foxonline.com/pdfs/FQ7050.pdf, 7.0x5.0mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_7050-2Pin_7.0x5.0mm_HandSoldering
-SMD Crystal SERIES SMD7050/4 https://www.foxonline.com/pdfs/FQ7050.pdf, hand-soldering, 7.0x5.0mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_7050-4Pin_7.0x5.0mm
-SMD Crystal SERIES SMD7050/4 https://www.foxonline.com/pdfs/FQ7050.pdf, 7.0x5.0mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm
-Abracon Miniature Ceramic Smd Crystal ABM3 http://www.abracon.com/Resonators/abm3.pdf, 5.0x3.2mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_Abracon_ABM3-2Pin_5.0x3.2mm_HandSoldering
-Abracon Miniature Ceramic Smd Crystal ABM3 http://www.abracon.com/Resonators/abm3.pdf, hand-soldering, 5.0x3.2mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_Abracon_ABM3B-4Pin_5.0x3.2mm
-Abracon Miniature Ceramic Smd Crystal ABM3B http://www.abracon.com/Resonators/abm3b.pdf, 5.0x3.2mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_Abracon_ABM3C-4Pin_5.0x3.2mm
-Abracon Miniature Ceramic Smd Crystal ABM3C http://www.abracon.com/Resonators/abm3c.pdf, 5.0x3.2mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_Abracon_ABM7-2Pin_6.0x3.5mm
-SMD Crystal Abracon ABM7, https://abracon.com/Resonators/abm7.pdf
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm
-Abracon Miniature Ceramic Smd Crystal ABM8G http://www.abracon.com/Resonators/ABM8G.pdf, 3.2x2.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_Abracon_ABM10-4Pin_2.5x2.0mm
-Abracon Miniature Ceramic Smd Crystal ABM10 http://www.abracon.com/Resonators/ABM10.pdf
-SMD SMT crystal Abracon ABM10
-0
-4
-4
-Crystal
-Crystal_SMD_Abracon_ABS25-4Pin_8.0x3.8mm
-Abracon Miniature Ceramic SMD Crystal ABS25 https://abracon.com/Resonators/abs25.pdf, 8.0x3.8mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_ECS_CSM3X-2Pin_7.6x4.1mm
-http://www.ecsxtal.com/store/pdf/CSM-3X.pdf
-Crystal CSM-3X
-0
-2
-2
-Crystal
-Crystal_SMD_EuroQuartz_EQ161-2Pin_3.2x1.5mm
-SMD Crystal EuroQuartz EQ161 series http://cdn-reichelt.de/documents/datenblatt/B400/PG32768C.pdf, 3.2x1.5mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_EuroQuartz_EQ161-2Pin_3.2x1.5mm_HandSoldering
-SMD Crystal EuroQuartz EQ161 series http://cdn-reichelt.de/documents/datenblatt/B400/PG32768C.pdf, hand-soldering, 3.2x1.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_EuroQuartz_MJ-4Pin_5.0x3.2mm
-SMD Crystal EuroQuartz MJ series http://cdn-reichelt.de/documents/datenblatt/B400/MJ.pdf, 5.0x3.2mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_EuroQuartz_MJ-4Pin_5.0x3.2mm_HandSoldering
-SMD Crystal EuroQuartz MJ series http://cdn-reichelt.de/documents/datenblatt/B400/MJ.pdf, hand-soldering, 5.0x3.2mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_EuroQuartz_MQ-4Pin_7.0x5.0mm
-SMD Crystal EuroQuartz MQ series http://cdn-reichelt.de/documents/datenblatt/B400/MQ.pdf, 7.0x5.0mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_EuroQuartz_MQ-4Pin_7.0x5.0mm_HandSoldering
-SMD Crystal EuroQuartz MQ series http://cdn-reichelt.de/documents/datenblatt/B400/MQ.pdf, hand-soldering, 7.0x5.0mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_EuroQuartz_MQ2-2Pin_7.0x5.0mm
-SMD Crystal EuroQuartz MQ2 series http://cdn-reichelt.de/documents/datenblatt/B400/MQ.pdf, 7.0x5.0mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_EuroQuartz_MQ2-2Pin_7.0x5.0mm_HandSoldering
-SMD Crystal EuroQuartz MQ2 series http://cdn-reichelt.de/documents/datenblatt/B400/MQ.pdf, hand-soldering, 7.0x5.0mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_EuroQuartz_MT-4Pin_3.2x2.5mm
-SMD Crystal EuroQuartz MT series http://cdn-reichelt.de/documents/datenblatt/B400/MT.pdf, 3.2x2.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_EuroQuartz_MT-4Pin_3.2x2.5mm_HandSoldering
-SMD Crystal EuroQuartz MT series http://cdn-reichelt.de/documents/datenblatt/B400/MT.pdf, hand-soldering, 3.2x2.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_EuroQuartz_X22-4Pin_2.5x2.0mm
-SMD Crystal EuroQuartz X22 series http://cdn-reichelt.de/documents/datenblatt/B400/DS_X22.pdf, 2.5x2.0mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_EuroQuartz_X22-4Pin_2.5x2.0mm_HandSoldering
-SMD Crystal EuroQuartz X22 series http://cdn-reichelt.de/documents/datenblatt/B400/DS_X22.pdf, hand-soldering, 2.5x2.0mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_FOX_FE-2Pin_7.5x5.0mm
-crystal Ceramic Resin Sealed SMD http://www.foxonline.com/pdfs/fe.pdf, 7.5x5.0mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_FOX_FE-2Pin_7.5x5.0mm_HandSoldering
-crystal Ceramic Resin Sealed SMD http://www.foxonline.com/pdfs/fe.pdf, hand-soldering, 7.5x5.0mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_FOX_FQ7050-2Pin_7.0x5.0mm
-FOX SMD Crystal SERIES SMD7050/4 https://www.foxonline.com/pdfs/FQ7050.pdf, 7.0x5.0mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_FOX_FQ7050-2Pin_7.0x5.0mm_HandSoldering
-FOX SMD Crystal SERIES SMD7050/4 https://www.foxonline.com/pdfs/FQ7050.pdf, hand-soldering, 7.0x5.0mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_FOX_FQ7050-4Pin_7.0x5.0mm
-FOX SMD Crystal SERIES SMD7050/4 https://www.foxonline.com/pdfs/FQ7050.pdf, 7.0x5.0mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_FrontierElectronics_FM206
-SMD Watch Crystal FrontierElectronics FM206 6.0mm length 1.9mm diameter http://www.chinafronter.com/wp-content/uploads/2013/12/FM206.pdf
-['FM206']
-0
-3
-3
-Crystal
-Crystal_SMD_G8-2Pin_3.2x1.5mm
-SMD Crystal G8, 3.2x1.5mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_G8-2Pin_3.2x1.5mm_HandSoldering
-SMD Crystal G8, hand-soldering, 3.2x1.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_HC49-SD
-SMD Crystal HC-49-SD http://cdn-reichelt.de/documents/datenblatt/B400/xxx-HC49-SMD.pdf, 11.4x4.7mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_HC49-SD_HandSoldering
-SMD Crystal HC-49-SD http://cdn-reichelt.de/documents/datenblatt/B400/xxx-HC49-SMD.pdf, hand-soldering, 11.4x4.7mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC1V-T1A-2Pin_8.0x3.7mm
-SMD Crystal MicroCrystal CC1V-T1A series https://www.microcrystal.com/fileadmin/Media/Products/32kHz/Datasheet/CC1V-T1A.pdf, 8.0x3.7mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC1V-T1A-2Pin_8.0x3.7mm_HandSoldering
-SMD Crystal MicroCrystal CC1V-T1A series https://www.microcrystal.com/fileadmin/Media/Products/32kHz/Datasheet/CC1V-T1A.pdf, hand-soldering, 8.0x3.7mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC4V-T1A-2Pin_5.0x1.9mm
-SMD Crystal MicroCrystal CC4V-T1A series http://cdn-reichelt.de/documents/datenblatt/B400/CC4V-T1A.pdf, 5.0x1.9mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC4V-T1A-2Pin_5.0x1.9mm_HandSoldering
-SMD Crystal MicroCrystal CC4V-T1A series http://cdn-reichelt.de/documents/datenblatt/B400/CC4V-T1A.pdf, hand-soldering, 5.0x1.9mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC5V-T1A-2Pin_4.1x1.5mm
-SMD Crystal MicroCrystal CC5V-T1A series http://cdn-reichelt.de/documents/datenblatt/B400/CC5V-T1A.pdf, 4.1x1.5mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC5V-T1A-2Pin_4.1x1.5mm_HandSoldering
-SMD Crystal MicroCrystal CC5V-T1A series http://cdn-reichelt.de/documents/datenblatt/B400/CC5V-T1A.pdf, hand-soldering, 4.1x1.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC7V-T1A-2Pin_3.2x1.5mm
-SMD Crystal MicroCrystal CC7V-T1A/CM7V-T1A series https://www.microcrystal.com/fileadmin/Media/Products/32kHz/Datasheet/CC7V-T1A.pdf, 3.2x1.5mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC7V-T1A-2Pin_3.2x1.5mm_HandSoldering
-SMD Crystal MicroCrystal CC7V-T1A/CM7V-T1A series http://www.microcrystal.com/images/_Product-Documentation/01_TF_ceramic_Packages/01_Datasheet/CC1V-T1A.pdf, hand-soldering, 3.2x1.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC8V-T1A-2Pin_2.0x1.2mm
-SMD Crystal MicroCrystal CC8V-T1A/CM8V-T1A series https://www.microcrystal.com/fileadmin/Media/Products/32kHz/Datasheet/CC8V-T1A.pdf, 2.0x1.2mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CC8V-T1A-2Pin_2.0x1.2mm_HandSoldering
-SMD Crystal MicroCrystal CC8V-T1A/CM8V-T1A series http://www.microcrystal.com/images/_Product-Documentation/01_TF_ceramic_Packages/01_Datasheet/CC8V-T1A.pdf, hand-soldering, 2.0x1.2mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CM9V-T1A-2Pin_1.6x1.0mm
-SMD Crystal MicroCrystal CM9V-T1A series https://www.microcrystal.com/fileadmin/Media/Products/32kHz/Datasheet/CM9V-T1A.pdf, 1.6x1.0mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_CM9V-T1A-2Pin_1.6x1.0mm_HandSoldering
-SMD Crystal MicroCrystal CM9V-T1A series http://www.microcrystal.com/images/_Product-Documentation/01_TF_ceramic_Packages/01_Datasheet/CM9V-T1A.pdf, hand-soldering, 1.6x1.0mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_MicroCrystal_MS1V-T1K
-SMD Watch Crystal MicroCrystal MS1V-T1K 6.1mm length 2.0mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/MS1V-T1K.pdf
-['MS1V-T1K']
-0
-3
-3
-Crystal
-Crystal_SMD_MicroCrystal_MS3V-T1R
-SMD Watch Crystal MicroCrystal MS3V-T1R 5.2mm length 1.4mm diameter http://www.microcrystal.com/images/_Product-Documentation/03_TF_metal_Packages/01_Datasheet/MS3V-T1R.pdf
-['MS3V-T1R']
-0
-3
-3
-Crystal
-Crystal_SMD_Qantek_QC5CB-2Pin_5x3.2mm
-SMD Crystal Qantek QC5CB, https://www.qantek.com/tl_files/products/crystals/QC5CB.pdf
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm
-crystal Epson Toyocom FA-238 https://support.epson.biz/td/api/doc_check.php?dl=brief_fa-238v_en.pdf, 3.2x2.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_FA238-4Pin_3.2x2.5mm_HandSoldering
-crystal Epson Toyocom FA-238 series https://support.epson.biz/td/api/doc_check.php?dl=brief_fa-238v_en.pdf, hand-soldering, 3.2x2.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm
-crystal Epson Toyocom FA-238 series https://support.epson.biz/td/api/doc_check.php?dl=brief_fa-238v_en.pdf, 3.2x2.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_FA238V-4Pin_3.2x2.5mm_HandSoldering
-crystal Epson Toyocom FA-238 series http://www.mouser.com/ds/2/137/1721499-465440.pdf, hand-soldering, 3.2x2.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MA406-4Pin_11.7x4.0mm
-SMD Crystal Seiko Epson MC-506 http://media.digikey.com/pdf/Data%20Sheets/Epson%20PDFs/MA-505,506.pdf, 11.7x4.0mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MA406-4Pin_11.7x4.0mm_HandSoldering
-SMD Crystal Seiko Epson MC-506 http://media.digikey.com/pdf/Data%20Sheets/Epson%20PDFs/MA-505,506.pdf, hand-soldering, 11.7x4.0mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MA505-2Pin_12.7x5.1mm
-SMD Crystal Seiko Epson MC-505 http://media.digikey.com/pdf/Data%20Sheets/Epson%20PDFs/MA-505,506.pdf, 12.7x5.1mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_SeikoEpson_MA505-2Pin_12.7x5.1mm_HandSoldering
-SMD Crystal Seiko Epson MC-505 http://media.digikey.com/pdf/Data%20Sheets/Epson%20PDFs/MA-505,506.pdf, hand-soldering, 12.7x5.1mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_SeikoEpson_MA506-4Pin_12.7x5.1mm
-SMD Crystal Seiko Epson MC-506 http://media.digikey.com/pdf/Data%20Sheets/Epson%20PDFs/MA-505,506.pdf, 12.7x5.1mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MA506-4Pin_12.7x5.1mm_HandSoldering
-SMD Crystal Seiko Epson MC-506 http://media.digikey.com/pdf/Data%20Sheets/Epson%20PDFs/MA-505,506.pdf, hand-soldering, 12.7x5.1mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MC146-4Pin_6.7x1.5mm
-SMD Crystal Seiko Epson MC-146 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-156_en.pdf, 6.7x1.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MC146-4Pin_6.7x1.5mm_HandSoldering
-SMD Crystal Seiko Epson MC-146 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-156_en.pdf, hand-soldering, 6.7x1.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MC156-4Pin_7.1x2.5mm
-SMD Crystal Seiko Epson MC-156 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-156_en.pdf, 7.1x2.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MC156-4Pin_7.1x2.5mm_HandSoldering
-SMD Crystal Seiko Epson MC-156 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-156_en.pdf, hand-soldering, 7.1x2.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm
-SMD Crystal Seiko Epson MC-306 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-306_en.pdf, 8.0x3.2mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering
-SMD Crystal Seiko Epson MC-306 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-306_en.pdf, hand-soldering, 8.0x3.2mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MC405-2Pin_9.6x4.1mm
-SMD Crystal Seiko Epson MC-405 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-306_en.pdf, 9.6x4.1mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_SeikoEpson_MC405-2Pin_9.6x4.1mm_HandSoldering
-SMD Crystal Seiko Epson MC-405 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-306_en.pdf, hand-soldering, 9.6x4.1mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_SeikoEpson_MC406-4Pin_9.6x4.1mm
-SMD Crystal Seiko Epson MC-406 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-306_en.pdf, 9.6x4.1mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_MC406-4Pin_9.6x4.1mm_HandSoldering
-SMD Crystal Seiko Epson MC-406 https://support.epson.biz/td/api/doc_check.php?dl=brief_MC-306_en.pdf, hand-soldering, 9.6x4.1mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_TSX3225-4Pin_3.2x2.5mm
-crystal Epson Toyocom TSX-3225 series https://support.epson.biz/td/api/doc_check.php?dl=brief_fa-238v_en.pdf, 3.2x2.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_SeikoEpson_TSX3225-4Pin_3.2x2.5mm_HandSoldering
-crystal Epson Toyocom TSX-3225 series https://support.epson.biz/td/api/doc_check.php?dl=brief_fa-238v_en.pdf, hand-soldering, 3.2x2.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_TXC_7A-2Pin_5x3.2mm
-SMD Crystal TXC 7A http://txccrystal.com/images/pdf/7a.pdf
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_TXC_7M-4Pin_3.2x2.5mm
-SMD Crystal TXC 7M http://www.txccrystal.com/images/pdf/7m-accuracy.pdf, 3.2x2.5mm^2 package
-SMD SMT crystal
-0
-4
-4
-Crystal
-Crystal_SMD_TXC_7M-4Pin_3.2x2.5mm_HandSoldering
-SMD Crystal TXC 7M http://www.txccrystal.com/images/pdf/7m-accuracy.pdf, hand-soldering, 3.2x2.5mm^2 package
-SMD SMT crystal hand-soldering
-0
-4
-4
-Crystal
-Crystal_SMD_TXC_9HT11-2Pin_2.0x1.2mm
-SMD Crystal TXC 9HT11 http://txccrystal.com/images/pdf/9ht11.pdf, 2.0x1.2mm^2 package
-SMD SMT crystal
-0
-2
-2
-Crystal
-Crystal_SMD_TXC_9HT11-2Pin_2.0x1.2mm_HandSoldering
-SMD Crystal TXC 9HT11 http://txccrystal.com/images/pdf/9ht11.pdf, hand-soldering, 2.0x1.2mm^2 package
-SMD SMT crystal hand-soldering
-0
-2
-2
-Crystal
-Crystal_SMD_TXC_AX_8045-2Pin_8.0x4.5mm
-http://www.txccrystal.com/images/pdf/ax-automotive.pdf
-SMD SMT crystal
-0
-2
-2
-Crystal
-Resonator-2Pin_W6.0mm_H3.0mm
-Ceramic Resomator/Filter 6.0x3.0mm^2, length*width=6.0x3.0mm^2 package, package length=6.0mm, package width=3.0mm, 2 pins
-THT ceramic resonator filter
-0
-2
-2
-Crystal
-Resonator-2Pin_W7.0mm_H2.5mm
-Ceramic Resomator/Filter 7.0x2.5mm^2, length*width=7.0x2.5mm^2 package, package length=7.0mm, package width=2.5mm, 2 pins
-THT ceramic resonator filter
-0
-2
-2
-Crystal
-Resonator-2Pin_W8.0mm_H3.5mm
-Ceramic Resomator/Filter 8.0x3.5mm^2, length*width=8.0x3.5mm^2 package, package length=8.0mm, package width=3.5mm, 2 pins
-THT ceramic resonator filter
-0
-2
-2
-Crystal
-Resonator-2Pin_W10.0mm_H5.0mm
-Ceramic Resomator/Filter 10.0x5.0 RedFrequency MG/MT/MX series, http://www.red-frequency.com/download/datenblatt/redfrequency-datenblatt-ir-zta.pdf, length*width=10.0x5.0mm^2 package, package length=10.0mm, package width=5.0mm, 2 pins
-THT ceramic resonator filter
-0
-2
-2
-Crystal
-Resonator-3Pin_W6.0mm_H3.0mm
-Ceramic Resomator/Filter 6.0x3.0mm^2, length*width=6.0x3.0mm^2 package, package length=6.0mm, package width=3.0mm, 3 pins
-THT ceramic resonator filter
-0
-3
-3
-Crystal
-Resonator-3Pin_W7.0mm_H2.5mm
-Ceramic Resomator/Filter 7.0x2.5mm^2, length*width=7.0x2.5mm^2 package, package length=7.0mm, package width=2.5mm, 3 pins
-THT ceramic resonator filter
-0
-3
-3
-Crystal
-Resonator-3Pin_W8.0mm_H3.5mm
-Ceramic Resomator/Filter 8.0x3.5mm^2, length*width=8.0x3.5mm^2 package, package length=8.0mm, package width=3.5mm, 3 pins
-THT ceramic resonator filter
-0
-3
-3
-Crystal
-Resonator-3Pin_W10.0mm_H5.0mm
-Ceramic Resomator/Filter 10.0x5.0mm^2 RedFrequency MG/MT/MX series, http://www.red-frequency.com/download/datenblatt/redfrequency-datenblatt-ir-zta.pdf, length*width=10.0x5.0mm^2 package, package length=10.0mm, package width=5.0mm, 3 pins
-THT ceramic resonator filter
-0
-3
-3
-Crystal
-Resonator_Murata_CSTLSxxxG-3Pin_W8.0mm_H3.0mm
-Ceramic Resomator/Filter Murata CSTLSxxxG, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/timingdevice/ceralock/p17e.ashx, length*width=8.0x3.0mm^2 package, package length=8.0mm, package width=3.0mm, 3 pins
-THT ceramic resonator filter CSTLSxxxG
-0
-3
-3
-Crystal
-Resonator_Murata_CSTLSxxxX-3Pin_W5.5mm_H3.0mm
-Ceramic Resomator/Filter Murata CSTLSxxxX, http://www.murata.com/~/media/webrenewal/support/library/catalog/products/timingdevice/ceralock/p17e.ashx, length*width=5.5x3.0mm^2 package, package length=5.5mm, package width=3.0mm, 3 pins
-THT ceramic resonator filter CSTLSxxxX
-0
-3
-3
-Crystal
-Resonator_Murata_DSN6-3Pin_W7.0mm_H2.5mm
-Ceramic Resomator/Filter Murata DSN6, http://cdn-reichelt.de/documents/datenblatt/B400/DSN6NC51H.pdf, length*width=7.0x2.5mm^2 package, package length=7.0mm, package width=2.5mm, 3 pins
-THT ceramic resonator filter DSN6
-0
-3
-3
-Crystal
-Resonator_Murata_DSS6-3Pin_W7.0mm_H2.5mm
-Ceramic Resomator/Filter Murata DSS6, http://cdn-reichelt.de/documents/datenblatt/B400/DSN6NC51H.pdf, length*width=7.0x2.5mm^2 package, package length=7.0mm, package width=2.5mm, 3 pins
-THT ceramic resonator filter DSS6
-0
-3
-3
-Crystal
-Resonator_SMD-3Pin_7.2x3.0mm
-SMD Resomator/Filter 7.2x3.0mm, Murata CSTCC8M00G53-R0; 8MHz resonator, SMD, Farnell (Element 14) #1170435, http://www.farnell.com/datasheets/19296.pdf?_ga=1.247244932.122297557.1475167906, 7.2x3.0mm^2 package
-SMD SMT ceramic resonator filter filter
-0
-3
-3
-Crystal
-Resonator_SMD-3Pin_7.2x3.0mm_HandSoldering
-SMD Resomator/Filter 7.2x3.0mm, Murata CSTCC8M00G53-R0; 8MHz resonator, SMD, Farnell (Element 14) #1170435, http://www.farnell.com/datasheets/19296.pdf?_ga=1.247244932.122297557.1475167906, hand-soldering, 7.2x3.0mm^2 package
-SMD SMT ceramic resonator filter filter hand-soldering
-0
-3
-3
-Crystal
-Resonator_SMD_Murata_CDSCB-2Pin_4.5x2.0mm
-SMD Resomator/Filter Murata CDSCB, http://cdn-reichelt.de/documents/datenblatt/B400/SFECV-107.pdf, 4.5x2.0mm^2 package
-SMD SMT ceramic resonator filter filter
-0
-2
-2
-Crystal
-Resonator_SMD_Murata_CDSCB-2Pin_4.5x2.0mm_HandSoldering
-SMD Resomator/Filter Murata CDSCB, http://cdn-reichelt.de/documents/datenblatt/B400/SFECV-107.pdf, hand-soldering, 4.5x2.0mm^2 package
-SMD SMT ceramic resonator filter filter hand-soldering
-0
-2
 2
-Crystal
-Resonator_SMD_Murata_CSTxExxV-3Pin_3.0x1.1mm
-SMD Resomator/Filter Murata CSTCE, https://www.murata.com/en-eu/products/productdata/8801162264606/SPEC-CSTNE16M0VH3C000R0.pdf
-SMD SMT ceramic resonator filter
-0
-3
-3
-Crystal
-Resonator_SMD_Murata_CSTxExxV-3Pin_3.0x1.1mm_HandSoldering
-SMD Resomator/Filter Murata CSTCE, https://www.murata.com/en-eu/products/productdata/8801162264606/SPEC-CSTNE16M0VH3C000R0.pdf
-SMD SMT ceramic resonator filter
-0
-3
-3
-Crystal
-Resonator_SMD_Murata_SFECV-3Pin_6.9x2.9mm
-SMD Resomator/Filter Murata SFECV, http://cdn-reichelt.de/documents/datenblatt/B400/SFECV-107.pdf, 6.9x2.9mm^2 package
-SMD SMT ceramic resonator filter filter
-0
-3
-3
-Crystal
-Resonator_SMD_Murata_SFECV-3Pin_6.9x2.9mm_HandSoldering
-SMD Resomator/Filter Murata SFECV, http://cdn-reichelt.de/documents/datenblatt/B400/SFECV-107.pdf, hand-soldering, 6.9x2.9mm^2 package
-SMD SMT ceramic resonator filter filter hand-soldering
+agroin
+UD2-3NU
+
+
 0
-3
-3
-Crystal
-Resonator_SMD_Murata_SFSKA-3Pin_7.9x3.8mm
-SMD Resomator/Filter Murata SFSKA, http://cdn-reichelt.de/documents/datenblatt/B400/SFECV-107.pdf, 7.9x3.8mm^2 package
-SMD SMT ceramic resonator filter filter
+8
+8
+agroin
+electronic_cats_logo_8x6
+
+
 0
-3
-3
-Crystal
-Resonator_SMD_Murata_SFSKA-3Pin_7.9x3.8mm_HandSoldering
-SMD Resomator/Filter Murata SFSKA, http://cdn-reichelt.de/documents/datenblatt/B400/SFECV-107.pdf, hand-soldering, 7.9x3.8mm^2 package
-SMD SMT ceramic resonator filter filter hand-soldering
 0
-3
-3
-Crystal
-Resonator_SMD_Murata_TPSKA-3Pin_7.9x3.8mm
-SMD Resomator/Filter Murata TPSKA, http://cdn-reichelt.de/documents/datenblatt/B400/SFECV-107.pdf, 7.9x3.8mm^2 package
-SMD SMT ceramic resonator filter filter
 0
-3
-3
-Crystal
-Resonator_SMD_Murata_TPSKA-3Pin_7.9x3.8mm_HandSoldering
-SMD Resomator/Filter Murata TPSKA, http://cdn-reichelt.de/documents/datenblatt/B400/SFECV-107.pdf, hand-soldering, 7.9x3.8mm^2 package
-SMD SMT ceramic resonator filter filter hand-soldering
+agroin
+¡RFM95W
+
+
 0
-3
-3
+16
+16
