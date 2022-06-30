@@ -41,20 +41,12 @@ void setup(){
   Serial.println("Changing the Frequency, Spreading Factor, BandWidth or the IQ signals of the radio.");
   Serial.println("Type help to get the available commands.");
   Serial.println("Electronic Cats ® 2020");
-  /*
-  TODO: 
-    set_chann -> Put LoRaWAN frequencies 
-    set_tx_ascii -> Send Ascii data over LoRa
-    set_rx -> send data over LoRa
-
-    //set_tx -> send data over LoRa
-    
-  */
   
   // Setup callbacks for SerialCommand commands 
   SCmd.addCommand("help",help); 
   SCmd.addCommand("set_rx",set_rx);
-  SCmd.addCommand("set_tx",set_tx1);
+  SCmd.addCommand("set_tx",set_tx0);
+  SCmd.addCommand("set_tx_hex",set_tx1);
   SCmd.addCommand("set_tx_ascii",set_tx2);
   SCmd.addCommand("set_freq",set_freq);
   SCmd.addCommand("set_sf",set_sf);
@@ -90,10 +82,11 @@ void loop()
 
 
 void help(){
-  Serial.println("Fw version: "+String(fwVersion,1)+"v");
+  Serial.println("Fw version: " + String(fwVersion,1)+"v");
   Serial.println("\tConfiguration commands:");
   Serial.println("\tset_rx");
   Serial.println("\tset_tx");
+  Serial.println("\tset_tx_hex");
   Serial.println("\tset_tx_ascii");
   Serial.println("\tset_chann");
   Serial.println("\tset_freq");
@@ -232,42 +225,83 @@ byte nibble(char c)
   return 0;  // Not a valid hexadecimal character
 }
 
-
-void set_tx1(){
+void set_tx0(){
   char *arg;  
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if (arg != NULL){
-   
-      byte data = 0;
-      data = nibble(*(arg + 2))<<4;
-      data = data|nibble(*(arg + 3));
-
-      Serial.println(data,BIN);
-      
-      LoRa.beginPacket();                   // start packet                 // add payload
-      LoRa.write(data);
-      LoRa.endPacket(true);                 // finish packet and send it
-
-      Serial.println("Byte sent"); 
-
-      rx_status = false;
+      if((arg[0] > 47 && arg[0]< 58) && (arg[1] > 47 && arg[1]< 58) && (arg[2] > 47 && arg[2]< 58) && arg[3] == 0){
+              
+        byte data = (byte)strtoul(arg, NULL, 10);
+  
+        Serial.println(data,BIN);
+        
+        LoRa.beginPacket();                   // start packet                 // add payload
+        LoRa.write(data);
+        LoRa.endPacket(true);                 // finish packet and send it
+  
+        Serial.println("Byte sent"); 
+  
+        rx_status = false;
+        
+      }
+    else {
+      Serial.println("Use xxx. The value xxx represents a 3-digit number. ");
+    }
   } 
   else {
     Serial.println("No argument"); 
   }
 }
 
-//°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+void set_tx1(){
+  char *arg;  
+  arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
+  if (arg != NULL){
+    if(arg[0] == '0' && arg[1] == 'x'&& arg[4] == 0){
+      if((arg[2] > 64 && arg[2]< 71 || arg[2] > 47 && arg[2]< 58) && (arg[3] > 64 && arg[3]< 71 || arg[3] > 47 && arg[3]< 58)){
+
+        byte data = 0;
+        data = nibble(*(arg + 2))<<4;
+        data = data|nibble(*(arg + 3));
+  
+        Serial.println(data,BIN);
+        
+        LoRa.beginPacket();                   // start packet                 // add payload
+        LoRa.write(data);
+        LoRa.endPacket(true);                 // finish packet and send it
+  
+        Serial.println("Byte sent"); 
+  
+        rx_status = false;
+        
+      }
+    }
+    else {
+      Serial.println("Use 0xyy. The value yy represents any pair of hexadecimal digits. ");
+    }
+  } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
 void set_tx2(){
   char *arg;  
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if (arg != NULL){
       
       LoRa.beginPacket();                   // start packet
-      LoRa.print(arg);                      // add payload
+      
+      for(int i = 0;;i++){
+        if(arg[i] == 0)
+          break;
+        Serial.print(arg[i]);
+        LoRa.write(arg[i]);             // add payload
+      }
+      
       LoRa.endPacket(true);                 // finish packet and send it
 
-      Serial.println("ASCII message sent"); 
+      Serial.println(" ASCII message sent"); 
 
       rx_status = false;
   } 
@@ -276,7 +310,6 @@ void set_tx2(){
   }
 }
 
-//°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
 void set_chann(){
   char *arg;  
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
@@ -427,18 +460,23 @@ void unrecognized(const char *command) {
 }
 
 void onReceive(int packetSize) {
-  char buf[64];
+  char buf[256];
+  int i;
   
   // received a packet
   Serial.print("Received packet '");
 
+  Serial.print(packetSize);
+  Serial.print(" bytes '");
+  
   // read packet
-  for (int i = 0; i < packetSize; i++) {
+  for (i = 0; i < packetSize; i++) {
     buf[i] = LoRa.read();
     Serial.print("<0x");
     Serial.print(buf[i], HEX);
     Serial.print(">");
   }
+  buf[i] = 0;
   Serial.print(" ");
   Serial.print(buf);
 
