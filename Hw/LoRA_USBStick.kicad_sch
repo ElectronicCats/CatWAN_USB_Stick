@@ -4370,7 +4370,7 @@
     (uuid fadc1c63-6a60-4896-9b12-60b8b11e379e)
     (property "Reference" "U4" (id 0) (at 245.872 134.366 0))
     (property "Value" "W25Q16JV" (id 1) (at 260.096 134.112 0))
-    (property "Footprint" "Package_SO:SOIC-8_5.275x5.275mm_P1.27mm" (id 2) (at 252.73 143.51 0)
+    (property "Footprint" "RP2040:W25Q16JVUUIQ" (id 2) (at 252.73 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.mouser.mx/ProductDetail/Winbond/W25Q16JVUXIQ-TR/?qs=%2Fha2pyFaduiS2uR9HYi5HkA%252B2tQKEnSsT8O6AY%252BoxISO7oyUQiPPXw%3D%3D" (id 3) (at 252.73 143.51 0)
@@ -4756,7 +4756,7 @@
       (reference "U3") (unit 1) (value "AP2112K-3.3") (footprint "Package_TO_SOT_SMD:SOT-23-5")
     )
     (path "/fadc1c63-6a60-4896-9b12-60b8b11e379e"
-      (reference "U4") (unit 1) (value "W25Q16JV") (footprint "Package_SO:SOIC-8_5.275x5.275mm_P1.27mm")
+      (reference "U4") (unit 1) (value "W25Q16JV") (footprint "RP2040:W25Q16JVUUIQ")
     )
     (path "/14b1cf47-fbe7-4d12-9fae-81e256db3a7b"
       (reference "Y1") (unit 1) (value "12Mhz") (footprint "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm")
