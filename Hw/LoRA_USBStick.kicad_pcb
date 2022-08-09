@@ -1907,7 +1907,7 @@
 
   (footprint "Aesthetics:electronic_cats_logo_8x6" (layer "B.Cu")
     (tedit 0) (tstamp 00000000-0000-0000-0000-00005b7ca79d)
-    (at 162.192 113.9224 180)
+    (at 162.27 116.52 180)
     (attr through_hole)
     (fp_text reference "G***" (at 0 0 180) (layer "B.SilkS") hide
       (effects (font (size 1.524 1.524) (thickness 0.3)) (justify mirror))
@@ -4646,10 +4646,10 @@
   (gr_line (start 119.8372 104.775) (end 175.2346 104.775) (layer "Edge.Cuts") (width 0.2) (tstamp 00000000-0000-0000-0000-00005e17b77b))
   (gr_line (start 178.2572 118.999) (end 176.53 118.999) (layer "Edge.Cuts") (width 0.2) (tstamp 2d76d44e-bef1-4a6c-b61d-cfdeee548ee5))
   (gr_line (start 178.2572 108.7628) (end 176.53 108.7628) (layer "Edge.Cuts") (width 0.2) (tstamp 491fa055-d3b9-464e-a08b-cf4fbe92015f))
-  (gr_text "Compatible with \nLoRaWAN®" (at 162.192 120.6724) (layer "B.SilkS") (tstamp 00000000-0000-0000-0000-00005b7cab0a)
-    (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
+  (gr_text "Compatible with \nLoRaWAN®" (at 162.19 121.73) (layer "B.SilkS") (tstamp 00000000-0000-0000-0000-00005b7cab0a)
+    (effects (font (size 1 1) (thickness 0.25)) (justify mirror))
   )
-  (gr_text "USB-Stick V2.4\nCatWAN" (at 162.142 107.5224) (layer "B.SilkS") (tstamp 00000000-0000-0000-0000-00005b7cab19)
+  (gr_text "USB-Stick V2.5\nCatWAN\nRP2040" (at 162.11 109.25) (layer "B.SilkS") (tstamp 00000000-0000-0000-0000-00005b7cab19)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
   (gr_text "ON" (at 128.74 122.39 90) (layer "F.SilkS") (tstamp fe1eab71-decf-4b8a-8010-8099decd5b2e)
