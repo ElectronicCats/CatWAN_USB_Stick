@@ -27,6 +27,7 @@ float fwVersion= 0.2;
 float frequency = 915;
 int spreadFactor = 7;
 int bwReference = 7;
+int codingRate = 5;
 int channel = 0;
 bool rx_status = false;
 
@@ -41,6 +42,13 @@ void setup(){
   Serial.println("Changing the Frequency, Spreading Factor, BandWidth or the IQ signals of the radio.");
   Serial.println("Type help to get the available commands.");
   Serial.println("Electronic Cats ® 2020");
+  /*
+  TODO: 
+  help format send byte 0x validate
+
+    //set_tx -> send data over LoRa
+    
+  */
   
   // Setup callbacks for SerialCommand commands 
   SCmd.addCommand("help",help); 
@@ -51,12 +59,14 @@ void setup(){
   SCmd.addCommand("set_freq",set_freq);
   SCmd.addCommand("set_sf",set_sf);
   SCmd.addCommand("set_bw",set_bw);
+  SCmd.addCommand("set_cr",set_cr);
   SCmd.addCommand("set_chann",set_chann);
 
   SCmd.addCommand("get_config",get_config);
   SCmd.addCommand("get_freq",get_freq);
   SCmd.addCommand("get_sf",get_sf);  
   SCmd.addCommand("get_bw",get_bw);
+  SCmd.addCommand("get_cr",get_cr);
 
   SCmd.setDefaultHandler(unrecognized);  // Handler for command that isn't matched  (says "What?") 
 
@@ -92,11 +102,13 @@ void help(){
   Serial.println("\tset_freq");
   Serial.println("\tset_sf");
   Serial.println("\tset_bw");
+  Serial.println("\tset_cr");
 
   Serial.println("Monitor commands:");
   Serial.println("\tget_freq");
   Serial.println("\tget_sf");
   Serial.println("\tget_bw");
+  Serial.println("\tget_cr");
   Serial.println("\tget_config");
 
   Serial.println("..help");
@@ -138,6 +150,28 @@ void set_sf(){
     else{
       LoRa.setSpreadingFactor(spreadFactor);
       Serial.println("Spreading factor set to " + String(spreadFactor));
+      rx_status = false;
+    }
+
+  } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
+void set_cr(){
+  char *arg;  
+  arg = SCmd.next();  
+  if (arg != NULL){
+    codingRate = atoi(arg);
+    if(codingRate > 8 || codingRate < 5){
+      Serial.println("Error setting the Coding Rate");
+      Serial.println("Value must be between 5 and 8");
+      return;
+    }
+    else{
+      LoRa.setCodingRate4(codingRate);
+      Serial.println("CodingRate set to 4/" + String(codingRate));
       rx_status = false;
     }
 
@@ -377,6 +411,11 @@ void get_sf(){
   Serial.println(spreadFactor);
 }
 
+void get_cr(){
+  Serial.print("Coding Rate = ");
+  Serial.println(codingRate);
+}
+
 void get_bw(){
   Serial.println("Bandwidth = ");
   switch (bwReference){
@@ -420,6 +459,7 @@ void get_config(){
   Serial.println("Radio configurations: ");
   Serial.println("Frequency = " + String(frequency) + " MHz");
   Serial.println("Spreading Factor = " + String(spreadFactor));
+  Serial.println("Coding Rate = 4/" + String(codingRate));
   Serial.print("Bandwidth = ");
   switch (bwReference){
     case 0:
