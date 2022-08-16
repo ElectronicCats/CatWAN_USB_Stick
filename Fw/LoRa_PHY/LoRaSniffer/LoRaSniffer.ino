@@ -25,7 +25,7 @@ SerialCommand SCmd;
 float fwVersion= 0.2;
 
 float frequency = 915;
-int spreadFactor = 7;
+int spreadFactor = 8;
 int bwReference = 7;
 int codingRate = 5;
 int channel = 0;
@@ -78,8 +78,10 @@ void setup(){
   }
 
   //LoRa.setFrequency(915E6);
-  //LoRa.setSpreadingFactor(spreadFactor);
+  LoRa.setSpreadingFactor(spreadFactor);
   //LoRa.setSignalBandwidth(125E3);
+  LoRa.setCodingRate4(codingRate);
+  
   rx_status = false;
 
   LoRa.onReceive(onReceive);
@@ -507,18 +509,19 @@ void onReceive(int packetSize) {
   Serial.print("Received packet '");
 
   Serial.print(packetSize);
-  Serial.print(" bytes '");
+  Serial.print(" bytes ' ");
   
   // read packet
   for (i = 0; i < packetSize; i++) {
     buf[i] = LoRa.read();
-    Serial.print("<0x");
+    //Serial.print("<0x");
+    Serial.print(buf[i] < 16 ? "0" : "");
     Serial.print(buf[i], HEX);
-    Serial.print(">");
+    //Serial.print(">");
   }
   buf[i] = 0;
   Serial.print(" ");
-  Serial.print(buf);
+  //Serial.print(buf);
 
   // print RSSI of packet
   Serial.print("' with RSSI ");
