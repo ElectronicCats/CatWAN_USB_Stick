@@ -37,6 +37,7 @@ void setup(){
   pinMode(RFM_DIO5,INPUT);
   Serial.begin(115200); 
   while (!Serial);
+  
   Serial.println("Welcome to the LoRa Sniffer CLI " + String(fwVersion,1) + "v\n");
   Serial.println("With this sketch you can scan the LoRa spectrum");
   Serial.println("Changing the Frequency, Spreading Factor, BandWidth or the IQ signals of the radio.");
@@ -262,27 +263,42 @@ byte nibble(char c)
 }
 
 void set_tx0(){
-  char *arg;  
+  char *arg;
+  byte data[64];
+  int i;
+
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
-  if (arg != NULL){
-      if((arg[0] > 47 && arg[0]< 58) && (arg[1] > 47 && arg[1]< 58) && (arg[2] > 47 && arg[2]< 58) && arg[3] == 0){
-              
-        byte data = (byte)strtoul(arg, NULL, 10);
-  
-        Serial.println(data,BIN);
-        
-        LoRa.beginPacket();                   // start packet                 // add payload
-        LoRa.write(data);
-        LoRa.endPacket(true);                 // finish packet and send it
-  
-        Serial.println("Byte sent"); 
-  
-        rx_status = false;
-        
-      }
-    else {
-      Serial.println("Use xxx. The value xxx represents a 3-digit number. ");
+  if(arg != NULL){
+    for(i = 0; arg != NULL; i++){  
+        if((arg[0] > 47 && arg[0]< 58) && (arg[1] > 47 && arg[1]< 58) && (arg[2] > 47 && arg[2]< 58) && arg[3] == 0){
+                
+          data[i] = (byte)strtoul(arg, NULL, 10);
+          //Serial.println(data[i],BIN);
+        }
+        else {
+          Serial.println("Use a series of xxx values separated by spaces. The value xxx represents a 3-digit number. ");
+          return;
+        }
+        arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
     }
+  
+    for(int j = 0; j < i; j++){
+      Serial.print(data[j]);
+      Serial.print(" ");
+    }
+    
+    // LoRa.write(buffer, length);
+          
+    LoRa.beginPacket();                   // start packet                 // add payload
+    //LoRa.write(data);
+    LoRa.write(data, i);
+    LoRa.endPacket(true);                 // finish packet and send it
+
+    Serial.println();
+    Serial.print(i);
+    Serial.println(" Byte(s) sent"); 
+    
+    rx_status = false; 
   } 
   else {
     Serial.println("No argument"); 
@@ -291,30 +307,44 @@ void set_tx0(){
 
 void set_tx1(){
   char *arg;  
-  arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
-  if (arg != NULL){
-    if(arg[0] == '0' && arg[1] == 'x'&& arg[4] == 0){
-      if((arg[2] > 64 && arg[2]< 71 || arg[2] > 47 && arg[2]< 58) && (arg[3] > 64 && arg[3]< 71 || arg[3] > 47 && arg[3]< 58)){
+  byte data[64];
+  int i;
 
-        byte data = 0;
-        data = nibble(*(arg + 2))<<4;
-        data = data|nibble(*(arg + 3));
+  arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
+  if(arg != NULL){
+    for(i = 0; arg != NULL; i++){ 
+      
+      if((arg[0] > 64 && arg[0]< 71 || arg[0] > 47 && arg[0]< 58) && (arg[1] > 64 && arg[1]< 71 || arg[1] > 47 && arg[1]< 58) && arg[2] == 0){
   
-        Serial.println(data,BIN);
-        
-        LoRa.beginPacket();                   // start packet                 // add payload
-        LoRa.write(data);
-        LoRa.endPacket(true);                 // finish packet and send it
-  
-        Serial.println("Byte sent"); 
-  
-        rx_status = false;
-        
+          data[i] = 0;
+          data[i] = nibble(*(arg))<<4;
+          data[i] = data[i]|nibble(*(arg + 1));
+    
+          //Serial.println(data[i],BIN);     
       }
+      else{
+        Serial.println("Use a series of yy values separated by spaces. The value yy represents any pair of hexadecimal digits. ");
+        return;
+      }
+      arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
     }
-    else {
-      Serial.println("Use 0xyy. The value yy represents any pair of hexadecimal digits. ");
+  
+    for(int j = 0; j < i; j++){
+      Serial.print(data[j]);
+      Serial.print(" ");
     }
+    
+    LoRa.beginPacket();                   // start packet                 // add payload
+    //LoRa.write(data);
+    LoRa.write(data, i);
+    LoRa.endPacket(true);                 // finish packet and send it
+
+    Serial.println();
+    Serial.print(i);
+    Serial.println(" Byte(s) sent"); 
+    
+    rx_status = false; 
+
   } 
   else {
     Serial.println("No argument"); 
@@ -506,7 +536,7 @@ void onReceive(int packetSize) {
   int i;
   
   // received a packet
-  Serial.print("Received packet '");
+  Serial.println("Received packet ");
 
   Serial.print(packetSize);
   Serial.print(" bytes ' ");
@@ -520,11 +550,16 @@ void onReceive(int packetSize) {
     //Serial.print(">");
   }
   buf[i] = 0;
-  Serial.print(" ");
+  Serial.println();
+  Serial.print("ASCII: '");
+  for (i = 0; i < packetSize; i++) {
+    Serial.print(buf[i]);
+  }  
   //Serial.print(buf);
 
   // print RSSI of packet
   Serial.print("' with RSSI ");
-  Serial.println(LoRa.packetRssi());
+  Serial.print(LoRa.packetRssi());
+  Serial.println();
   LoRa.receive();
 }
