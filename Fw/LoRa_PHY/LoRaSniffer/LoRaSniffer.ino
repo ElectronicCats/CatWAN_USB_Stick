@@ -43,13 +43,6 @@ void setup(){
   Serial.println("Changing the Frequency, Spreading Factor, BandWidth or the IQ signals of the radio.");
   Serial.println("Type help to get the available commands.");
   Serial.println("Electronic Cats ® 2020");
-  /*
-  TODO: 
-  help format send byte 0x validate
-
-    //set_tx -> send data over LoRa
-    
-  */
   
   // Setup callbacks for SerialCommand commands 
   SCmd.addCommand("help",help); 
@@ -92,7 +85,6 @@ void loop()
 {  
   SCmd.readSerial();     // We don't do much, just process serial commands
 }
-
 
 void help(){
   Serial.println("Fw version: " + String(fwVersion,1)+"v");
@@ -286,17 +278,14 @@ void set_tx0(){
       Serial.print(data[j]);
       Serial.print(" ");
     }
-    
-    // LoRa.write(buffer, length);
           
-    LoRa.beginPacket();                   // start packet                 // add payload
-    //LoRa.write(data);
-    LoRa.write(data, i);
+    LoRa.beginPacket();                   // start packet                 
+    LoRa.write(data, i);                  // add payload
     LoRa.endPacket(true);                 // finish packet and send it
 
     Serial.println();
     Serial.print(i);
-    Serial.println(" Byte(s) sent"); 
+    Serial.println(" byte(s) sent"); 
     
     rx_status = false; 
   } 
@@ -318,9 +307,7 @@ void set_tx1(){
   
           data[i] = 0;
           data[i] = nibble(*(arg))<<4;
-          data[i] = data[i]|nibble(*(arg + 1));
-    
-          //Serial.println(data[i],BIN);     
+          data[i] = data[i]|nibble(*(arg + 1));   
       }
       else{
         Serial.println("Use a series of yy values separated by spaces. The value yy represents any pair of hexadecimal digits. ");
@@ -334,14 +321,13 @@ void set_tx1(){
       Serial.print(" ");
     }
     
-    LoRa.beginPacket();                   // start packet                 // add payload
-    //LoRa.write(data);
-    LoRa.write(data, i);
+    LoRa.beginPacket();                   // start packet
+    LoRa.write(data, i);                  // add payload
     LoRa.endPacket(true);                 // finish packet and send it
 
     Serial.println();
     Serial.print(i);
-    Serial.println(" Byte(s) sent"); 
+    Serial.println(" byte(s) sent"); 
     
     rx_status = false; 
 
@@ -356,7 +342,7 @@ void set_tx2(){
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if (arg != NULL){
       
-      LoRa.beginPacket();                   // start packet
+      LoRa.beginPacket();               // start packet
       
       for(int i = 0;;i++){
         if(arg[i] == 0)
@@ -365,7 +351,7 @@ void set_tx2(){
         LoRa.write(arg[i]);             // add payload
       }
       
-      LoRa.endPacket(true);                 // finish packet and send it
+      LoRa.endPacket(true);             // finish packet and send it
 
       Serial.println(" ASCII message sent"); 
 
@@ -481,11 +467,8 @@ void get_bw(){
     default:
       Serial.println("Error setting the bandwidth value must be between 0-8");
       break;
-  } 
-
+  }
 }
-
-
 
 void get_config(){
   Serial.println("Radio configurations: ");
@@ -547,7 +530,6 @@ void onReceive(int packetSize) {
     //Serial.print("<0x");
     Serial.print(buf[i] < 16 ? "0" : "");
     Serial.print(buf[i], HEX);
-    //Serial.print(">");
   }
   buf[i] = 0;
   Serial.println();
@@ -555,7 +537,6 @@ void onReceive(int packetSize) {
   for (i = 0; i < packetSize; i++) {
     Serial.print(buf[i]);
   }  
-  //Serial.print(buf);
 
   // print RSSI of packet
   Serial.print("' with RSSI ");
