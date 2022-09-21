@@ -67,3 +67,6 @@ Hardware released under an CERN Open Hardware Licence v1.2. See the LICENSE_HARD
 Electronic Cats is a registered trademark, please do not use if you sell these PCBs.
 
 27 May 2019
+
+## Wiki and Getting Started
+[Getting Started in our Wiki](https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki)
