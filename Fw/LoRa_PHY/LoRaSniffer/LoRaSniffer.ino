@@ -28,6 +28,9 @@ float frequency = 915;
 int spreadFactor = 8;
 int bwReference = 7;
 int codingRate = 5;
+byte syncWord = 0x12;
+int preambleLength = 8;
+int txPower = 17;
 int channel = 0;
 bool rx_status = false;
 
@@ -54,6 +57,9 @@ void setup(){
   SCmd.addCommand("set_sf",set_sf);
   SCmd.addCommand("set_bw",set_bw);
   SCmd.addCommand("set_cr",set_cr);
+  SCmd.addCommand("set_sw",set_sw);
+  SCmd.addCommand("set_pl",set_pl);
+  SCmd.addCommand("set_tp",set_tp);
   SCmd.addCommand("set_chann",set_chann);
 
   SCmd.addCommand("get_config",get_config);
@@ -61,7 +67,10 @@ void setup(){
   SCmd.addCommand("get_sf",get_sf);  
   SCmd.addCommand("get_bw",get_bw);
   SCmd.addCommand("get_cr",get_cr);
-
+  SCmd.addCommand("get_sw",get_sw);
+  SCmd.addCommand("get_pl",get_pl);
+  SCmd.addCommand("get_tp",get_tp);
+  
   SCmd.setDefaultHandler(unrecognized);  // Handler for command that isn't matched  (says "What?") 
 
   LoRa.setPins(SS, RFM_RST, RFM_DIO0);
@@ -75,6 +84,10 @@ void setup(){
   LoRa.setSpreadingFactor(spreadFactor);
   //LoRa.setSignalBandwidth(125E3);
   LoRa.setCodingRate4(codingRate);
+  //LoRa.setSyncWord(0x12);
+  LoRa.setSyncWord(syncWord);
+  //LoRa.setPreambleLength(8);
+  LoRa.setPreambleLength(preambleLength);
   
   rx_status = false;
 
@@ -98,12 +111,19 @@ void help(){
   Serial.println("\tset_sf");
   Serial.println("\tset_bw");
   Serial.println("\tset_cr");
+  Serial.println("\tset_sw");
+  Serial.println("\tset_pl");
+  Serial.println("\tset_tp");
 
   Serial.println("Monitor commands:");
   Serial.println("\tget_freq");
   Serial.println("\tget_sf");
   Serial.println("\tget_bw");
   Serial.println("\tget_cr");
+  Serial.println("\tget_sw");
+  Serial.println("\tget_pl");
+  Serial.println("\tget_tp");  
+  
   Serial.println("\tget_config");
 
   Serial.println("..help");
@@ -167,6 +187,80 @@ void set_cr(){
     else{
       LoRa.setCodingRate4(codingRate);
       Serial.println("CodingRate set to 4/" + String(codingRate));
+      rx_status = false;
+    }
+
+  } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
+void set_sw(){
+  char *arg;  
+  byte data;
+  int i;
+
+  arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
+  if(arg != NULL){
+      
+      if((arg[0] > 64 && arg[0]< 71 || arg[0] > 47 && arg[0]< 58) && (arg[1] > 64 && arg[1]< 71 || arg[1] > 47 && arg[1]< 58) && arg[2] == 0){
+  
+          data = 0;
+          data = nibble(*(arg))<<4;
+          data = data|nibble(*(arg + 1));
+          LoRa.setSyncWord(data);
+          syncWord = data;
+          Serial.print("Sync word set to 0x");
+          Serial.println(data, HEX);
+      }
+      else{
+        Serial.println("Use yy value. The value yy represents any pair of hexadecimal digits. ");
+        return;
+      }
+
+  } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
+void set_pl(){
+  char *arg;  
+  arg = SCmd.next();  
+  if (arg != NULL){
+    preambleLength = atoi(arg);
+    if(preambleLength > 5 || preambleLength < 65536){
+      Serial.println("Error setting the Preamble Length");
+      Serial.println("Value must be between 6 and 65535");
+      return;
+    }
+    else{
+      LoRa.setPreambleLength(preambleLength);
+      Serial.println("Preamble lenght set to " + String(preambleLength));
+      rx_status = false;
+    }
+
+  } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
+
+void set_tp(){
+  char *arg;  
+  arg = SCmd.next();  
+  if (arg != NULL){
+    txPower = atoi(arg);
+    if(txPower > 1 || txPower < 21){
+      Serial.println("Error setting the TX Power");
+      Serial.println("Value must be between 2 and 20");
+      return;
+    }
+    else{
+      LoRa.setTxPower(txPower);
+      Serial.println("TX Power set to " + String(txPower));
       rx_status = false;
     }
 
@@ -434,6 +528,21 @@ void get_cr(){
   Serial.println(codingRate);
 }
 
+void get_sw(){
+  Serial.print("Sync Word = 0x");
+  Serial.println(syncWord, HEX);
+}
+
+void get_pl(){
+  Serial.print("Preamble Length = ");
+  Serial.println(preambleLength);
+}
+
+void get_tp(){
+  Serial.print("TX Power = ");
+  Serial.println(txPower);
+}
+
 void get_bw(){
   Serial.println("Bandwidth = ");
   switch (bwReference){
@@ -471,10 +580,8 @@ void get_bw(){
 }
 
 void get_config(){
-  Serial.println("Radio configurations: ");
+  Serial.println("\nRadio configurations: ");
   Serial.println("Frequency = " + String(frequency) + " MHz");
-  Serial.println("Spreading Factor = " + String(spreadFactor));
-  Serial.println("Coding Rate = 4/" + String(codingRate));
   Serial.print("Bandwidth = ");
   switch (bwReference){
     case 0:
@@ -505,6 +612,12 @@ void get_config(){
       Serial.println("250 kHz");
       break;
   }
+  Serial.println("Spreading Factor = " + String(spreadFactor));
+  Serial.println("Coding Rate = 4/" + String(codingRate));
+  Serial.print("Sync Word = 0x");
+  Serial.println(syncWord, HEX);
+  Serial.println("Preamble Length = " + String(preambleLength));
+  Serial.println("TX Power = " + String(txPower));  
   Serial.println("Rx active = " + String(rx_status));
 }
 
