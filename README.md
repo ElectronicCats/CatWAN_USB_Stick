@@ -1,12 +1,27 @@
 # LoRA USB Stick
 
-![MX0005](https://github.com/ElectronicCats/CatWAN_USB_Stick/raw/master/MX000006.png)
+<p align="center">
+    <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/assets/44976441/51508bc4-9d92-4624-85f6-da037400540e" width="40%">
+    <br><strong>CatWAN USB Stick</strong>
+</p>
 
-**[OSHW] MX000006 | Certified open source hardware |** [oshwa.org/cert.](https://www.oshwa.org/cert)
+## Open Source certified.
+<p align="center">
+    <a href="https://www.oshwa.org/cert">
+        <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/raw/master/MX000006.png" alt="CatWANShield" width="10%">
+        <br>
+        <strong>[OSHW] MX000006 | Certified open source hardware |</strong>
+    </a>
+</p>
 
-<a href="https://electroniccats.com/store/catwan_usb-stick/">
-  <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" height="104" />
-</a>
+## Find yours in our official store!
+<p align="center">
+    <a href="https://electroniccats.com/store/catwan-usb-stick/">
+        <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" alt="CatWANShield" height="104">
+        <br>
+        <strong>Get yours here!</strong>
+    </a>
+</p>
 
 Are you interested in learning how LoRa works at the package level? Debugging your own LoRa hardware and trying to detect where something is wrong? Or maybe you're writing a custom application for your Internet of Things (IoT) network with LoraWAN? We have the perfect tool for you!
 
