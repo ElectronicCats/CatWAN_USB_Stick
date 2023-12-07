@@ -1,8 +1,10 @@
 # CatWAN USB Stick
-
 <p align="center">
-    <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/assets/44976441/51508bc4-9d92-4624-85f6-da037400540e" width="60%">
-    <br><strong>CatWAN USB Stick</strong>
+    <a href="https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki">
+        <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/assets/44976441/51508bc4-9d92-4624-85f6-da037400540e" alt="CatWANShield" width="60%">
+        <br>
+        <strong>CatWAN USB Stick</strong>
+    </a>
 </p>
 
 ## Find yours in our official store!
