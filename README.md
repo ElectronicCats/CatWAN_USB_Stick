@@ -1,17 +1,8 @@
-# LoRA USB Stick
+# CatWAN USB Stick
 
 <p align="center">
-    <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/assets/44976441/51508bc4-9d92-4624-85f6-da037400540e" width="40%">
+    <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/assets/44976441/51508bc4-9d92-4624-85f6-da037400540e" width="60%">
     <br><strong>CatWAN USB Stick</strong>
-</p>
-
-## Open Source certified.
-<p align="center">
-    <a href="https://www.oshwa.org/cert">
-        <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/raw/master/MX000006.png" alt="CatWANShield" width="10%">
-        <br>
-        <strong>[OSHW] MX000006 | Certified open source hardware |</strong>
-    </a>
 </p>
 
 ## Find yours in our official store!
@@ -23,6 +14,7 @@
     </a>
 </p>
 
+## What is CatWAN USB Stick?
 Are you interested in learning how LoRa works at the package level? Debugging your own LoRa hardware and trying to detect where something is wrong? Or maybe you're writing a custom application for your Internet of Things (IoT) network with LoraWAN? We have the perfect tool for you!
 
 This CatWAN USB Stick is programmed with a special firmware image that makes it an easy-to-use LoRa sniffer. You can passively capture the data exchanges between two LoRa devices, capturing with our "LoRa Sniffer" the open source network analysis tool that we have created to use together.
@@ -32,7 +24,6 @@ This device can work in networks LoRaWAN compatible with classes A, B and C, alt
 This device has a SAMD21 ARM Cortex microcontroller at 48Mhz with native USB 2.1, with 256Kb for programming, compatible with Arduino and Circuit Python.
 
 Check our repository for more details and software downloads!
-
 
 ### Main characteristics
 
@@ -67,11 +58,20 @@ Check our repository for more details and software downloads!
 |19      |   PORTA19 |   SCK    |
 |20      |   PORTA17 |   SS     |
 
-### For update firmware with Arduino IDE:
+##  Wiki and Getting Started
 
-Visit Wiki with [Manual](https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki)
+[**Getting Started in our Wiki**](https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki)
 
-Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
+## Open Source certified.
+<p align="center">
+    <a href="https://www.oshwa.org/cert">
+        <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/raw/master/MX000006.png" alt="CatWANShield" width="10%">
+        <br>
+        <strong>[OSHW] MX000006 | Certified open source hardware |</strong>
+    </a>
+</p>
+
+Electronic Cats invests time and resources in providing this open-source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
 
 Designed by Electronic Cats.
 
@@ -82,6 +82,3 @@ Hardware released under an CERN Open Hardware Licence v1.2. See the LICENSE_HARD
 Electronic Cats is a registered trademark, please do not use if you sell these PCBs.
 
 27 May 2019
-
-## Wiki and Getting Started
-[Getting Started in our Wiki](https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki)
