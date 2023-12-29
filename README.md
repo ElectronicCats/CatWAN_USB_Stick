@@ -1,27 +1,24 @@
 # CatWAN USB Stick
 <p align="center">
     <a href="https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki">
-        <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/assets/44976441/51508bc4-9d92-4624-85f6-da037400540e" alt="CatWANShield" width="60%">
-        <br>
-        <strong>CatWAN USB Stick</strong>
+        <img src="https://github.com/ElectronicCats/CatWAN_USB_Stick/assets/44976441/51508bc4-9d92-4624-85f6-da037400540e" alt="CatWANShield" width="70%"/>
     </a>
 </p>
 
-## Find yours in our official store!
-<p align="center">
-    <a href="https://electroniccats.com/store/catwan-usb-stick/">
-        <img src="https://electroniccats.com/wp-content/uploads/badge_store.png" alt="CatWANShield" height="104">
-        <br>
-        <strong>Get yours here!</strong>
+<p align=center>
+    <a href="https://electroniccats.com/store/catwan-usb-stick">
+        <img src="https://github.com/ElectronicCats/flipper-shields/assets/44976441/0c617467-052b-4ab1-a3b9-ba36e1f55a91" width="200" height="104" />
+    </a>
+    <a href="https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki">
+        <img src="https://github.com/ElectronicCats/flipper-shields/assets/44976441/6aa7f319-3256-442e-a00d-33c8126833ec" width="200" height="104" />
     </a>
 </p>
 
-## What is CatWAN USB Stick?
 Are you interested in learning how LoRa works at the package level? Debugging your own LoRa hardware and trying to detect where something is wrong? Or maybe you're writing a custom application for your Internet of Things (IoT) network with LoraWAN? We have the perfect tool for you!
 
-This CatWAN USB Stick is programmed with a special firmware image that makes it an easy-to-use LoRa sniffer. You can passively capture the data exchanges between two LoRa devices, capturing with our "LoRa Sniffer" the open source network analysis tool that we have created to use together.
+This CatWAN USB Stick is programmed with a special firmware image that makes it an easy-to-use LoRa sniffer. You can passively capture the data exchanges between two LoRa devices, capturing with our "LoRa Sniffer" the open-source network analysis tool that we have created to use together.
 
-This device can work in networks LoRaWAN compatible with classes A, B and C, although currently we do not have a firmware for this way of working, the CatWAN firmware is completely open source and you can find it in our repository along with the schematic. If you want to reprogram this device you can do it through Arduino IDE and its USB port or if you do not have to use a J-Link. ATMEL-ICE or a DIY SWD programmer
+This device can work in networks LoRaWAN compatible with classes A, B, and C, although currently we do not have a firmware for this way of working, the CatWAN firmware is completely open source and you can find it in our repository along with the schematic. If you want to reprogram this device you can do it through Arduino IDE and its USB port or if you do not have to use a J-Link. ATMEL-ICE or a DIY SWD programmer
 
 This device has a SAMD21 ARM Cortex microcontroller at 48Mhz with native USB 2.1, with 256Kb for programming, compatible with Arduino and Circuit Python.
 
@@ -59,10 +56,6 @@ Check our repository for more details and software downloads!
 |18      |   PORTA18 |   MOSI   |
 |19      |   PORTA19 |   SCK    |
 |20      |   PORTA17 |   SS     |
-
-##  Wiki and Getting Started
-
-[**Getting Started in our Wiki**](https://github.com/ElectronicCats/CatWAN_USB_Stick/wiki)
 
 ## Open Source certified.
 <p align="center">
