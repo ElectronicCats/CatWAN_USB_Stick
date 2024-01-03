@@ -33,6 +33,7 @@ int preambleLength = 8;
 int txPower = 17;
 int channel = 0;
 bool rx_status = false;
+int inv_iq = 0;
 
 void setup(){  
   pinMode(LED_BUILTIN,OUTPUT);      // Configure the onboard LED for output
@@ -61,6 +62,7 @@ void setup(){
   SCmd.addCommand("set_pl",set_pl);
   SCmd.addCommand("set_tp",set_tp);
   SCmd.addCommand("set_chann",set_chann);
+  SCmd.addCommand("set_inv_iq",set_inv_iq);
 
   SCmd.addCommand("get_config",get_config);
   SCmd.addCommand("get_freq",get_freq);
@@ -114,6 +116,7 @@ void help(){
   Serial.println("\tset_sw");
   Serial.println("\tset_pl");
   Serial.println("\tset_tp");
+  Serial.println("\tset_inv_iq");
 
   Serial.println("Monitor commands:");
   Serial.println("\tget_freq");
@@ -136,7 +139,7 @@ void set_freq(){
   arg = SCmd.next();
   frequency = atof(arg);
   if (arg != NULL){
-    if(frequency > 902 && frequency < 923){
+    if(frequency > 902 && frequency < 928){
       long freq = frequency*1000000;
       LoRa.setFrequency(freq);
       Serial.println("Frequency set to " + String(frequency) + " MHz");
@@ -230,9 +233,9 @@ void set_pl(){
   arg = SCmd.next();  
   if (arg != NULL){
     preambleLength = atoi(arg);
-    if(preambleLength > 5 || preambleLength < 65536){
+    if(preambleLength < 6 || preambleLength > 65536){
       Serial.println("Error setting the Preamble Length");
-      Serial.println("Value must be between 6 and 65535");
+      Serial.println("Value must be between 6 and 65536");
       return;
     }
     else{
@@ -322,6 +325,11 @@ void set_bw(){
           rx_status = false;
           Serial.println("Bandwidth set to 250 kHz");
           break;
+        case 9:
+          LoRa.setSignalBandwidth(500E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 500 kHz");
+          break;  
 
         default:
           Serial.println("Error setting the bandwidth value must be between 0-8");
@@ -485,6 +493,35 @@ void set_chann(){
   }
 }
 
+void set_inv_iq(){
+  char *arg;  
+  arg = SCmd.next();  
+  if (arg != NULL){
+    inv_iq = atoi(arg);
+    if(inv_iq != 0 && inv_iq != 1){
+      Serial.println("Error setting the InvertIQ parameter");
+      Serial.println("Value must be 0 or 1");
+      return;
+    }
+    else{
+      if(inv_iq){
+        LoRa.enableInvertIQ();
+        Serial.println("InvertIQ enabled ");
+        rx_status = false;
+      }
+      else {
+        LoRa.disableInvertIQ();
+        Serial.println("InvertIQ disabled");
+        rx_status = false;
+      }
+    }
+
+  } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
 void set_rx(){
   char *arg;  
   arg = SCmd.next(); 
@@ -573,6 +610,9 @@ void get_bw(){
     case 8:
       Serial.println("250 kHz");
       break;
+    case 9:
+      Serial.println("500 kHz");
+      break;      
     default:
       Serial.println("Error setting the bandwidth value must be between 0-8");
       break;
@@ -611,12 +651,17 @@ void get_config(){
     case 8:
       Serial.println("250 kHz");
       break;
+    case 9:
+      Serial.println("500 kHz");
+      break;      
   }
   Serial.println("Spreading Factor = " + String(spreadFactor));
   Serial.println("Coding Rate = 4/" + String(codingRate));
   Serial.print("Sync Word = 0x");
   Serial.println(syncWord, HEX);
   Serial.println("Preamble Length = " + String(preambleLength));
+  Serial.print("InvertIQ = ");
+  Serial.println(inv_iq?"enabled":"disabled");
   Serial.println("TX Power = " + String(txPower));  
   Serial.println("Rx active = " + String(rx_status));
 }
