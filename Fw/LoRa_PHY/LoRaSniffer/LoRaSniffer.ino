@@ -7,6 +7,8 @@
 
   This example code works as a CLI to control your CatWAN USB-Stick
   As a LoRa Sniffer to catch any LoRa Packet
+
+  TODO: Set frequency and channels depending on the region 
   
   This code is beerware; if you see me (or any other Electronic Cats
   member) at the local, and you've found our code helpful,
@@ -33,6 +35,7 @@ int preambleLength = 8;
 int txPower = 17;
 int channel = 0;
 bool rx_status = false;
+int inv_iq = 0;
 
 void setup(){  
   pinMode(LED_BUILTIN,OUTPUT);      // Configure the onboard LED for output
@@ -50,9 +53,9 @@ void setup(){
   // Setup callbacks for SerialCommand commands 
   SCmd.addCommand("help",help); 
   SCmd.addCommand("set_rx",set_rx);
-  SCmd.addCommand("set_tx",set_tx0);
-  SCmd.addCommand("set_tx_hex",set_tx1);
-  SCmd.addCommand("set_tx_ascii",set_tx2);
+  SCmd.addCommand("set_tx",set_tx);
+  SCmd.addCommand("set_tx_hex",set_tx_hex);
+  SCmd.addCommand("set_tx_ascii",set_tx_ascii);
   SCmd.addCommand("set_freq",set_freq);
   SCmd.addCommand("set_sf",set_sf);
   SCmd.addCommand("set_bw",set_bw);
@@ -61,6 +64,7 @@ void setup(){
   SCmd.addCommand("set_pl",set_pl);
   SCmd.addCommand("set_tp",set_tp);
   SCmd.addCommand("set_chann",set_chann);
+  SCmd.addCommand("set_inv_iq",set_inv_iq);
 
   SCmd.addCommand("get_config",get_config);
   SCmd.addCommand("get_freq",get_freq);
@@ -114,6 +118,7 @@ void help(){
   Serial.println("\tset_sw");
   Serial.println("\tset_pl");
   Serial.println("\tset_tp");
+  Serial.println("\tset_inv_iq");
 
   Serial.println("Monitor commands:");
   Serial.println("\tget_freq");
@@ -136,16 +141,10 @@ void set_freq(){
   arg = SCmd.next();
   frequency = atof(arg);
   if (arg != NULL){
-    if(frequency > 902 && frequency < 923){
       long freq = frequency*1000000;
       LoRa.setFrequency(freq);
       Serial.println("Frequency set to " + String(frequency) + " MHz");
       rx_status = false;
-    }
-    else{
-      Serial.println("Error setting the frequency");
-      Serial.println("Value must be between 902 MHz and 923 MHz");
-    }
   } 
   else {
     Serial.println("No argument"); 
@@ -230,9 +229,9 @@ void set_pl(){
   arg = SCmd.next();  
   if (arg != NULL){
     preambleLength = atoi(arg);
-    if(preambleLength > 5 || preambleLength < 65536){
+    if(preambleLength < 6 || preambleLength > 65536){
       Serial.println("Error setting the Preamble Length");
-      Serial.println("Value must be between 6 and 65535");
+      Serial.println("Value must be between 6 and 65536");
       return;
     }
     else{
@@ -322,6 +321,11 @@ void set_bw(){
           rx_status = false;
           Serial.println("Bandwidth set to 250 kHz");
           break;
+        case 9:
+          LoRa.setSignalBandwidth(500E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 500 kHz");
+          break;  
 
         default:
           Serial.println("Error setting the bandwidth value must be between 0-8");
@@ -348,7 +352,7 @@ byte nibble(char c)
   return 0;  // Not a valid hexadecimal character
 }
 
-void set_tx0(){
+void set_tx(){
   char *arg;
   byte data[64];
   int i;
@@ -388,7 +392,7 @@ void set_tx0(){
   }
 }
 
-void set_tx1(){
+void set_tx_hex(){
   char *arg;  
   byte data[64];
   int i;
@@ -431,7 +435,7 @@ void set_tx1(){
   }
 }
 
-void set_tx2(){
+void set_tx_ascii(){
   char *arg;  
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if (arg != NULL){
@@ -485,12 +489,41 @@ void set_chann(){
   }
 }
 
+void set_inv_iq(){
+  char *arg;  
+  arg = SCmd.next();  
+  if (arg != NULL){
+    inv_iq = atoi(arg);
+    if(inv_iq != 0 && inv_iq != 1){
+      Serial.println("Error setting the InvertIQ parameter");
+      Serial.println("Value must be 0 or 1");
+      return;
+    }
+    else{
+      if(inv_iq){
+        LoRa.enableInvertIQ();
+        Serial.println("InvertIQ enabled ");
+        rx_status = false;
+      }
+      else {
+        LoRa.disableInvertIQ();
+        Serial.println("InvertIQ disabled");
+        rx_status = false;
+      }
+    }
+
+  } 
+  else {
+    Serial.println("No argument"); 
+  }
+}
+
 void set_rx(){
   char *arg;  
   arg = SCmd.next(); 
   if (arg != NULL){
     frequency = atof(arg);
-    if(frequency > 902 && frequency < 923){
+//    if(frequency > 902 && frequency < 923){
       long freq = frequency*1000000;
       LoRa.setFrequency(freq);
       Serial.println("LoRa radio receiving at " + String(frequency) + " MHz");
@@ -499,11 +532,11 @@ void set_rx(){
         }
       LoRa.receive(); 
       rx_status = true;
-    }
-    else{
-      Serial.println("Error setting the frequency");
-      Serial.println("Value must be between 902 MHz and 923 MHz");
-    }
+//    }
+//    else{
+//      Serial.println("Error setting the frequency");
+//      Serial.println("Value must be between 902 MHz and 923 MHz");
+//    }
   } 
   else {
     Serial.println("LoRa radio receiving at " + String(frequency) + " MHz");
@@ -573,6 +606,9 @@ void get_bw(){
     case 8:
       Serial.println("250 kHz");
       break;
+    case 9:
+      Serial.println("500 kHz");
+      break;      
     default:
       Serial.println("Error setting the bandwidth value must be between 0-8");
       break;
@@ -611,12 +647,17 @@ void get_config(){
     case 8:
       Serial.println("250 kHz");
       break;
+    case 9:
+      Serial.println("500 kHz");
+      break;      
   }
   Serial.println("Spreading Factor = " + String(spreadFactor));
   Serial.println("Coding Rate = 4/" + String(codingRate));
   Serial.print("Sync Word = 0x");
   Serial.println(syncWord, HEX);
   Serial.println("Preamble Length = " + String(preambleLength));
+  Serial.print("InvertIQ = ");
+  Serial.println(inv_iq?"enabled":"disabled");
   Serial.println("TX Power = " + String(txPower));  
   Serial.println("Rx active = " + String(rx_status));
 }
