@@ -141,16 +141,10 @@ void set_freq(){
   arg = SCmd.next();
   frequency = atof(arg);
   if (arg != NULL){
-//    if(frequency > 902 && frequency < 928){
       long freq = frequency*1000000;
       LoRa.setFrequency(freq);
       Serial.println("Frequency set to " + String(frequency) + " MHz");
       rx_status = false;
-//    }
-//    else{
-//      Serial.println("Error setting the frequency");
-//      Serial.println("Value must be between 902 MHz and 923 MHz");
-//    }
   } 
   else {
     Serial.println("No argument"); 
