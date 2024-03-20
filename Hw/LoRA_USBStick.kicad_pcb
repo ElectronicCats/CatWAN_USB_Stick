@@ -10933,7 +10933,7 @@
 			(justify mirror)
 		)
 	)
-	(gr_text "USB-Stick V3.0\nCatWAN\nRP2040"
+	(gr_text "USB-Stick V3.1\nCatWAN\nRP2040"
 		(at 162.11 109.25 0)
 		(layer "B.SilkS")
 		(uuid "00000000-0000-0000-0000-00005b7cab19")
