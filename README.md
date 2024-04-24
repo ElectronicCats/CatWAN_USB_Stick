@@ -14,6 +14,15 @@
     </a>
 </p>
 
+<p align=center>
+Also available at distributors:
+</p>
+<p align=center>
+<a href="https://labs.ksec.co.uk/product-category/electronic-cat/">
+<img src="https://cdn.ksec.co.uk/ksec-solutions/ksec-W-BW-MV-small-clipped.png" width="200" />
+</a>
+</p>
+
 Are you interested in learning how LoRa works at the package level? Debugging your own LoRa hardware and trying to detect where something is wrong? Or maybe you're writing a custom application for your Internet of Things (IoT) network with LoraWAN? We have the perfect tool for you!
 
 This CatWAN USB Stick is programmed with a special firmware image that makes it an easy-to-use LoRa sniffer. You can passively capture the data exchanges between two LoRa devices, capturing with our "LoRa Sniffer" the open-source network analysis tool that we have created to use together.
