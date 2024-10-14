@@ -161,7 +161,7 @@ void set_rx() {
   arg = SCmd.next();  // Get the next argument from the command
   if (arg != NULL) {
     frequency = atof(arg);
-    if (frequency > 902 && frequency < 923) {
+    if (frequency > 862 && frequency < 1020) {
       long freq = frequency * 1000000;
       LoRa.setFrequency(freq);
       Serial.println("LoRa radio receiving at " + String(frequency) + " Mhz");
@@ -169,7 +169,7 @@ void set_rx() {
       rx_status = true;
     } else {
       Serial.println("Error setting the frequency");
-      Serial.println("Value must be between 902 Mhz and 923");
+      Serial.println("Value must be between 862 MHz and 1020 MHz");
     }
   } else {
     Serial.println("LoRa radio receiving at " + String(frequency) + " Mhz");
@@ -200,7 +200,7 @@ void set_freq() {
   char *arg = SCmd.next();
   frequency = atof(arg);
   if (arg != NULL) {
-    if (frequency > 902 && frequency < 923) {
+    if (frequency > 862 && frequency < 1020) {
       long freq = frequency * 1000000;
       LoRa.setFrequency(freq);
       Serial.println("Frequency set to " + String(frequency) + " Mhz");
