@@ -19,6 +19,9 @@ bool sensorActive = false;
 unsigned long lastSendTime = 0;
 unsigned long sendInterval = 5000;  // Interval for sending sensor data (5 seconds)
 
+// **New variable to control encryption**
+bool encryptionEnabled = false;  // By default, encryption is disabled
+
 // SerialCommand object for handling serial commands
 SerialCommand SCmd;
 
@@ -62,6 +65,9 @@ void setup() {
   SCmd.addCommand("get_bw", get_bw);
   SCmd.addCommand("start_sensor", start_sensor);  // Command to start the sensor simulation
 
+  // **New command to enable/disable encryption**
+  SCmd.addCommand("set_encryption", set_encryption);
+
   SCmd.setDefaultHandler(unrecognized);  // Handler for unrecognized commands
 
   // Initialize LoRa module with specific pins for SS, RST, and DIO0
@@ -90,22 +96,48 @@ void loop() {
     Serial.print("Data before encryption (decimal): ");
     Serial.println(randomValue);
 
-    // Convert the random value to hexadecimal format for encryption
     byte plainText[16] = { 0 };
     sprintf((char *)plainText, "%02X", randomValue);  // Convert to hexadecimal
 
-    // Encrypt the plain text using AES
     byte encryptedText[16] = { 0 };
-    aes.encryptBlock(encryptedText, plainText);
 
-    // Send the encrypted data over LoRa
+    // **Check if encryption is enabled before encrypting**
+    if (encryptionEnabled) {
+      aes.encryptBlock(encryptedText, plainText);  // Encrypt the data
+      Serial.println("Encryption enabled, sending encrypted data.");
+    } else {
+      memcpy(encryptedText, plainText, sizeof(plainText));  // Send plain data
+      Serial.println("Encryption disabled, sending plain data.");
+    }
+
+    // Send the (possibly encrypted) data over LoRa
     LoRa.beginPacket();
     LoRa.write(encryptedText, sizeof(encryptedText));
     LoRa.endPacket();
 
-    Serial.println("Random encrypted data sent successfully!");
+    Serial.println("Data sent successfully!");
   }
 }
+
+// **New command to enable/disable encryption**
+void set_encryption() {
+  char *arg = SCmd.next();
+  if (arg != NULL) {
+    if (strcmp(arg, "on") == 0) {
+      encryptionEnabled = true;
+      Serial.println("Encryption enabled.");
+    } else if (strcmp(arg, "off") == 0) {
+      encryptionEnabled = false;
+      Serial.println("Encryption disabled.");
+    } else {
+      Serial.println("Invalid argument. Use 'on' or 'off'.");
+    }
+  } else {
+    Serial.println("No argument. Use 'on' or 'off'.");
+  }
+}
+
+// The rest of the program remains the same
 
 void help() {
   // Display help information about available commands
@@ -119,16 +151,15 @@ void help() {
   Serial.println("\tset_bw");
   Serial.println("\tget_config");
   Serial.println("Type 'start_sensor' to simulate sensor data transmission.");
+  Serial.println("Type 'set_encryption on/off' to enable or disable data encryption.");
 }
 
 /********** Set configuration commands **************/
 
 void set_rx() {
-  // Command to set the radio to receive mode
   char *arg;
   arg = SCmd.next();  // Get the next argument from the command
   if (arg != NULL) {
-    // Convert the argument to frequency and set LoRa frequency
     frequency = atof(arg);
     if (frequency > 902 && frequency < 923) {
       long freq = frequency * 1000000;
@@ -148,7 +179,6 @@ void set_rx() {
 }
 
 void set_tx1() {
-  // Command to set LoRa radio to transmit mode
   char *arg = SCmd.next();
   if (arg != NULL) {
     rx_status = false;
@@ -158,7 +188,6 @@ void set_tx1() {
 }
 
 void set_tx2() {
-  // Command to transmit ASCII data over LoRa
   char *arg = SCmd.next();
   if (arg != NULL) {
     rx_status = false;
@@ -168,7 +197,6 @@ void set_tx2() {
 }
 
 void set_freq() {
-  // Command to set the frequency of the LoRa module
   char *arg = SCmd.next();
   frequency = atof(arg);
   if (arg != NULL) {
@@ -187,7 +215,6 @@ void set_freq() {
 }
 
 void set_sf() {
-  // Command to set the spreading factor of LoRa communication
   char *arg = SCmd.next();
   if (arg != NULL) {
     spreadFactor = atoi(arg);
@@ -206,7 +233,6 @@ void set_sf() {
 }
 
 void set_bw() {
-  // Command to set the bandwidth of LoRa communication
   char *arg = SCmd.next();
   int bwRefResp = bwReference;
   bwReference = atoi(arg);
@@ -268,19 +294,16 @@ void start_sensor() {
 /********** Get configuration information **************/
 
 void get_freq() {
-  // Display the current frequency
   Serial.print("Frequency = ");
   Serial.println(frequency);
 }
 
 void get_sf() {
-  // Display the current spreading factor
   Serial.print("Spreading factor = ");
   Serial.println(spreadFactor);
 }
 
 void get_bw() {
-  // Display the current bandwidth
   Serial.println("Bandwidth = ");
   switch (bwReference) {
     case 0:
@@ -317,7 +340,6 @@ void get_bw() {
 }
 
 void get_config() {
-  // Display all current radio configuration settings
   Serial.println("Radio configurations: ");
   Serial.println("Frequency = " + String(frequency) + " Mhz");
   Serial.println("Spreading Factor = " + String(spreadFactor));
@@ -355,15 +377,12 @@ void get_config() {
 }
 
 void unrecognized(const char *command) {
-  // Handler for unrecognized commands
   Serial.println("Command not found, type help to get the valid commands");
 }
 
 void onReceive(int packetSize) {
-  // Function to handle received packets
   Serial.print("Received encrypted packet: ");
 
-  // Buffer to hold the received encrypted packet
   byte encryptedText[16];
   for (int i = 0; i < packetSize && i < 16; i++) {
     encryptedText[i] = LoRa.read();
@@ -372,9 +391,16 @@ void onReceive(int packetSize) {
   }
   Serial.println();
 
-  // Decrypt the received packet
   byte decryptedText[16] = { 0 };
-  aes.decryptBlock(decryptedText, encryptedText);
+
+  // **Check if encryption is enabled before decrypting**
+  if (encryptionEnabled) {
+    aes.decryptBlock(decryptedText, encryptedText);  // Decrypt the data
+    Serial.println("Decryption enabled, decrypted data received.");
+  } else {
+    memcpy(decryptedText, encryptedText, sizeof(encryptedText));  // Use plain data
+    Serial.println("Decryption disabled, plain data received.");
+  }
 
   // Convert decrypted text to a number (decimal)
   int receivedValue = strtol((char *)decryptedText, NULL, 16);
