@@ -63,7 +63,7 @@ void setup() {
   SCmd.addCommand("get_freq", get_freq);
   SCmd.addCommand("get_sf", get_sf);
   SCmd.addCommand("get_bw", get_bw);
-  SCmd.addCommand("start_sensor", start_sensor);  // Command to start the sensor simulation
+  SCmd.addCommand("set_sensor", set_sensor);  // Command to start the sensor simulation
 
   // **New command to enable/disable encryption**
   SCmd.addCommand("set_encryption", set_encryption);
@@ -150,7 +150,7 @@ void help() {
   Serial.println("\tset_sf");
   Serial.println("\tset_bw");
   Serial.println("\tget_config");
-  Serial.println("Type 'start_sensor' to simulate sensor data transmission.");
+  Serial.println("Type 'set_sensor on/off' to simulate sensor data transmission.");
   Serial.println("Type 'set_encryption on/off' to enable or disable data encryption.");
 }
 
@@ -286,9 +286,21 @@ void set_bw() {
 }
 
 // Command to start sensor simulation
-void start_sensor() {
-  sensorActive = true;
-  Serial.println("Sensor simulation started. Sending random data...");
+void set_sensor() {
+char *arg = SCmd.next();
+  if (arg != NULL) {
+    if (strcmp(arg, "on") == 0) {
+      sensorActive = true;
+      Serial.println("Sensor simulation started. Sending random data...");
+    } else if (strcmp(arg, "off") == 0) {
+      sensorActive = false;
+      Serial.println("Sensor simulation stopped.");
+    } else {
+      Serial.println("Invalid argument. Use 'on' or 'off'.");
+    }
+  } else {
+    Serial.println("No argument. Use 'on' or 'off'.");
+  }
 }
 
 /********** Get configuration information **************/
