@@ -1,9 +1,9 @@
 #define SERIALCOMMAND_HARDWAREONLY
 
-#include <SerialCommand.h>  // Library for processing serial commands
+#include <SerialCommand.h>  // Library for processing serial commands https://github.com/kroimon/Arduino-SerialCommand
 #include <SPI.h>  // Library for SPI communication
 #include <LoRa.h>  // Library for LoRa communication
-#include <Crypto.h>  // Library for cryptographic functions
+#include <Crypto.h>  // Library for cryptographic functions https://github.com/OperatorFoundation/Crypto
 #include <AES.h>  // Library for AES encryption
 
 // Initialize AES128 object for encryption
