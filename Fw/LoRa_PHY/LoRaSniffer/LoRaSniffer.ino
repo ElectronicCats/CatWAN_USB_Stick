@@ -6,6 +6,7 @@
  * PLEASE REFER TO THESE LIBRARIES:
  *   https://github.com/kroimon/Arduino-SerialCommand
  *   https://github.com/sandeepmistry/arduino-LoRa
+ *   https://github.com/OperatorFoundation/Crypto
  *
  * This code is beerware; if you see me (or any other collaborator
  * member) at the local, and you've found our code helpful,
@@ -18,8 +19,8 @@
 #include <SerialCommand.h>
 #include <SPI.h>
 #include <LoRa.h>
-#include <Crypto.h>  // Library for cryptographic functions https://github.com/OperatorFoundation/Crypto
-#include <AES.h>  // Library for AES encryption
+#include <Crypto.h>
+#include <AES.h>
 
 // Initialize AES128 object for encryption
 AES128 aes;
