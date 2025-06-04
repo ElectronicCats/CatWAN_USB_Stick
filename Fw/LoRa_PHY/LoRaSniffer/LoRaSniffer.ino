@@ -22,7 +22,7 @@
 
 #define SS 17
 #define RFM_RST 21
-#define RFM_DIO0 11
+#define RFM_DIO0 10
 #define RFM_DIO5 15
 
 SerialCommand SCmd;
