@@ -1,5 +1,11 @@
 #include <SPI.h>
 #include <LoRa.h>
+
+#define SS 17
+#define RFM_RST 21
+#define RFM_DIO0 11
+#define RFM_DIO5 15
+
 String dato="";
 bool flag_g=0;
 int incomingByte = 0;   
