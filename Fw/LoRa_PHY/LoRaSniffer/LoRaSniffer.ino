@@ -1,24 +1,42 @@
-/*
-  Created by Eduardo Contreras @ Electronic Cats 2020
-
-  PLEASE REFER TO THESE LIBRARIES:
-    https://github.com/kroimon/Arduino-SerialCommand
-    https://github.com/sandeepmistry/arduino-LoRa
-
-  This example code works as a CLI to control your CatWAN USB-Stick
-  As a LoRa Sniffer to catch any LoRa Packet
-  
-  This code is beerware; if you see me (or any other Electronic Cats
-  member) at the local, and you've found our code helpful,
-  please buy us a round!
-  Distributed as-is; no warranty is given.
-*/
+/**
+ * Example LoRaSniffer
+ * Authors: Eduardo Contreras @ Electronic Cats
+ *          Raul Vargas@ Electronic Cats
+ *
+ * PLEASE REFER TO THESE LIBRARIES:
+ *   https://github.com/kroimon/Arduino-SerialCommand
+ *   https://github.com/sandeepmistry/arduino-LoRa
+ *   https://github.com/OperatorFoundation/Crypto
+ *
+ * This code is beerware; if you see me (or any other collaborator
+ * member) at the local, and you've found our code helpful,
+ * please buy us a round!
+ * Distributed as-is; no warranty is given.
+ */
 
 #define SERIALCOMMAND_HARDWAREONLY
- 
+
 #include <SerialCommand.h>
 #include <SPI.h>
 #include <LoRa.h>
+#include <Crypto.h>
+#include <AES.h>
+
+// Initialize AES128 object for encryption
+AES128 aes;
+
+// 128-bit encryption key for AES
+byte aes_key[16] = { 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F };
+// Initialization vector for AES (not used in this example)
+byte aes_iv[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
+
+// Variables for sensor simulation
+bool sensorActive = false;
+unsigned long lastSendTime = 0;
+unsigned long sendInterval = 5000;  // Interval for sending sensor data (5 seconds)
+
+// **New variable to control encryption**
+bool encryptionEnabled = false;  // By default, encryption is disabled
 
 #define SS 17
 #define RFM_RST 21
@@ -30,7 +48,7 @@ SerialCommand SCmd;
 float fwVersion= 0.2;
 
 float frequency = 915;
-int spreadFactor = 8;
+int spreadFactor = 7;
 int bwReference = 7;
 int codingRate = 5;
 byte syncWord = 0x12;
@@ -38,26 +56,30 @@ int preambleLength = 8;
 int txPower = 17;
 int channel = 0;
 bool rx_status = false;
+int inv_iq = 0;
 
-void setup(){  
+void setup(){
   pinMode(LED_BUILTIN,OUTPUT);      // Configure the onboard LED for output
   digitalWrite(LED_BUILTIN,LOW);    // default to LED off
   pinMode(RFM_DIO5,INPUT);
-  Serial.begin(115200); 
+  Serial.begin(115200);
   while (!Serial);
-  
+
   Serial.println("Welcome to the LoRa Sniffer CLI " + String(fwVersion,1) + "v\n");
   Serial.println("With this sketch you can scan the LoRa spectrum");
   Serial.println("Changing the Frequency, Spreading Factor, BandWidth or the IQ signals of the radio.");
   Serial.println("Type help to get the available commands.");
   Serial.println("Electronic Cats ® 2020");
-  
-  // Setup callbacks for SerialCommand commands 
-  SCmd.addCommand("help",help); 
+
+  // Set AES encryption key
+  aes.setKey(aes_key, sizeof(aes_key));
+
+  // Setup callbacks for SerialCommand commands
+  SCmd.addCommand("help",help);
   SCmd.addCommand("set_rx",set_rx);
-  SCmd.addCommand("set_tx",set_tx0);
-  SCmd.addCommand("set_tx_hex",set_tx1);
-  SCmd.addCommand("set_tx_ascii",set_tx2);
+  SCmd.addCommand("set_tx",set_tx);
+  SCmd.addCommand("set_tx_hex",set_tx_hex);
+  SCmd.addCommand("set_tx_ascii",set_tx_ascii);
   SCmd.addCommand("set_freq",set_freq);
   SCmd.addCommand("set_sf",set_sf);
   SCmd.addCommand("set_bw",set_bw);
@@ -66,23 +88,29 @@ void setup(){
   SCmd.addCommand("set_pl",set_pl);
   SCmd.addCommand("set_tp",set_tp);
   SCmd.addCommand("set_chann",set_chann);
+  SCmd.addCommand("set_inv_iq",set_inv_iq);
 
   SCmd.addCommand("get_config",get_config);
   SCmd.addCommand("get_freq",get_freq);
-  SCmd.addCommand("get_sf",get_sf);  
+  SCmd.addCommand("get_sf",get_sf);
   SCmd.addCommand("get_bw",get_bw);
   SCmd.addCommand("get_cr",get_cr);
   SCmd.addCommand("get_sw",get_sw);
   SCmd.addCommand("get_pl",get_pl);
   SCmd.addCommand("get_tp",get_tp);
-  
-  SCmd.setDefaultHandler(unrecognized);  // Handler for command that isn't matched  (says "What?") 
+
+  SCmd.addCommand("set_sensor", set_sensor);  // Command to start the sensor simulation
+
+  // **New command to enable/disable encryption**
+  SCmd.addCommand("set_encryption", set_encryption);
+
+  SCmd.setDefaultHandler(unrecognized);  // Handler for command that isn't matched  (says "What?")
 
   LoRa.setPins(SS, RFM_RST, RFM_DIO0);
 
   if (!LoRa.begin(915E6)) {
     Serial.println("Starting LoRa failed!");
-    while (1);
+    while (1); // Stop execution if LoRa initialization fails
   }
 
   //LoRa.setFrequency(915E6);
@@ -93,15 +121,47 @@ void setup(){
   LoRa.setSyncWord(syncWord);
   //LoRa.setPreambleLength(8);
   LoRa.setPreambleLength(preambleLength);
-  
+
   rx_status = false;
 
+  // Set the callback function to handle incoming packets
   LoRa.onReceive(onReceive);
 }
 
 void loop()
-{  
+{
   SCmd.readSerial();     // We don't do much, just process serial commands
+
+  // Sensor simulation: send encrypted data at regular intervals
+  if (sensorActive && (millis() - lastSendTime >= sendInterval)) {
+    lastSendTime = millis();  // Update the last send time
+
+    // Generate random sensor data
+    int randomValue = random(0, 255);
+    Serial.print("Data before encryption (decimal): ");
+    Serial.println(randomValue);
+
+    byte plainText[16] = { 0 };
+    sprintf((char *)plainText, "%02X", randomValue);  // Convert to hexadecimal
+
+    byte encryptedText[16] = { 0 };
+
+    // **Check if encryption is enabled before encrypting**
+    if (encryptionEnabled) {
+      aes.encryptBlock(encryptedText, plainText);  // Encrypt the data
+      Serial.println("Encryption enabled, sending encrypted data.");
+    } else {
+      memcpy(encryptedText, plainText, sizeof(plainText));  // Send plain data
+      Serial.println("Encryption disabled, sending plain data.");
+    }
+
+    // Send the (possibly encrypted) data over LoRa
+    LoRa.beginPacket();
+    LoRa.write(encryptedText, sizeof(encryptedText));
+    LoRa.endPacket();
+
+    Serial.println("Data sent successfully!");
+  }
 }
 
 void help(){
@@ -119,6 +179,7 @@ void help(){
   Serial.println("\tset_sw");
   Serial.println("\tset_pl");
   Serial.println("\tset_tp");
+  Serial.println("\tset_inv_iq");
 
   Serial.println("Monitor commands:");
   Serial.println("\tget_freq");
@@ -127,39 +188,54 @@ void help(){
   Serial.println("\tget_cr");
   Serial.println("\tget_sw");
   Serial.println("\tget_pl");
-  Serial.println("\tget_tp");  
-  
+  Serial.println("\tget_tp");
+
   Serial.println("\tget_config");
+
+  Serial.println("Type 'set_sensor-on/off' to simulate sensor data transmission.");
+  Serial.println("Type 'set_encryption-on/off' to enable or disable data encryption.");
 
   Serial.println("..help");
 
 }
 
+// **New command to enable/disable encryption**
+void set_encryption() {
+  char *arg = SCmd.next();
+  if (arg != NULL) {
+    if (strcmp(arg, "on") == 0) {
+      encryptionEnabled = true;
+      Serial.println("Encryption enabled.");
+    } else if (strcmp(arg, "off") == 0) {
+      encryptionEnabled = false;
+      Serial.println("Encryption disabled.");
+    } else {
+      Serial.println("Invalid argument. Use 'on' or 'off'.");
+    }
+  } else {
+    Serial.println("No argument. Use 'on' or 'off'.");
+  }
+}
+
 /**********Set configuration**************/
 void set_freq(){
-  char *arg;  
+  char *arg;
   arg = SCmd.next();
   frequency = atof(arg);
   if (arg != NULL){
-    if(frequency > 902 && frequency < 923){
       long freq = frequency*1000000;
       LoRa.setFrequency(freq);
       Serial.println("Frequency set to " + String(frequency) + " MHz");
       rx_status = false;
-    }
-    else{
-      Serial.println("Error setting the frequency");
-      Serial.println("Value must be between 902 MHz and 923 MHz");
-    }
-  } 
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
 void set_sf(){
-  char *arg;  
-  arg = SCmd.next();  
+  char *arg;
+  arg = SCmd.next();
   if (arg != NULL){
     spreadFactor = atoi(arg);
     if(spreadFactor < 6 || spreadFactor > 12){
@@ -173,15 +249,15 @@ void set_sf(){
       rx_status = false;
     }
 
-  } 
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
 void set_cr(){
-  char *arg;  
-  arg = SCmd.next();  
+  char *arg;
+  arg = SCmd.next();
   if (arg != NULL){
     codingRate = atoi(arg);
     if(codingRate > 8 || codingRate < 5){
@@ -195,22 +271,22 @@ void set_cr(){
       rx_status = false;
     }
 
-  } 
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
 void set_sw(){
-  char *arg;  
+  char *arg;
   byte data;
   int i;
 
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if(arg != NULL){
-      
+
       if((arg[0] > 64 && arg[0]< 71 || arg[0] > 47 && arg[0]< 58) && (arg[1] > 64 && arg[1]< 71 || arg[1] > 47 && arg[1]< 58) && arg[2] == 0){
-  
+
           data = 0;
           data = nibble(*(arg))<<4;
           data = data|nibble(*(arg + 1));
@@ -224,20 +300,20 @@ void set_sw(){
         return;
       }
 
-  } 
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
 void set_pl(){
-  char *arg;  
-  arg = SCmd.next();  
+  char *arg;
+  arg = SCmd.next();
   if (arg != NULL){
     preambleLength = atoi(arg);
-    if(preambleLength > 5 || preambleLength < 65536){
+    if(preambleLength < 6 || preambleLength > 65536){
       Serial.println("Error setting the Preamble Length");
-      Serial.println("Value must be between 6 and 65535");
+      Serial.println("Value must be between 6 and 65536");
       return;
     }
     else{
@@ -246,16 +322,16 @@ void set_pl(){
       rx_status = false;
     }
 
-  } 
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
 
 void set_tp(){
-  char *arg;  
-  arg = SCmd.next();  
+  char *arg;
+  arg = SCmd.next();
   if (arg != NULL){
     txPower = atoi(arg);
     if(txPower > 1 || txPower < 21){
@@ -269,16 +345,16 @@ void set_tp(){
       rx_status = false;
     }
 
-  } 
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
 void set_bw(){
-  char *arg;  
+  char *arg;
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
-  int bwRefResp = bwReference; //save the previous data 
+  int bwRefResp = bwReference; //save the previous data
   bwReference = atoi(arg);
   if (arg != NULL){
       switch (bwReference){
@@ -327,15 +403,20 @@ void set_bw(){
           rx_status = false;
           Serial.println("Bandwidth set to 250 kHz");
           break;
+        case 9:
+          LoRa.setSignalBandwidth(500E3);
+          rx_status = false;
+          Serial.println("Bandwidth set to 500 kHz");
+          break;
 
         default:
           Serial.println("Error setting the bandwidth value must be between 0-8");
           bwReference = bwRefResp; //if there's no valid data restore previous value
           break;
       }
-  } 
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
@@ -353,16 +434,16 @@ byte nibble(char c)
   return 0;  // Not a valid hexadecimal character
 }
 
-void set_tx0(){
+void set_tx(){
   char *arg;
-  byte data[64];
+  byte data[128];
   int i;
 
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if(arg != NULL){
-    for(i = 0; arg != NULL; i++){  
+    for(i = 0; arg != NULL; i++){
         if((arg[0] > 47 && arg[0]< 58) && (arg[1] > 47 && arg[1]< 58) && (arg[2] > 47 && arg[2]< 58) && arg[3] == 0){
-                
+
           data[i] = (byte)strtoul(arg, NULL, 10);
           //Serial.println(data[i],BIN);
         }
@@ -372,41 +453,41 @@ void set_tx0(){
         }
         arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
     }
-  
+
     for(int j = 0; j < i; j++){
       Serial.print(data[j]);
       Serial.print(" ");
     }
-          
-    LoRa.beginPacket();                   // start packet                 
+
+    LoRa.beginPacket();                   // start packet
     LoRa.write(data, i);                  // add payload
     LoRa.endPacket(true);                 // finish packet and send it
 
     Serial.println();
     Serial.print(i);
-    Serial.println(" byte(s) sent"); 
-    
-    rx_status = false; 
-  } 
+    Serial.println(" byte(s) sent");
+
+    rx_status = false;
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
-void set_tx1(){
-  char *arg;  
-  byte data[64];
+void set_tx_hex(){
+  char *arg;
+  byte data[128];
   int i;
 
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if(arg != NULL){
-    for(i = 0; arg != NULL; i++){ 
-      
+    for(i = 0; arg != NULL; i++){
+
       if((arg[0] > 64 && arg[0]< 71 || arg[0] > 47 && arg[0]< 58) && (arg[1] > 64 && arg[1]< 71 || arg[1] > 47 && arg[1]< 58) && arg[2] == 0){
-  
+
           data[i] = 0;
           data[i] = nibble(*(arg))<<4;
-          data[i] = data[i]|nibble(*(arg + 1));   
+          data[i] = data[i]|nibble(*(arg + 1));
       }
       else{
         Serial.println("Use a series of yy values separated by spaces. The value yy represents any pair of hexadecimal digits. ");
@@ -414,55 +495,55 @@ void set_tx1(){
       }
       arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
     }
-  
+
     for(int j = 0; j < i; j++){
       Serial.print(data[j]);
       Serial.print(" ");
     }
-    
+
     LoRa.beginPacket();                   // start packet
     LoRa.write(data, i);                  // add payload
     LoRa.endPacket(true);                 // finish packet and send it
 
     Serial.println();
     Serial.print(i);
-    Serial.println(" byte(s) sent"); 
-    
-    rx_status = false; 
+    Serial.println(" byte(s) sent");
 
-  } 
+    rx_status = false;
+
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
-void set_tx2(){
-  char *arg;  
+void set_tx_ascii(){
+  char *arg;
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   if (arg != NULL){
-      
+
       LoRa.beginPacket();               // start packet
-      
+
       for(int i = 0;;i++){
         if(arg[i] == 0)
           break;
         Serial.print(arg[i]);
         LoRa.write(arg[i]);             // add payload
       }
-      
+
       LoRa.endPacket(true);             // finish packet and send it
 
-      Serial.println(" ASCII message sent"); 
+      Serial.println(" ASCII message sent");
 
       rx_status = false;
-  } 
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
   }
 }
 
 void set_chann(){
-  char *arg;  
+  char *arg;
   arg = SCmd.next();    // Get the next argument from the SerialCommand object buffer
   channel = atoi(arg);
   if (arg != NULL){
@@ -484,38 +565,86 @@ void set_chann(){
       Serial.println("Error setting the channel");
       Serial.println("Value must be between 0 and 63");
     }
-  }  
+  }
   else {
-    Serial.println("No argument"); 
+    Serial.println("No argument");
+  }
+}
+
+void set_inv_iq(){
+  char *arg;
+  arg = SCmd.next();
+  if (arg != NULL){
+    inv_iq = atoi(arg);
+    if(inv_iq != 0 && inv_iq != 1){
+      Serial.println("Error setting the InvertIQ parameter");
+      Serial.println("Value must be 0 or 1");
+      return;
+    }
+    else{
+      if(inv_iq){
+        LoRa.enableInvertIQ();
+        Serial.println("InvertIQ enabled ");
+        rx_status = false;
+      }
+      else {
+        LoRa.disableInvertIQ();
+        Serial.println("InvertIQ disabled");
+        rx_status = false;
+      }
+    }
+
+  }
+  else {
+    Serial.println("No argument");
   }
 }
 
 void set_rx(){
-  char *arg;  
-  arg = SCmd.next(); 
+  char *arg;
+  arg = SCmd.next();
   if (arg != NULL){
     frequency = atof(arg);
-    if(frequency > 902 && frequency < 923){
+//    if(frequency > 902 && frequency < 923){
       long freq = frequency*1000000;
       LoRa.setFrequency(freq);
       Serial.println("LoRa radio receiving at " + String(frequency) + " MHz");
       while (digitalRead(RFM_DIO5) == LOW){
           Serial.print(".");
         }
-      LoRa.receive(); 
+      LoRa.receive();
       rx_status = true;
-    }
-    else{
-      Serial.println("Error setting the frequency");
-      Serial.println("Value must be between 902 MHz and 923 MHz");
-    }
-  } 
+//    }
+//    else{
+//      Serial.println("Error setting the frequency");
+//      Serial.println("Value must be between 902 MHz and 923 MHz");
+//    }
+  }
   else {
     Serial.println("LoRa radio receiving at " + String(frequency) + " MHz");
     LoRa.receive();
     rx_status = true;
   }
 }
+
+// Command to start sensor simulation
+void set_sensor() {
+char *arg = SCmd.next();
+  if (arg != NULL) {
+    if (strcmp(arg, "on") == 0) {
+      sensorActive = true;
+      Serial.println("Sensor simulation started. Sending random data...");
+    } else if (strcmp(arg, "off") == 0) {
+      sensorActive = false;
+      Serial.println("Sensor simulation stopped.");
+    } else {
+      Serial.println("Invalid argument. Use 'on' or 'off'.");
+    }
+  } else {
+    Serial.println("No argument. Use 'on' or 'off'.");
+  }
+}
+
 
 /**********Get information**************/
 void get_freq(){
@@ -578,6 +707,9 @@ void get_bw(){
     case 8:
       Serial.println("250 kHz");
       break;
+    case 9:
+      Serial.println("500 kHz");
+      break;
     default:
       Serial.println("Error setting the bandwidth value must be between 0-8");
       break;
@@ -616,32 +748,37 @@ void get_config(){
     case 8:
       Serial.println("250 kHz");
       break;
+    case 9:
+      Serial.println("500 kHz");
+      break;
   }
   Serial.println("Spreading Factor = " + String(spreadFactor));
   Serial.println("Coding Rate = 4/" + String(codingRate));
   Serial.print("Sync Word = 0x");
   Serial.println(syncWord, HEX);
   Serial.println("Preamble Length = " + String(preambleLength));
-  Serial.println("TX Power = " + String(txPower));  
+  Serial.print("InvertIQ = ");
+  Serial.println(inv_iq?"enabled":"disabled");
+  Serial.println("TX Power = " + String(txPower));
   Serial.println("Rx active = " + String(rx_status));
 }
 
 
-// This gets set as the default handler, and gets called when no other command matches. 
+// This gets set as the default handler, and gets called when no other command matches.
 void unrecognized(const char *command) {
-  Serial.println("Command not found, type help to get the valid commands"); 
+  Serial.println("Command not found, type help to get the valid commands");
 }
 
 void onReceive(int packetSize) {
   char buf[256];
   int i;
-  
+
   // received a packet
   Serial.println("Received packet ");
 
   Serial.print(packetSize);
   Serial.print(" bytes ' ");
-  
+
   // read packet
   for (i = 0; i < packetSize; i++) {
     buf[i] = LoRa.read();
@@ -654,7 +791,27 @@ void onReceive(int packetSize) {
   Serial.print("ASCII: '");
   for (i = 0; i < packetSize; i++) {
     Serial.print(buf[i]);
-  }  
+  }
+
+  Serial.println();
+
+  byte decryptedText[16] = { 0 };
+
+  // **Check if encryption is enabled before decrypting**
+  if (encryptionEnabled) {
+    aes.decryptBlock(decryptedText, (byte*)buf);  // Decrypt the data
+    Serial.println("Decryption enabled, decrypted data received.");
+  } else {
+    memcpy(decryptedText, buf, sizeof(buf));  // Use plain data
+    Serial.println("Decryption disabled, plain data received.");
+  }
+
+  // Convert decrypted text to a number (decimal)
+  int receivedValue = strtol((char *)decryptedText, NULL, 16);
+
+  // Print the decrypted value in decimal format
+  Serial.print("Decrypted value (decimal): ");
+  Serial.println(receivedValue);
 
   // print RSSI of packet
   Serial.print("' with RSSI ");
