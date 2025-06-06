@@ -38,6 +38,11 @@ unsigned long sendInterval = 5000;  // Interval for sending sensor data (5 secon
 // **New variable to control encryption**
 bool encryptionEnabled = false;  // By default, encryption is disabled
 
+#define SS 17
+#define RFM_RST 21
+#define RFM_DIO0 10
+#define RFM_DIO5 15
+
 SerialCommand SCmd;
 
 float fwVersion= 0.2;
