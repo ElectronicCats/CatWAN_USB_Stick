@@ -1,0 +1,626 @@
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/Users/wero1414/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:28 (find_package)"
+      - "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:97 (include_boilerplate)"
+      - "CMakeLists.txt:4 (find_package)"
+    name: "ZephyrBuildConfiguration"
+    configs:
+      -
+        filename: "ZephyrBuildConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyrbuild-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: false
+      bypass_provider: false
+      names:
+        - "ZephyrBuild"
+      search_paths:
+        - "/Users/wero1414/zephyrproject/zephyr/../*"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: false
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: false
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK/build_sx1276/CMakeFiles/pkgRedirects/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK/build_sx1276/CMakeFiles/pkgRedirects/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/tools/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/tools/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/bootloader/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/bootloader/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/.venv/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/.venv/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/.west/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/.west/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/build/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/build/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/modules/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/modules/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/.cache/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/.cache/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/zephyr/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/zephyr/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/zephyr/cmake/ZephyrBuildConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/zephyr/cmake/zephyrbuild-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Applications/Wireshark.app/Contents/MacOS"
+        - "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF"
+        - "/Users/wero1414/.nvm/versions/node/v22.22.0/bin"
+        - "/Users/wero1414/.antigravity/antigravity/bin"
+        - "/Users/wero1414/.local/bin"
+        - "/Users/wero1414/.pyenv/shims"
+        - "/Users/wero1414/.cargo/bin"
+        - "/Users/wero1414/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/Applications/Codex.app/Contents/Resources"
+        - "/Users/wero1414/.local/bin"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/Users/wero1414/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:41 (find_package)"
+      - "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:97 (include_boilerplate)"
+      - "CMakeLists.txt:4 (find_package)"
+    name: "ZephyrAppConfiguration"
+    configs:
+      -
+        filename: "ZephyrAppConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyrapp-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: false
+      bypass_provider: false
+      names:
+        - "ZephyrApp"
+      search_paths:
+        - "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: false
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: false
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK/build_sx1276/CMakeFiles/pkgRedirects/ZephyrAppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK/build_sx1276/CMakeFiles/pkgRedirects/zephyrapp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK/ZephyrAppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK/zephyrapp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Applications/Wireshark.app/Contents/MacOS"
+        - "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF"
+        - "/Users/wero1414/.nvm/versions/node/v22.22.0/bin"
+        - "/Users/wero1414/.antigravity/antigravity/bin"
+        - "/Users/wero1414/.local/bin"
+        - "/Users/wero1414/.pyenv/shims"
+        - "/Users/wero1414/.cargo/bin"
+        - "/Users/wero1414/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/Applications/Codex.app/Contents/Resources"
+        - "/Users/wero1414/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/Users/wero1414/zephyrproject/zephyr/cmake/modules/python.cmake:26 (find_program)"
+      - "/Users/wero1414/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:129 (include)"
+      - "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:97 (include_boilerplate)"
+      - "CMakeLists.txt:4 (find_package)"
+    mode: "program"
+    variable: "Python3_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python"
+    candidate_directories:
+      - "/opt/homebrew/opt/python/libexec/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Applications/Wireshark.app/Contents/MacOS/"
+      - "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF/"
+      - "/Users/wero1414/.nvm/versions/node/v22.22.0/bin/"
+      - "/Users/wero1414/.antigravity/antigravity/bin/"
+      - "/Users/wero1414/.local/bin/"
+      - "/Users/wero1414/.pyenv/shims/"
+      - "/Users/wero1414/.cargo/bin/"
+      - "/Users/wero1414/bin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    found: "/opt/homebrew/opt/python/libexec/bin/python"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Applications/Wireshark.app/Contents/MacOS"
+        - "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF"
+        - "/Users/wero1414/.nvm/versions/node/v22.22.0/bin"
+        - "/Users/wero1414/.antigravity/antigravity/bin"
+        - "/Users/wero1414/.local/bin"
+        - "/Users/wero1414/.pyenv/shims"
+        - "/Users/wero1414/.cargo/bin"
+        - "/Users/wero1414/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/Applications/Codex.app/Contents/Resources"
+        - "/Users/wero1414/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/Users/wero1414/zephyrproject/zephyr/cmake/modules/ccache.cmake:10 (find_program)"
+      - "/Users/wero1414/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:129 (include)"
+      - "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)"
+      - "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:97 (include_boilerplate)"
+      - "CMakeLists.txt:4 (find_package)"
+    mode: "program"
+    variable: "CCACHE_FOUND"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ccache"
+    candidate_directories:
+      - "/opt/homebrew/opt/python/libexec/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Applications/Wireshark.app/Contents/MacOS/"
+      - "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF/"
+      - "/Users/wero1414/.nvm/versions/node/v22.22.0/bin/"
+      - "/Users/wero1414/.antigravity/antigravity/bin/"
+      - "/Users/wero1414/.local/bin/"
+      - "/Users/wero1414/.pyenv/shims/"
+      - "/Users/wero1414/.cargo/bin/"
+      - "/Users/wero1414/bin/"
+      - "/Applications/Codex.app/Contents/Resources/"
+    searched_directories:
+      - "/opt/homebrew/opt/python/libexec/bin/ccache"
+    found: "/opt/homebrew/bin/ccache"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Applications/Wireshark.app/Contents/MacOS"
+        - "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF"
+        - "/Users/wero1414/.nvm/versions/node/v22.22.0/bin"
+        - "/Users/wero1414/.antigravity/antigravity/bin"
+        - "/Users/wero1414/.local/bin"
+        - "/Users/wero1414/.pyenv/shims"
+        - "/Users/wero1414/.cargo/bin"
+        - "/Users/wero1414/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/Applications/Codex.app/Contents/Resources"
+        - "/Users/wero1414/.local/bin"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:4 (find_package)"
+    name: "Zephyr"
+    configs:
+      -
+        filename: "ZephyrConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zephyr-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Zephyr"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK/build_sx1276/CMakeFiles/pkgRedirects/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/Documents/electronicCats/Hw/CatWAN_USB_Stick/Fw/CatWAN-USBSTICK/build_sx1276/CMakeFiles/pkgRedirects/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/python/libexec/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/python/libexec/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Cryptexes/App/usr/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/System/Cryptexes/App/usr/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/X11/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/X11/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Wireshark.app/Contents/MacOS/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Wireshark.app/Contents/MacOS/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.nvm/versions/node/v22.22.0/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.nvm/versions/node/v22.22.0/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.antigravity/antigravity/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.antigravity/antigravity/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.local/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.local/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.pyenv/shims/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.pyenv/shims/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.cargo/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/.cargo/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyrproject/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr_projects/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr_projects/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr-sdk-0.17.0/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr-sdk-0.17.0/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr-sdk-0.17.0/cmake/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr-sdk-0.17.0/cmake/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr-sdk-0.17.0/cmake/zephyr/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/wero1414/zephyr-sdk-0.17.0/cmake/zephyr/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Codex.app/Contents/Resources/ZephyrConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Applications/Codex.app/Contents/Resources/zephyr-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/Users/wero1414/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake"
+      mode: "config"
+      version: "4.3.99"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Applications/Wireshark.app/Contents/MacOS"
+        - "/Users/wero1414/.codex/tmp/arg0/codex-arg0Y6LicF"
+        - "/Users/wero1414/.nvm/versions/node/v22.22.0/bin"
+        - "/Users/wero1414/.antigravity/antigravity/bin"
+        - "/Users/wero1414/.local/bin"
+        - "/Users/wero1414/.pyenv/shims"
+        - "/Users/wero1414/.cargo/bin"
+        - "/Users/wero1414/bin"
+        - "/opt/homebrew/opt/python/libexec/bin"
+        - "/Applications/Codex.app/Contents/Resources"
+        - "/Users/wero1414/.local/bin"
+...

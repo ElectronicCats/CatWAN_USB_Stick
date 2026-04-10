@@ -5,14 +5,15 @@ Hw/library/agroin\.pretty/\.DS_Store
 
 Hw/\.DS_Store
 
-Hw/library/agroin\.bak
-
-Hw/library/agroin\.bck
-
 \.DS_Store
 
 *.kicad_pcb-bak
 
 *.sch-bak
-Hw/LoRA_USBStick-backups/LoRA_USBStick-2022-06-24_103809.zip
 *.zip
+
+Fw/CatWAN-USBSTICK/.cache/
+
+Fw/CatWAN-USBSTICK/build/
+
+Fw/CatWAN-USBSTICK/scripts/__pycache__/

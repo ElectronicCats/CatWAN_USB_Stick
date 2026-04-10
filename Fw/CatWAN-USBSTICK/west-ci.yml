@@ -1,0 +1,33 @@
+manifest:
+  version: "1.2"
+
+  remotes:
+    - name: wero1414
+      url-base: https://github.com/wero1414
+    - name: zephyrproject
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: wero1414
+      revision: fsk-native-driver
+      west-commands: scripts/west-commands.yml
+    - name: hal_rpi_pico
+      remote: zephyrproject
+      revision: 562b41e10a1d8b1a761b253b107c5c6a84cf4535
+      path: modules/hal/rpi_pico
+    - name: cmsis
+      remote: zephyrproject
+      revision: 512cc7e895e8491696b61f7ba8066b4a182569b8
+      path: modules/hal/cmsis
+    - name: cmsis_6
+      remote: zephyrproject
+      revision: 30a859f44ef8ab4dc8f84b03ed586fd16ccf9d74
+      path: modules/hal/cmsis_6
+    - name: loramac-node
+      remote: zephyrproject
+      revision: fb00b383072518c918e2258b0916c996f2d4eebe
+      path: modules/lib/loramac-node
+
+  self:
+    path: RP2040/catsniffer
