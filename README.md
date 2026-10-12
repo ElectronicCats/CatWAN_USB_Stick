@@ -15,12 +15,9 @@
 </p>
 
 <p align=center>
-Also available at distributors:
-</p>
-<p align=center>
-<a href="https://labs.ksec.co.uk/product-category/electronic-cat/">
-<img src="https://cdn.ksec.co.uk/ksec-solutions/ksec-W-BW-MV-small-clipped.png" width="200" />
-</a>
+  <a href="https://electroniccats.com/distributors/">
+    <img src="https://electroniccats.com/wp-content/uploads/2026/10/official-distributors-banner.png" width="600" alt="Buy from an official Electronic Cats distributor" />
+  </a>
 </p>
 
 Are you interested in learning how LoRa works at the package level? Debugging your own LoRa hardware and trying to detect where something is wrong? Or maybe you're writing a custom application for your Internet of Things (IoT) network with LoraWAN? We have the perfect tool for you!
