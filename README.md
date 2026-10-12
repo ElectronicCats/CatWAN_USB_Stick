@@ -5,6 +5,7 @@
     </a>
 </p>
 
+<p align=center><b>Where to buy and learn more</b></p>
 <p align=center>
     <a href="https://electroniccats.com/store/catwan-usb-stick">
         <img src="https://github.com/ElectronicCats/flipper-shields/assets/44976441/0c617467-052b-4ab1-a3b9-ba36e1f55a91" width="200" height="104" />
